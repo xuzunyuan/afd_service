@@ -1,205 +1,211 @@
 package com.afd.model.user;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserAddress {
-    private Integer addrId;
+public class UserAddress implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5592386443078728805L;
 
-    private Integer userId;
+	private Integer addrId;
 
-    private String receiver;
+	private Integer userId;
 
-    private Integer province;
+	private String receiver;
 
-    private String provinceName;
+	private Integer province;
 
-    private Integer city;
+	private String provinceName;
 
-    private String cityName;
+	private Integer city;
 
-    private Integer district;
+	private String cityName;
 
-    private String districtName;
+	private Integer district;
 
-    private Integer town;
+	private String districtName;
 
-    private String townName;
+	private Integer town;
 
-    private String addr;
+	private String townName;
 
-    private String tel;
+	private String addr;
 
-    private String mobile;
+	private String tel;
 
-    private String zipCode;
+	private String mobile;
 
-    private String status;
+	private String zipCode;
 
-    private String isDefault;
+	private String status;
 
-    private Date createDate;
+	private String isDefault;
 
-    private Date updateDate;
+	private Date createDate;
 
-    private String landMark;
+	private Date updateDate;
 
-    public Integer getAddrId() {
-        return addrId;
-    }
+	private String landMark;
 
-    public void setAddrId(Integer addrId) {
-        this.addrId = addrId;
-    }
+	public Integer getAddrId() {
+		return addrId;
+	}
 
-    public Integer getUserId() {
-        return userId;
-    }
+	public void setAddrId(Integer addrId) {
+		this.addrId = addrId;
+	}
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getReceiver() {
-        return receiver;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver == null ? null : receiver.trim();
-    }
+	public String getReceiver() {
+		return receiver;
+	}
 
-    public Integer getProvince() {
-        return province;
-    }
+	public void setReceiver(String receiver) {
+		this.receiver = receiver == null ? null : receiver.trim();
+	}
 
-    public void setProvince(Integer province) {
-        this.province = province;
-    }
+	public Integer getProvince() {
+		return province;
+	}
 
-    public String getProvinceName() {
-        return provinceName;
-    }
+	public void setProvince(Integer province) {
+		this.province = province;
+	}
 
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName == null ? null : provinceName.trim();
-    }
+	public String getProvinceName() {
+		return provinceName;
+	}
 
-    public Integer getCity() {
-        return city;
-    }
+	public void setProvinceName(String provinceName) {
+		this.provinceName = provinceName == null ? null : provinceName.trim();
+	}
 
-    public void setCity(Integer city) {
-        this.city = city;
-    }
+	public Integer getCity() {
+		return city;
+	}
 
-    public String getCityName() {
-        return cityName;
-    }
+	public void setCity(Integer city) {
+		this.city = city;
+	}
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName == null ? null : cityName.trim();
-    }
+	public String getCityName() {
+		return cityName;
+	}
 
-    public Integer getDistrict() {
-        return district;
-    }
+	public void setCityName(String cityName) {
+		this.cityName = cityName == null ? null : cityName.trim();
+	}
 
-    public void setDistrict(Integer district) {
-        this.district = district;
-    }
+	public Integer getDistrict() {
+		return district;
+	}
 
-    public String getDistrictName() {
-        return districtName;
-    }
+	public void setDistrict(Integer district) {
+		this.district = district;
+	}
 
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName == null ? null : districtName.trim();
-    }
+	public String getDistrictName() {
+		return districtName;
+	}
 
-    public Integer getTown() {
-        return town;
-    }
+	public void setDistrictName(String districtName) {
+		this.districtName = districtName == null ? null : districtName.trim();
+	}
 
-    public void setTown(Integer town) {
-        this.town = town;
-    }
+	public Integer getTown() {
+		return town;
+	}
 
-    public String getTownName() {
-        return townName;
-    }
+	public void setTown(Integer town) {
+		this.town = town;
+	}
 
-    public void setTownName(String townName) {
-        this.townName = townName == null ? null : townName.trim();
-    }
+	public String getTownName() {
+		return townName;
+	}
 
-    public String getAddr() {
-        return addr;
-    }
+	public void setTownName(String townName) {
+		this.townName = townName == null ? null : townName.trim();
+	}
 
-    public void setAddr(String addr) {
-        this.addr = addr == null ? null : addr.trim();
-    }
+	public String getAddr() {
+		return addr;
+	}
 
-    public String getTel() {
-        return tel;
-    }
+	public void setAddr(String addr) {
+		this.addr = addr == null ? null : addr.trim();
+	}
 
-    public void setTel(String tel) {
-        this.tel = tel == null ? null : tel.trim();
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public String getMobile() {
-        return mobile;
-    }
+	public void setTel(String tel) {
+		this.tel = tel == null ? null : tel.trim();
+	}
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
-    }
+	public String getMobile() {
+		return mobile;
+	}
 
-    public String getZipCode() {
-        return zipCode;
-    }
+	public void setMobile(String mobile) {
+		this.mobile = mobile == null ? null : mobile.trim();
+	}
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode == null ? null : zipCode.trim();
-    }
+	public String getZipCode() {
+		return zipCode;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode == null ? null : zipCode.trim();
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public String getIsDefault() {
-        return isDefault;
-    }
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 
-    public void setIsDefault(String isDefault) {
-        this.isDefault = isDefault == null ? null : isDefault.trim();
-    }
+	public String getIsDefault() {
+		return isDefault;
+	}
 
-    public Date getCreateDate() {
-        return createDate;
-    }
+	public void setIsDefault(String isDefault) {
+		this.isDefault = isDefault == null ? null : isDefault.trim();
+	}
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
+	public Date getCreateDate() {
+		return createDate;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
-    public String getLandMark() {
-        return landMark;
-    }
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
-    public void setLandMark(String landMark) {
-        this.landMark = landMark == null ? null : landMark.trim();
-    }
+	public String getLandMark() {
+		return landMark;
+	}
+
+	public void setLandMark(String landMark) {
+		this.landMark = landMark == null ? null : landMark.trim();
+	}
 }

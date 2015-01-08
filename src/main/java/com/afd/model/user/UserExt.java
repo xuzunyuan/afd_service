@@ -1,95 +1,102 @@
 package com.afd.model.user;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserExt {
-    private Integer userId;
+public class UserExt implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7472107395875344154L;
 
-    private String realName;
+	private Integer userId;
 
-    private String gender;
+	private String realName;
 
-    private Date birthday;
+	private String gender;
 
-    private String constellation;
+	private Date birthday;
 
-    private String homeAddress;
+	private String constellation;
 
-    private String zipCode;
+	private String homeAddress;
 
-    private String tel;
+	private String zipCode;
 
-    private String headerPic;
+	private String tel;
 
-    public Integer getUserId() {
-        return userId;
-    }
+	private String headerPic;
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getRealName() {
-        return realName;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setRealName(String realName) {
-        this.realName = realName == null ? null : realName.trim();
-    }
+	public String getRealName() {
+		return realName;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public void setRealName(String realName) {
+		this.realName = realName == null ? null : realName.trim();
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender == null ? null : gender.trim();
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public Date getBirthday() {
-        return birthday;
-    }
+	public void setGender(String gender) {
+		this.gender = gender == null ? null : gender.trim();
+	}
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    public String getConstellation() {
-        return constellation;
-    }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-    public void setConstellation(String constellation) {
-        this.constellation = constellation == null ? null : constellation.trim();
-    }
+	public String getConstellation() {
+		return constellation;
+	}
 
-    public String getHomeAddress() {
-        return homeAddress;
-    }
+	public void setConstellation(String constellation) {
+		this.constellation = constellation == null ? null : constellation
+				.trim();
+	}
 
-    public void setHomeAddress(String homeAddress) {
-        this.homeAddress = homeAddress == null ? null : homeAddress.trim();
-    }
+	public String getHomeAddress() {
+		return homeAddress;
+	}
 
-    public String getZipCode() {
-        return zipCode;
-    }
+	public void setHomeAddress(String homeAddress) {
+		this.homeAddress = homeAddress == null ? null : homeAddress.trim();
+	}
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode == null ? null : zipCode.trim();
-    }
+	public String getZipCode() {
+		return zipCode;
+	}
 
-    public String getTel() {
-        return tel;
-    }
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode == null ? null : zipCode.trim();
+	}
 
-    public void setTel(String tel) {
-        this.tel = tel == null ? null : tel.trim();
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public String getHeaderPic() {
-        return headerPic;
-    }
+	public void setTel(String tel) {
+		this.tel = tel == null ? null : tel.trim();
+	}
 
-    public void setHeaderPic(String headerPic) {
-        this.headerPic = headerPic == null ? null : headerPic.trim();
-    }
+	public String getHeaderPic() {
+		return headerPic;
+	}
+
+	public void setHeaderPic(String headerPic) {
+		this.headerPic = headerPic == null ? null : headerPic.trim();
+	}
 }
