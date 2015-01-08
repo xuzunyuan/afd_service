@@ -23,8 +23,7 @@ public class StartDubbo {
 	public static void main(String[] args) {
 		System.setProperty("spring.profiles.default", "develop");
 		final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"classpath:**/application-config.xml",
-				"classpath:spring-dubbo-consumer.xml");
+				"classpath:spring/*.xml");
 
 		// 增加一个停止钩子，用于关闭spring
 		Runtime.getRuntime().addShutdownHook(new Thread() {
