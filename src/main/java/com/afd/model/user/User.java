@@ -1,245 +1,252 @@
 package com.afd.model.user;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
-    private Integer userId;
+public class User implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2942237996139751825L;
 
-    private String userName;
+	private Integer userId;
 
-    private String pwd;
+	private String userName;
 
-    private String pwdKey;
+	private String pwd;
 
-    private String nickname;
+	private String pwdKey;
 
-    private Short type;
+	private String nickname;
 
-    private Short status;
+	private Short type;
 
-    private Short levelId;
+	private Short status;
 
-    private String levelName;
+	private Short levelId;
 
-    private String mobile;
+	private String levelName;
 
-    private String isMobileCheck;
+	private String mobile;
 
-    private String email;
+	private String isMobileCheck;
 
-    private String isEmailCheck;
+	private String email;
 
-    private String idCode;
+	private String isEmailCheck;
 
-    private String isBindId;
+	private String idCode;
 
-    private Date regDate;
+	private String isBindId;
 
-    private String regFrom;
+	private Date regDate;
 
-    private String marketFrom;
+	private String regFrom;
 
-    private String regIp;
+	private String marketFrom;
 
-    private Date lastLoginDate;
+	private String regIp;
 
-    private String lastLoginIp;
+	private Date lastLoginDate;
 
-    private String freezeByName;
+	private String lastLoginIp;
 
-    private Integer freezeById;
+	private String freezeByName;
 
-    private Date freezeByDate;
+	private Integer freezeById;
 
-    public Integer getUserId() {
-        return userId;
-    }
+	private Date freezeByDate;
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getUserName() {
-        return userName;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
-    }
+	public String getUserName() {
+		return userName;
+	}
 
-    public String getPwd() {
-        return pwd;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName == null ? null : userName.trim();
+	}
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd == null ? null : pwd.trim();
-    }
+	public String getPwd() {
+		return pwd;
+	}
 
-    public String getPwdKey() {
-        return pwdKey;
-    }
+	public void setPwd(String pwd) {
+		this.pwd = pwd == null ? null : pwd.trim();
+	}
 
-    public void setPwdKey(String pwdKey) {
-        this.pwdKey = pwdKey == null ? null : pwdKey.trim();
-    }
+	public String getPwdKey() {
+		return pwdKey;
+	}
 
-    public String getNickname() {
-        return nickname;
-    }
+	public void setPwdKey(String pwdKey) {
+		this.pwdKey = pwdKey == null ? null : pwdKey.trim();
+	}
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
-    }
+	public String getNickname() {
+		return nickname;
+	}
 
-    public Short getType() {
-        return type;
-    }
+	public void setNickname(String nickname) {
+		this.nickname = nickname == null ? null : nickname.trim();
+	}
 
-    public void setType(Short type) {
-        this.type = type;
-    }
+	public Short getType() {
+		return type;
+	}
 
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
-
-    public Short getLevelId() {
-        return levelId;
-    }
-
-    public void setLevelId(Short levelId) {
-        this.levelId = levelId;
-    }
-
-    public String getLevelName() {
-        return levelName;
-    }
-
-    public void setLevelName(String levelName) {
-        this.levelName = levelName == null ? null : levelName.trim();
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
-    }
-
-    public String getIsMobileCheck() {
-        return isMobileCheck;
-    }
-
-    public void setIsMobileCheck(String isMobileCheck) {
-        this.isMobileCheck = isMobileCheck == null ? null : isMobileCheck.trim();
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
-    public String getIsEmailCheck() {
-        return isEmailCheck;
-    }
-
-    public void setIsEmailCheck(String isEmailCheck) {
-        this.isEmailCheck = isEmailCheck == null ? null : isEmailCheck.trim();
-    }
-
-    public String getIdCode() {
-        return idCode;
-    }
-
-    public void setIdCode(String idCode) {
-        this.idCode = idCode == null ? null : idCode.trim();
-    }
-
-    public String getIsBindId() {
-        return isBindId;
-    }
-
-    public void setIsBindId(String isBindId) {
-        this.isBindId = isBindId == null ? null : isBindId.trim();
-    }
-
-    public Date getRegDate() {
-        return regDate;
-    }
-
-    public void setRegDate(Date regDate) {
-        this.regDate = regDate;
-    }
-
-    public String getRegFrom() {
-        return regFrom;
-    }
-
-    public void setRegFrom(String regFrom) {
-        this.regFrom = regFrom == null ? null : regFrom.trim();
-    }
-
-    public String getMarketFrom() {
-        return marketFrom;
-    }
-
-    public void setMarketFrom(String marketFrom) {
-        this.marketFrom = marketFrom == null ? null : marketFrom.trim();
-    }
-
-    public String getRegIp() {
-        return regIp;
-    }
-
-    public void setRegIp(String regIp) {
-        this.regIp = regIp == null ? null : regIp.trim();
-    }
-
-    public Date getLastLoginDate() {
-        return lastLoginDate;
-    }
-
-    public void setLastLoginDate(Date lastLoginDate) {
-        this.lastLoginDate = lastLoginDate;
-    }
-
-    public String getLastLoginIp() {
-        return lastLoginIp;
-    }
-
-    public void setLastLoginIp(String lastLoginIp) {
-        this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
-    }
-
-    public String getFreezeByName() {
-        return freezeByName;
-    }
-
-    public void setFreezeByName(String freezeByName) {
-        this.freezeByName = freezeByName == null ? null : freezeByName.trim();
-    }
-
-    public Integer getFreezeById() {
-        return freezeById;
-    }
-
-    public void setFreezeById(Integer freezeById) {
-        this.freezeById = freezeById;
-    }
-
-    public Date getFreezeByDate() {
-        return freezeByDate;
-    }
-
-    public void setFreezeByDate(Date freezeByDate) {
-        this.freezeByDate = freezeByDate;
-    }
+	public void setType(Short type) {
+		this.type = type;
+	}
+
+	public Short getStatus() {
+		return status;
+	}
+
+	public void setStatus(Short status) {
+		this.status = status;
+	}
+
+	public Short getLevelId() {
+		return levelId;
+	}
+
+	public void setLevelId(Short levelId) {
+		this.levelId = levelId;
+	}
+
+	public String getLevelName() {
+		return levelName;
+	}
+
+	public void setLevelName(String levelName) {
+		this.levelName = levelName == null ? null : levelName.trim();
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile == null ? null : mobile.trim();
+	}
+
+	public String getIsMobileCheck() {
+		return isMobileCheck;
+	}
+
+	public void setIsMobileCheck(String isMobileCheck) {
+		this.isMobileCheck = isMobileCheck == null ? null : isMobileCheck
+				.trim();
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email == null ? null : email.trim();
+	}
+
+	public String getIsEmailCheck() {
+		return isEmailCheck;
+	}
+
+	public void setIsEmailCheck(String isEmailCheck) {
+		this.isEmailCheck = isEmailCheck == null ? null : isEmailCheck.trim();
+	}
+
+	public String getIdCode() {
+		return idCode;
+	}
+
+	public void setIdCode(String idCode) {
+		this.idCode = idCode == null ? null : idCode.trim();
+	}
+
+	public String getIsBindId() {
+		return isBindId;
+	}
+
+	public void setIsBindId(String isBindId) {
+		this.isBindId = isBindId == null ? null : isBindId.trim();
+	}
+
+	public Date getRegDate() {
+		return regDate;
+	}
+
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
+
+	public String getRegFrom() {
+		return regFrom;
+	}
+
+	public void setRegFrom(String regFrom) {
+		this.regFrom = regFrom == null ? null : regFrom.trim();
+	}
+
+	public String getMarketFrom() {
+		return marketFrom;
+	}
+
+	public void setMarketFrom(String marketFrom) {
+		this.marketFrom = marketFrom == null ? null : marketFrom.trim();
+	}
+
+	public String getRegIp() {
+		return regIp;
+	}
+
+	public void setRegIp(String regIp) {
+		this.regIp = regIp == null ? null : regIp.trim();
+	}
+
+	public Date getLastLoginDate() {
+		return lastLoginDate;
+	}
+
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
+	}
+
+	public String getLastLoginIp() {
+		return lastLoginIp;
+	}
+
+	public void setLastLoginIp(String lastLoginIp) {
+		this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
+	}
+
+	public String getFreezeByName() {
+		return freezeByName;
+	}
+
+	public void setFreezeByName(String freezeByName) {
+		this.freezeByName = freezeByName == null ? null : freezeByName.trim();
+	}
+
+	public Integer getFreezeById() {
+		return freezeById;
+	}
+
+	public void setFreezeById(Integer freezeById) {
+		this.freezeById = freezeById;
+	}
+
+	public Date getFreezeByDate() {
+		return freezeByDate;
+	}
+
+	public void setFreezeByDate(Date freezeByDate) {
+		this.freezeByDate = freezeByDate;
+	}
 }

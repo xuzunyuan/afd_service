@@ -1,65 +1,71 @@
 package com.afd.model.user;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Geo {
-    private Integer geoId;
+public class Geo implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4891783488114375863L;
 
-    private String geoName;
+	private Integer geoId;
 
-    private String geoLevel;
+	private String geoName;
 
-    private String type;
+	private String geoLevel;
 
-    private Integer pGeoId;
+	private String type;
 
-    private Date createDate;
+	private Integer pGeoId;
 
-    public Integer getGeoId() {
-        return geoId;
-    }
+	private Date createDate;
 
-    public void setGeoId(Integer geoId) {
-        this.geoId = geoId;
-    }
+	public Integer getGeoId() {
+		return geoId;
+	}
 
-    public String getGeoName() {
-        return geoName;
-    }
+	public void setGeoId(Integer geoId) {
+		this.geoId = geoId;
+	}
 
-    public void setGeoName(String geoName) {
-        this.geoName = geoName == null ? null : geoName.trim();
-    }
+	public String getGeoName() {
+		return geoName;
+	}
 
-    public String getGeoLevel() {
-        return geoLevel;
-    }
+	public void setGeoName(String geoName) {
+		this.geoName = geoName == null ? null : geoName.trim();
+	}
 
-    public void setGeoLevel(String geoLevel) {
-        this.geoLevel = geoLevel == null ? null : geoLevel.trim();
-    }
+	public String getGeoLevel() {
+		return geoLevel;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setGeoLevel(String geoLevel) {
+		this.geoLevel = geoLevel == null ? null : geoLevel.trim();
+	}
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
-    }
+	public String getType() {
+		return type;
+	}
 
-    public Integer getpGeoId() {
-        return pGeoId;
-    }
+	public void setType(String type) {
+		this.type = type == null ? null : type.trim();
+	}
 
-    public void setpGeoId(Integer pGeoId) {
-        this.pGeoId = pGeoId;
-    }
+	public Integer getpGeoId() {
+		return pGeoId;
+	}
 
-    public Date getCreateDate() {
-        return createDate;
-    }
+	public void setpGeoId(Integer pGeoId) {
+		this.pGeoId = pGeoId;
+	}
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 }
