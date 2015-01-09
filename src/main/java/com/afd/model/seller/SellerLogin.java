@@ -1,185 +1,192 @@
 package com.afd.model.seller;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SellerLogin {
-    private Integer sellerLoginId;
+public class SellerLogin implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5221849954719721452L;
 
-    private String loginName;
+	private Integer sellerLoginId;
 
-    private String loginPwd;
+	private String loginName;
 
-    private String pwdKey;
+	private String loginPwd;
 
-    private String mobile;
+	private String pwdKey;
 
-    private String nickname;
+	private String mobile;
 
-    private String status;
+	private String nickname;
 
-    private String type;
+	private String status;
 
-    private Date regDate;
+	private String type;
 
-    private String regIp;
+	private Date regDate;
 
-    private Integer sellerId;
+	private String regIp;
 
-    private Integer sellerApplyId;
+	private Integer sellerId;
 
-    private Date lastLoginDate;
+	private Integer sellerApplyId;
 
-    private String lastLoginIp;
+	private Date lastLoginDate;
 
-    private Date freezeDate;
+	private String lastLoginIp;
 
-    private String freezeByName;
+	private Date freezeDate;
 
-    private Date unfreezeDate;
+	private String freezeByName;
 
-    private String unfreezeByName;
+	private Date unfreezeDate;
 
-    public Integer getSellerLoginId() {
-        return sellerLoginId;
-    }
+	private String unfreezeByName;
 
-    public void setSellerLoginId(Integer sellerLoginId) {
-        this.sellerLoginId = sellerLoginId;
-    }
+	public Integer getSellerLoginId() {
+		return sellerLoginId;
+	}
 
-    public String getLoginName() {
-        return loginName;
-    }
+	public void setSellerLoginId(Integer sellerLoginId) {
+		this.sellerLoginId = sellerLoginId;
+	}
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName == null ? null : loginName.trim();
-    }
+	public String getLoginName() {
+		return loginName;
+	}
 
-    public String getLoginPwd() {
-        return loginPwd;
-    }
+	public void setLoginName(String loginName) {
+		this.loginName = loginName == null ? null : loginName.trim();
+	}
 
-    public void setLoginPwd(String loginPwd) {
-        this.loginPwd = loginPwd == null ? null : loginPwd.trim();
-    }
+	public String getLoginPwd() {
+		return loginPwd;
+	}
 
-    public String getPwdKey() {
-        return pwdKey;
-    }
+	public void setLoginPwd(String loginPwd) {
+		this.loginPwd = loginPwd == null ? null : loginPwd.trim();
+	}
 
-    public void setPwdKey(String pwdKey) {
-        this.pwdKey = pwdKey == null ? null : pwdKey.trim();
-    }
+	public String getPwdKey() {
+		return pwdKey;
+	}
 
-    public String getMobile() {
-        return mobile;
-    }
+	public void setPwdKey(String pwdKey) {
+		this.pwdKey = pwdKey == null ? null : pwdKey.trim();
+	}
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
-    }
+	public String getMobile() {
+		return mobile;
+	}
 
-    public String getNickname() {
-        return nickname;
-    }
+	public void setMobile(String mobile) {
+		this.mobile = mobile == null ? null : mobile.trim();
+	}
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
-    }
+	public String getNickname() {
+		return nickname;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public void setNickname(String nickname) {
+		this.nickname = nickname == null ? null : nickname.trim();
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
-    }
+	public String getType() {
+		return type;
+	}
 
-    public Date getRegDate() {
-        return regDate;
-    }
+	public void setType(String type) {
+		this.type = type == null ? null : type.trim();
+	}
 
-    public void setRegDate(Date regDate) {
-        this.regDate = regDate;
-    }
+	public Date getRegDate() {
+		return regDate;
+	}
 
-    public String getRegIp() {
-        return regIp;
-    }
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 
-    public void setRegIp(String regIp) {
-        this.regIp = regIp == null ? null : regIp.trim();
-    }
+	public String getRegIp() {
+		return regIp;
+	}
 
-    public Integer getSellerId() {
-        return sellerId;
-    }
+	public void setRegIp(String regIp) {
+		this.regIp = regIp == null ? null : regIp.trim();
+	}
 
-    public void setSellerId(Integer sellerId) {
-        this.sellerId = sellerId;
-    }
+	public Integer getSellerId() {
+		return sellerId;
+	}
 
-    public Integer getSellerApplyId() {
-        return sellerApplyId;
-    }
+	public void setSellerId(Integer sellerId) {
+		this.sellerId = sellerId;
+	}
 
-    public void setSellerApplyId(Integer sellerApplyId) {
-        this.sellerApplyId = sellerApplyId;
-    }
+	public Integer getSellerApplyId() {
+		return sellerApplyId;
+	}
 
-    public Date getLastLoginDate() {
-        return lastLoginDate;
-    }
+	public void setSellerApplyId(Integer sellerApplyId) {
+		this.sellerApplyId = sellerApplyId;
+	}
 
-    public void setLastLoginDate(Date lastLoginDate) {
-        this.lastLoginDate = lastLoginDate;
-    }
+	public Date getLastLoginDate() {
+		return lastLoginDate;
+	}
 
-    public String getLastLoginIp() {
-        return lastLoginIp;
-    }
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
+	}
 
-    public void setLastLoginIp(String lastLoginIp) {
-        this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
-    }
+	public String getLastLoginIp() {
+		return lastLoginIp;
+	}
 
-    public Date getFreezeDate() {
-        return freezeDate;
-    }
+	public void setLastLoginIp(String lastLoginIp) {
+		this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
+	}
 
-    public void setFreezeDate(Date freezeDate) {
-        this.freezeDate = freezeDate;
-    }
+	public Date getFreezeDate() {
+		return freezeDate;
+	}
 
-    public String getFreezeByName() {
-        return freezeByName;
-    }
+	public void setFreezeDate(Date freezeDate) {
+		this.freezeDate = freezeDate;
+	}
 
-    public void setFreezeByName(String freezeByName) {
-        this.freezeByName = freezeByName == null ? null : freezeByName.trim();
-    }
+	public String getFreezeByName() {
+		return freezeByName;
+	}
 
-    public Date getUnfreezeDate() {
-        return unfreezeDate;
-    }
+	public void setFreezeByName(String freezeByName) {
+		this.freezeByName = freezeByName == null ? null : freezeByName.trim();
+	}
 
-    public void setUnfreezeDate(Date unfreezeDate) {
-        this.unfreezeDate = unfreezeDate;
-    }
+	public Date getUnfreezeDate() {
+		return unfreezeDate;
+	}
 
-    public String getUnfreezeByName() {
-        return unfreezeByName;
-    }
+	public void setUnfreezeDate(Date unfreezeDate) {
+		this.unfreezeDate = unfreezeDate;
+	}
 
-    public void setUnfreezeByName(String unfreezeByName) {
-        this.unfreezeByName = unfreezeByName == null ? null : unfreezeByName.trim();
-    }
+	public String getUnfreezeByName() {
+		return unfreezeByName;
+	}
+
+	public void setUnfreezeByName(String unfreezeByName) {
+		this.unfreezeByName = unfreezeByName == null ? null : unfreezeByName
+				.trim();
+	}
 }

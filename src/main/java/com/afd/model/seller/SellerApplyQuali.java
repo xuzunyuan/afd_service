@@ -1,83 +1,90 @@
 package com.afd.model.seller;
 
-public class SellerApplyQuali {
-    private Integer applyQualiId;
+import java.io.Serializable;
 
-    private Integer applyId;
+public class SellerApplyQuali implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3701171069901658157L;
 
-    private String qualiName;
+	private Integer applyQualiId;
 
-    private String quailUrl;
+	private Integer applyId;
 
-    private String expireDate;
+	private String qualiName;
 
-    private Integer ccId;
+	private String quailUrl;
 
-    private String ccName;
+	private String expireDate;
 
-    private String auditType;
+	private Integer ccId;
 
-    public Integer getApplyQualiId() {
-        return applyQualiId;
-    }
+	private String ccName;
 
-    public void setApplyQualiId(Integer applyQualiId) {
-        this.applyQualiId = applyQualiId;
-    }
+	private String auditType;
 
-    public Integer getApplyId() {
-        return applyId;
-    }
+	public Integer getApplyQualiId() {
+		return applyQualiId;
+	}
 
-    public void setApplyId(Integer applyId) {
-        this.applyId = applyId;
-    }
+	public void setApplyQualiId(Integer applyQualiId) {
+		this.applyQualiId = applyQualiId;
+	}
 
-    public String getQualiName() {
-        return qualiName;
-    }
+	public Integer getApplyId() {
+		return applyId;
+	}
 
-    public void setQualiName(String qualiName) {
-        this.qualiName = qualiName == null ? null : qualiName.trim();
-    }
+	public void setApplyId(Integer applyId) {
+		this.applyId = applyId;
+	}
 
-    public String getQuailUrl() {
-        return quailUrl;
-    }
+	public String getQualiName() {
+		return qualiName;
+	}
 
-    public void setQuailUrl(String quailUrl) {
-        this.quailUrl = quailUrl == null ? null : quailUrl.trim();
-    }
+	public void setQualiName(String qualiName) {
+		this.qualiName = qualiName == null ? null : qualiName.trim();
+	}
 
-    public String getExpireDate() {
-        return expireDate;
-    }
+	public String getQuailUrl() {
+		return quailUrl;
+	}
 
-    public void setExpireDate(String expireDate) {
-        this.expireDate = expireDate == null ? null : expireDate.trim();
-    }
+	public void setQuailUrl(String quailUrl) {
+		this.quailUrl = quailUrl == null ? null : quailUrl.trim();
+	}
 
-    public Integer getCcId() {
-        return ccId;
-    }
+	public String getExpireDate() {
+		return expireDate;
+	}
 
-    public void setCcId(Integer ccId) {
-        this.ccId = ccId;
-    }
+	public void setExpireDate(String expireDate) {
+		this.expireDate = expireDate == null ? null : expireDate.trim();
+	}
 
-    public String getCcName() {
-        return ccName;
-    }
+	public Integer getCcId() {
+		return ccId;
+	}
 
-    public void setCcName(String ccName) {
-        this.ccName = ccName == null ? null : ccName.trim();
-    }
+	public void setCcId(Integer ccId) {
+		this.ccId = ccId;
+	}
 
-    public String getAuditType() {
-        return auditType;
-    }
+	public String getCcName() {
+		return ccName;
+	}
 
-    public void setAuditType(String auditType) {
-        this.auditType = auditType == null ? null : auditType.trim();
-    }
+	public void setCcName(String ccName) {
+		this.ccName = ccName == null ? null : ccName.trim();
+	}
+
+	public String getAuditType() {
+		return auditType;
+	}
+
+	public void setAuditType(String auditType) {
+		this.auditType = auditType == null ? null : auditType.trim();
+	}
 }

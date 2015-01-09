@@ -1,95 +1,101 @@
 package com.afd.model.seller;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SellerAudit {
-    private Integer auditId;
+public class SellerAudit implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7875281647883917763L;
 
-    private Integer applyId;
+	private Integer auditId;
 
-    private String auditResult;
+	private Integer applyId;
 
-    private String auditType;
+	private String auditResult;
 
-    private String auditor;
+	private String auditType;
 
-    private String auditOpinion;
+	private String auditor;
 
-    private Date auditDate;
+	private String auditOpinion;
 
-    private String auditIp;
+	private Date auditDate;
 
-    private String column9;
+	private String auditIp;
 
-    public Integer getAuditId() {
-        return auditId;
-    }
+	private String column9;
 
-    public void setAuditId(Integer auditId) {
-        this.auditId = auditId;
-    }
+	public Integer getAuditId() {
+		return auditId;
+	}
 
-    public Integer getApplyId() {
-        return applyId;
-    }
+	public void setAuditId(Integer auditId) {
+		this.auditId = auditId;
+	}
 
-    public void setApplyId(Integer applyId) {
-        this.applyId = applyId;
-    }
+	public Integer getApplyId() {
+		return applyId;
+	}
 
-    public String getAuditResult() {
-        return auditResult;
-    }
+	public void setApplyId(Integer applyId) {
+		this.applyId = applyId;
+	}
 
-    public void setAuditResult(String auditResult) {
-        this.auditResult = auditResult == null ? null : auditResult.trim();
-    }
+	public String getAuditResult() {
+		return auditResult;
+	}
 
-    public String getAuditType() {
-        return auditType;
-    }
+	public void setAuditResult(String auditResult) {
+		this.auditResult = auditResult == null ? null : auditResult.trim();
+	}
 
-    public void setAuditType(String auditType) {
-        this.auditType = auditType == null ? null : auditType.trim();
-    }
+	public String getAuditType() {
+		return auditType;
+	}
 
-    public String getAuditor() {
-        return auditor;
-    }
+	public void setAuditType(String auditType) {
+		this.auditType = auditType == null ? null : auditType.trim();
+	}
 
-    public void setAuditor(String auditor) {
-        this.auditor = auditor == null ? null : auditor.trim();
-    }
+	public String getAuditor() {
+		return auditor;
+	}
 
-    public String getAuditOpinion() {
-        return auditOpinion;
-    }
+	public void setAuditor(String auditor) {
+		this.auditor = auditor == null ? null : auditor.trim();
+	}
 
-    public void setAuditOpinion(String auditOpinion) {
-        this.auditOpinion = auditOpinion == null ? null : auditOpinion.trim();
-    }
+	public String getAuditOpinion() {
+		return auditOpinion;
+	}
 
-    public Date getAuditDate() {
-        return auditDate;
-    }
+	public void setAuditOpinion(String auditOpinion) {
+		this.auditOpinion = auditOpinion == null ? null : auditOpinion.trim();
+	}
 
-    public void setAuditDate(Date auditDate) {
-        this.auditDate = auditDate;
-    }
+	public Date getAuditDate() {
+		return auditDate;
+	}
 
-    public String getAuditIp() {
-        return auditIp;
-    }
+	public void setAuditDate(Date auditDate) {
+		this.auditDate = auditDate;
+	}
 
-    public void setAuditIp(String auditIp) {
-        this.auditIp = auditIp == null ? null : auditIp.trim();
-    }
+	public String getAuditIp() {
+		return auditIp;
+	}
 
-    public String getColumn9() {
-        return column9;
-    }
+	public void setAuditIp(String auditIp) {
+		this.auditIp = auditIp == null ? null : auditIp.trim();
+	}
 
-    public void setColumn9(String column9) {
-        this.column9 = column9 == null ? null : column9.trim();
-    }
+	public String getColumn9() {
+		return column9;
+	}
+
+	public void setColumn9(String column9) {
+		this.column9 = column9 == null ? null : column9.trim();
+	}
 }

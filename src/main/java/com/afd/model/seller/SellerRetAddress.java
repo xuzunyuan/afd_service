@@ -1,163 +1,170 @@
 package com.afd.model.seller;
 
-public class SellerRetAddress {
-    private Integer sRAId;
+import java.io.Serializable;
 
-    private Integer sellerId;
+public class SellerRetAddress implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -85762245777273759L;
 
-    private String receiver;
+	private Integer sRAId;
 
-    private Integer province;
+	private Integer sellerId;
 
-    private String provinceName;
+	private String receiver;
 
-    private Integer city;
+	private Integer province;
 
-    private String cityName;
+	private String provinceName;
 
-    private Integer district;
+	private Integer city;
 
-    private String districtName;
+	private String cityName;
 
-    private Integer town;
+	private Integer district;
 
-    private String townName;
+	private String districtName;
 
-    private String addr;
+	private Integer town;
 
-    private String tel;
+	private String townName;
 
-    private String mobile;
+	private String addr;
 
-    private String zipCode;
+	private String tel;
 
-    private String status;
+	private String mobile;
 
-    public Integer getsRAId() {
-        return sRAId;
-    }
+	private String zipCode;
 
-    public void setsRAId(Integer sRAId) {
-        this.sRAId = sRAId;
-    }
+	private String status;
 
-    public Integer getSellerId() {
-        return sellerId;
-    }
+	public Integer getsRAId() {
+		return sRAId;
+	}
 
-    public void setSellerId(Integer sellerId) {
-        this.sellerId = sellerId;
-    }
+	public void setsRAId(Integer sRAId) {
+		this.sRAId = sRAId;
+	}
 
-    public String getReceiver() {
-        return receiver;
-    }
+	public Integer getSellerId() {
+		return sellerId;
+	}
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver == null ? null : receiver.trim();
-    }
+	public void setSellerId(Integer sellerId) {
+		this.sellerId = sellerId;
+	}
 
-    public Integer getProvince() {
-        return province;
-    }
+	public String getReceiver() {
+		return receiver;
+	}
 
-    public void setProvince(Integer province) {
-        this.province = province;
-    }
+	public void setReceiver(String receiver) {
+		this.receiver = receiver == null ? null : receiver.trim();
+	}
 
-    public String getProvinceName() {
-        return provinceName;
-    }
+	public Integer getProvince() {
+		return province;
+	}
 
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName == null ? null : provinceName.trim();
-    }
+	public void setProvince(Integer province) {
+		this.province = province;
+	}
 
-    public Integer getCity() {
-        return city;
-    }
+	public String getProvinceName() {
+		return provinceName;
+	}
 
-    public void setCity(Integer city) {
-        this.city = city;
-    }
+	public void setProvinceName(String provinceName) {
+		this.provinceName = provinceName == null ? null : provinceName.trim();
+	}
 
-    public String getCityName() {
-        return cityName;
-    }
+	public Integer getCity() {
+		return city;
+	}
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName == null ? null : cityName.trim();
-    }
+	public void setCity(Integer city) {
+		this.city = city;
+	}
 
-    public Integer getDistrict() {
-        return district;
-    }
+	public String getCityName() {
+		return cityName;
+	}
 
-    public void setDistrict(Integer district) {
-        this.district = district;
-    }
+	public void setCityName(String cityName) {
+		this.cityName = cityName == null ? null : cityName.trim();
+	}
 
-    public String getDistrictName() {
-        return districtName;
-    }
+	public Integer getDistrict() {
+		return district;
+	}
 
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName == null ? null : districtName.trim();
-    }
+	public void setDistrict(Integer district) {
+		this.district = district;
+	}
 
-    public Integer getTown() {
-        return town;
-    }
+	public String getDistrictName() {
+		return districtName;
+	}
 
-    public void setTown(Integer town) {
-        this.town = town;
-    }
+	public void setDistrictName(String districtName) {
+		this.districtName = districtName == null ? null : districtName.trim();
+	}
 
-    public String getTownName() {
-        return townName;
-    }
+	public Integer getTown() {
+		return town;
+	}
 
-    public void setTownName(String townName) {
-        this.townName = townName == null ? null : townName.trim();
-    }
+	public void setTown(Integer town) {
+		this.town = town;
+	}
 
-    public String getAddr() {
-        return addr;
-    }
+	public String getTownName() {
+		return townName;
+	}
 
-    public void setAddr(String addr) {
-        this.addr = addr == null ? null : addr.trim();
-    }
+	public void setTownName(String townName) {
+		this.townName = townName == null ? null : townName.trim();
+	}
 
-    public String getTel() {
-        return tel;
-    }
+	public String getAddr() {
+		return addr;
+	}
 
-    public void setTel(String tel) {
-        this.tel = tel == null ? null : tel.trim();
-    }
+	public void setAddr(String addr) {
+		this.addr = addr == null ? null : addr.trim();
+	}
 
-    public String getMobile() {
-        return mobile;
-    }
+	public String getTel() {
+		return tel;
+	}
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
-    }
+	public void setTel(String tel) {
+		this.tel = tel == null ? null : tel.trim();
+	}
 
-    public String getZipCode() {
-        return zipCode;
-    }
+	public String getMobile() {
+		return mobile;
+	}
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode == null ? null : zipCode.trim();
-    }
+	public void setMobile(String mobile) {
+		this.mobile = mobile == null ? null : mobile.trim();
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public String getZipCode() {
+		return zipCode;
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode == null ? null : zipCode.trim();
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 }
