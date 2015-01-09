@@ -1,6 +1,8 @@
 package com.afd.model.order;
 
-public class PaymentDetail {
+import java.io.Serializable;
+
+public class PaymentDetail implements Serializable{
     private Integer pDetailId;
 
     private Integer paymentId;

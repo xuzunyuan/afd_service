@@ -1,8 +1,9 @@
 package com.afd.model.order;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OrderItem {
+public class OrderItem implements Serializable{
     private Integer paymentId;
 
     private Integer originPaymentId;
