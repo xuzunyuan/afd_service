@@ -5,113 +5,114 @@ import java.io.Serializable;
 public class BcAttrValue implements Serializable {
 	private static final long serialVersionUID = 4460956852700566435L;
 
-	private Integer bcAvId;
+	private Long bcAvId;
 
-    private Integer bcAttrId;
+    private Long bcAttrId;
 
-    private Integer attrValueId;
+    private Long attrValueId;
 
-    private Integer pBcAvId;
+    private Long pBcAvId;
 
     private Boolean isSubAttr;
 
     private String icon;
 
-    private Byte displayOrder;
+    private Integer displayOrder;
 
     private String status;
 
-    private Short bcId;
+    private Integer bcId;
 
     private Boolean isFilter;
 
     private Boolean isMobileDisplay;
 
-    public Integer getBcAvId() {
-        return bcAvId;
-    }
+	public Long getBcAvId() {
+		return bcAvId;
+	}
 
-    public void setBcAvId(Integer bcAvId) {
-        this.bcAvId = bcAvId;
-    }
+	public void setBcAvId(Long bcAvId) {
+		this.bcAvId = bcAvId;
+	}
 
-    public Integer getBcAttrId() {
-        return bcAttrId;
-    }
+	public Long getBcAttrId() {
+		return bcAttrId;
+	}
 
-    public void setBcAttrId(Integer bcAttrId) {
-        this.bcAttrId = bcAttrId;
-    }
+	public void setBcAttrId(Long bcAttrId) {
+		this.bcAttrId = bcAttrId;
+	}
 
-    public Integer getAttrValueId() {
-        return attrValueId;
-    }
+	public Long getAttrValueId() {
+		return attrValueId;
+	}
 
-    public void setAttrValueId(Integer attrValueId) {
-        this.attrValueId = attrValueId;
-    }
+	public void setAttrValueId(Long attrValueId) {
+		this.attrValueId = attrValueId;
+	}
 
-    public Integer getpBcAvId() {
-        return pBcAvId;
-    }
+	public Long getpBcAvId() {
+		return pBcAvId;
+	}
 
-    public void setpBcAvId(Integer pBcAvId) {
-        this.pBcAvId = pBcAvId;
-    }
+	public void setpBcAvId(Long pBcAvId) {
+		this.pBcAvId = pBcAvId;
+	}
 
-    public Boolean getIsSubAttr() {
-        return isSubAttr;
-    }
+	public Boolean getIsSubAttr() {
+		return isSubAttr;
+	}
 
-    public void setIsSubAttr(Boolean isSubAttr) {
-        this.isSubAttr = isSubAttr;
-    }
+	public void setIsSubAttr(Boolean isSubAttr) {
+		this.isSubAttr = isSubAttr;
+	}
 
-    public String getIcon() {
-        return icon;
-    }
+	public String getIcon() {
+		return icon;
+	}
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
 
-    public Byte getDisplayOrder() {
-        return displayOrder;
-    }
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
 
-    public void setDisplayOrder(Byte displayOrder) {
-        this.displayOrder = displayOrder;
-    }
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public Short getBcId() {
-        return bcId;
-    }
+	public Integer getBcId() {
+		return bcId;
+	}
 
-    public void setBcId(Short bcId) {
-        this.bcId = bcId;
-    }
+	public void setBcId(Integer bcId) {
+		this.bcId = bcId;
+	}
 
-    public Boolean getIsFilter() {
-        return isFilter;
-    }
+	public Boolean getIsFilter() {
+		return isFilter;
+	}
 
-    public void setIsFilter(Boolean isFilter) {
-        this.isFilter = isFilter;
-    }
+	public void setIsFilter(Boolean isFilter) {
+		this.isFilter = isFilter;
+	}
 
-    public Boolean getIsMobileDisplay() {
-        return isMobileDisplay;
-    }
+	public Boolean getIsMobileDisplay() {
+		return isMobileDisplay;
+	}
 
-    public void setIsMobileDisplay(Boolean isMobileDisplay) {
-        this.isMobileDisplay = isMobileDisplay;
-    }
+	public void setIsMobileDisplay(Boolean isMobileDisplay) {
+		this.isMobileDisplay = isMobileDisplay;
+	}
+
 }
