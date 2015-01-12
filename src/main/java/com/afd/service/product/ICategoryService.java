@@ -1,8 +1,6 @@
 package com.afd.service.product;
 
 import java.util.List;
-
-import com.afd.common.mybatis.Page;
 import com.afd.model.product.BaseCategory;
 import com.afd.model.product.BcAttrValue;
 import com.afd.model.product.BcAttribute;
@@ -39,15 +37,15 @@ public interface ICategoryService {
 	 * @param pId 父ID
 	 * @return -1:编码越过预定,否则基础类目新编码
 	 */
-	public String getCodeByBpid(int flag, Integer pId);
+	public String getCodeByPid(int flag, Integer pId);
 	
 	/**
 	 * @param name 基本类目名称
-	 * @param pBcId 父类目ID
+	 * @param pId 父类目ID
 	 * @param status 0:无效,1:有效
 	 * @return
 	 */
-	public BaseCategory getBaseCategoryByNameAndLevel(Integer pBcId, String name, String status);
+	public BaseCategory getBaseCategoryByNameAndPid(Integer pId, String name, String status);
 	
 	/**
 	 * @param bcName 类目名称
@@ -60,7 +58,7 @@ public interface ICategoryService {
 	/**
 	 * 删除指定的基本类目
 	 * @param bcId
-	 * @return 1:成功,0:失败,-1:存在子类目不允许删除-2:类目不存在,-5:已关品牌不允许删除
+	 * @return 1:成功,0:失败,-1:存在子类目不允许删除-2:类目不存在
 	 */
 	public int deleteByBcId(Integer bcId);
 	
@@ -139,13 +137,6 @@ public interface ICategoryService {
     List<BcAttributeVO> getBcAttributeByBcId(Integer bcId, String status);
 
     /**
-     * 分页获取信息列表
-     * @param status
-     * @param page
-     * @return
-     */
-    public Page<BcAttributeVO> getBcAttributeByBcIdPage(Integer bcId, String status, Page<BcAttributeVO> page);
-    /**
      * @param sbcaId
      * @param dbcaId
      * @return
@@ -175,13 +166,6 @@ public interface ICategoryService {
 	 */
     public List<BcAttrValueVO> getBcAttrValueByBcAttrId(Long bcAttrId, String status, boolean sub);
 	
-    /**
-	 * @param bcAttrId 分页获取类目属性的所有一级值
-	 * @param status
-	 * @param page
-	 * @return
-	 */
-    Page<BcAttrValueVO> getBcAttrValueByBcAttrIdPage(Long bcAttrId, String status, Page<BcAttrValueVO> page);
 	
 	/**
 	 * 获取指定属性值ID的子属性列表
@@ -191,15 +175,6 @@ public interface ICategoryService {
 	 */
     public List<BcAttrValueVO> getBcAttrValueByPBcAvId(Long pBcAvId, String status);
     
-    /**
-	 * 分页获取指定属性值ID的子属性列表
-	 * @param pBcAvId
-	 * @param status
-	 * @param page
-	 * @return
-	 */
-    Page<BcAttrValueVO> getBcAttrValueByPBcAvIdPage(Long pBcAvId, String status, Page<BcAttrValueVO> page);
-	
     /**
      * 删除指定ID的属性值
      * @param bcAvId
@@ -291,15 +266,6 @@ public interface ICategoryService {
      */
     public boolean updateBcSpecOrder(Long sbcsId, Long dbcsId);
     
-    /**
-     * 分页获取信息列表
-     * @param status
-     * @param page
-     * @return
-     */
-    public Page<BcSpecVO> getBcSpecByBcIdPage(Integer bcId, String status, Page<BcSpecVO> page);
-    
-    
     
     /**
      * @param specValueId 规格值ID
@@ -336,13 +302,6 @@ public interface ICategoryService {
      */
     public List<BcSpecValue> getBcSpecValueByBcSpecId(Long bcSpecId, String status);
 
-    /**
-     * 根据类目规格关系ID分页获取该规格值列表信息
-     * @param bcSpecId
-     * @param status
-     * @return
-     */
-    Page<BcSpecValue> getBcSpecValueByBcSpecIdPage(Long bcSpecId, String status, Page<BcSpecValue> page);
     
     /**
      * 修改规格值信息

@@ -172,7 +172,7 @@ public class BaseCategoryInfoVO implements Serializable {
 		private Long bcSpecId;
 		private Long specId;
 		private String specName;
-		private Short displayOrder;
+		private Integer displayOrder;
 		private String displayMode;
 		private Boolean isFilter;
 		private List<SpecValue> specValueList;
@@ -202,11 +202,11 @@ public class BaseCategoryInfoVO implements Serializable {
 			this.specName = specName;
 		}
 
-		public Short getDisplayOrder() {
+		public Integer getDisplayOrder() {
 			return displayOrder;
 		}
 
-		public void setDisplayOrder(Short displayOrder) {
+		public void setDisplayOrder(Integer displayOrder) {
 			this.displayOrder = displayOrder;
 		}
 
@@ -240,10 +240,10 @@ public class BaseCategoryInfoVO implements Serializable {
 			private Long specValueId;
 			private String specValueName;
 		    private String imgUrl;
-		    private Short displayOrder;
+		    private Integer displayOrder;
 		    private Boolean isFilter;
 		    private Boolean isMobileDisplay;
-		    private Long mDisplayPosition;
+		    private Integer mDisplayPosition;
 		    
 			public Long getSpecValueId() {
 				return specValueId;
@@ -263,10 +263,10 @@ public class BaseCategoryInfoVO implements Serializable {
 			public void setImgUrl(String imgUrl) {
 				this.imgUrl = imgUrl;
 			}
-			public Short getDisplayOrder() {
+			public Integer getDisplayOrder() {
 				return displayOrder;
 			}
-			public void setDisplayOrder(Short displayOrder) {
+			public void setDisplayOrder(Integer displayOrder) {
 				this.displayOrder = displayOrder;
 			}
 			public Long getBcSvId() {
@@ -287,10 +287,10 @@ public class BaseCategoryInfoVO implements Serializable {
 			public void setIsMobileDisplay(Boolean isMobileDisplay) {
 				this.isMobileDisplay = isMobileDisplay;
 			}
-			public Long getmDisplayPosition() {
+			public Integer getmDisplayPosition() {
 				return mDisplayPosition;
 			}
-			public void setmDisplayPosition(Long mDisplayPosition) {
+			public void setmDisplayPosition(Integer mDisplayPosition) {
 				this.mDisplayPosition = mDisplayPosition;
 			}
 		}
@@ -388,7 +388,6 @@ public class BaseCategoryInfoVO implements Serializable {
     	    private Boolean isSubAttr;
     	    private Boolean isFilter;
 		    private Boolean isMobileDisplay;
-		    private Long mDisplayPosition;
     	    //子属性
     	    private Attr subAttrObj;
     	    
@@ -445,12 +444,6 @@ public class BaseCategoryInfoVO implements Serializable {
 			}
 			public void setSubAttrObj(Attr subAttrObj) {
 				this.subAttrObj = subAttrObj;
-			}
-			public Long getmDisplayPosition() {
-				return mDisplayPosition;
-			}
-			public void setmDisplayPosition(Long mDisplayPosition) {
-				this.mDisplayPosition = mDisplayPosition;
 			}
         }
     }
