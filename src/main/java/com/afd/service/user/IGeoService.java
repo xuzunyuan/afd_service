@@ -24,4 +24,11 @@ public interface IGeoService {
 	 * @return
 	 */
 	public Geo getGeoById(int id);
+	
+	/**
+	 * 根据一组id获取geo
+	 * @param ids
+	 * @return
+	 */
+	public List<Geo> getGeosByIds(List<Integer> ids);
 }
