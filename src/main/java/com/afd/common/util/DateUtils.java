@@ -13,7 +13,7 @@ public final class DateUtils {
 	private static final Logger logger = LoggerFactory
 			.getLogger(DateUtils.class);
 
-	private static final String DEFAULT_PATTERN = "yyyy-MM-dd HH:mm:ss";
+	public static final String DEFAULT_PATTERN = "yyyy-MM-dd HH:mm:ss";
 	public static final String PART_TIME_PATTERN = "yyyy-MM-dd";
 
 	/**
@@ -28,23 +28,30 @@ public final class DateUtils {
 
 	/**
 	 * 将日期增加相应的天数
-	 * @param date   日期
-	 * @param amount 天数
+	 * 
+	 * @param date
+	 *            日期
+	 * @param amount
+	 *            天数
 	 * @return
 	 */
-	public static Date addDay(Date date,int amount){
-		return dateAdd(date,Calendar.DAY_OF_MONTH,amount);
+	public static Date addDay(Date date, int amount) {
+		return dateAdd(date, Calendar.DAY_OF_MONTH, amount);
 	}
-	
+
 	/**
 	 * 通过指定的域给日期加/减相应的时间
-	 * @param date   指定的日期
-	 * @param field  指定的日期域(例如：Calendar.DAY_OF_MONTH)
-	 * @param amount 加/减的数量(负数代表减)
+	 * 
+	 * @param date
+	 *            指定的日期
+	 * @param field
+	 *            指定的日期域(例如：Calendar.DAY_OF_MONTH)
+	 * @param amount
+	 *            加/减的数量(负数代表减)
 	 * @return
 	 */
-	public static Date dateAdd(Date date,int field,int amount){
-		if(date != null){
+	public static Date dateAdd(Date date, int field, int amount) {
+		if (date != null) {
 			Calendar now = Calendar.getInstance();
 			now.setTime(date);
 			now.add(field, amount);
@@ -52,7 +59,7 @@ public final class DateUtils {
 		}
 		return date;
 	}
-	
+
 	/**
 	 * 将Date类型转化为指定格式的String类型
 	 * 
@@ -109,9 +116,10 @@ public final class DateUtils {
 	public static Date parseDate(String strDate) {
 		return parseDate(strDate, DEFAULT_PATTERN);
 	}
-	
+
 	/**
 	 * 将long型的日期转化为Date型
+	 * 
 	 * @param time
 	 * @return
 	 */
