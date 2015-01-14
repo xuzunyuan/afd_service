@@ -6,7 +6,7 @@ import java.util.Date;
 public class SpecValue implements Serializable {
 	private static final long serialVersionUID = -1746196142698813995L;
 
-	private Integer specValueId;
+	private Long specValueId;
 
     private String specValueName;
 
@@ -24,11 +24,11 @@ public class SpecValue implements Serializable {
 
     private Date lastUpdateByDate;
 
-    public Integer getSpecValueId() {
+    public Long getSpecValueId() {
         return specValueId;
     }
 
-    public void setSpecValueId(Integer specValueId) {
+    public void setSpecValueId(Long specValueId) {
         this.specValueId = specValueId;
     }
 

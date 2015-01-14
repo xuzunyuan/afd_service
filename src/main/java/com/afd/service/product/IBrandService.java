@@ -8,33 +8,21 @@ import com.afd.model.product.Brand;
  */
 public interface IBrandService {
 
-	/**
-	 *  通过主键获取品牌
-	 * @param brandId
-	 * @return
+    /**
+	 * @param brand 
+	 * @return 成功返回ID
 	 */
-	public Brand getBrandById(Long brandId);
+	Long insertBrand(Brand brand);
+
+	boolean updateByBrandId(Brand record);
 	
 	/**
-	 *  添加品牌
-	 * @param brand
-	 * @return
+	 * @param brandId 品牌ID
+	 * @return 1:成功,-1:已关联类目不允许删除,0:失败
 	 */
-	public boolean addBrand(Brand brand);
+	int deleteByBrandId(Long brandId);
 	
-	/**
-	 * 修改品牌信息
-	 * @param brand
-	 * @return
-	 */
-	public boolean editBrand(Brand brand);
-	
-	/**
-	 * 通过主键ID删除追加评论信息
-	 * @param brandId
-	 * @return
-	 */
-	public boolean deleteBrand(Long brandId);
+	Brand getByBrandId(Long brandId);
 	
 	/**
 	 * @param brandName 中文名 精确匹配
@@ -43,5 +31,4 @@ public interface IBrandService {
 	 * @return
 	 */
 	Brand getBrandByName(String brandName, String brandEname, String status);
-	
 }

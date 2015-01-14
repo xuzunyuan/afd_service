@@ -6,7 +6,7 @@ import java.util.Date;
 public class AttributeValue implements Serializable {
 	private static final long serialVersionUID = 5836500081642997193L;
 
-	private Integer attrValueId;
+	private Long attrValueId;
 
     private String attrValueName;
 
@@ -22,11 +22,11 @@ public class AttributeValue implements Serializable {
 
     private Date lastUpdateByDate;
 
-    public Integer getAttrValueId() {
+    public Long getAttrValueId() {
         return attrValueId;
     }
 
-    public void setAttrValueId(Integer attrValueId) {
+    public void setAttrValueId(Long attrValueId) {
         this.attrValueId = attrValueId;
     }
 
