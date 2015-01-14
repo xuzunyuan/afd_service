@@ -5,47 +5,47 @@ import java.io.Serializable;
 public class BcSpec implements Serializable {
 	private static final long serialVersionUID = -2750724936705067748L;
 
-	private Integer bcSpecId;
+	private Long bcSpecId;
 
-    private Short bcId;
+    private Integer bcId;
 
-    private Integer specId;
+    private Long specId;
 
-    private Byte displayOrder;
+    private Integer displayOrder;
 
     private String status;
 
     private Boolean isFilter;
 
-    public Integer getBcSpecId() {
+    public Long getBcSpecId() {
         return bcSpecId;
     }
 
-    public void setBcSpecId(Integer bcSpecId) {
+    public void setBcSpecId(Long bcSpecId) {
         this.bcSpecId = bcSpecId;
     }
 
-    public Short getBcId() {
+    public Integer getBcId() {
         return bcId;
     }
 
-    public void setBcId(Short bcId) {
+    public void setBcId(Integer bcId) {
         this.bcId = bcId;
     }
 
-    public Integer getSpecId() {
+    public Long getSpecId() {
         return specId;
     }
 
-    public void setSpecId(Integer specId) {
+    public void setSpecId(Long specId) {
         this.specId = specId;
     }
 
-    public Byte getDisplayOrder() {
+    public Integer getDisplayOrder() {
         return displayOrder;
     }
 
-    public void setDisplayOrder(Byte displayOrder) {
+    public void setDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
     }
 

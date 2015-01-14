@@ -2,11 +2,12 @@ package com.afd.model.product;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class BaseCategory implements Serializable {
 	private static final long serialVersionUID = -8469240612799673131L;
 
-	private Short bcId;
+	private Integer bcId;
 
     private String bcName;
 
@@ -20,9 +21,9 @@ public class BaseCategory implements Serializable {
 
     private String pathName;
 
-    private String isLeaf;
+    private Boolean isLeaf;
 
-    private Short displayOrder;
+    private Integer displayOrder;
 
     private Date createDate;
 
@@ -30,11 +31,21 @@ public class BaseCategory implements Serializable {
 
     private String status;
 
-    public Short getBcId() {
+    private List<BaseCategory> categories;
+    
+    public List<BaseCategory> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<BaseCategory> categories) {
+		this.categories = categories;
+	}
+
+	public Integer getBcId() {
         return bcId;
     }
 
-    public void setBcId(Short bcId) {
+    public void setBcId(Integer bcId) {
         this.bcId = bcId;
     }
 
@@ -63,14 +74,14 @@ public class BaseCategory implements Serializable {
     }
 
     public Integer getpBcId() {
-        return pBcId;
-    }
+		return pBcId;
+	}
 
-    public void setpBcId(Integer pBcId) {
-        this.pBcId = pBcId;
-    }
+	public void setpBcId(Integer pBcId) {
+		this.pBcId = pBcId;
+	}
 
-    public String getPathId() {
+	public String getPathId() {
         return pathId;
     }
 
@@ -86,19 +97,19 @@ public class BaseCategory implements Serializable {
         this.pathName = pathName;
     }
 
-    public String getIsLeaf() {
-        return isLeaf;
-    }
+    public Boolean getIsLeaf() {
+		return isLeaf;
+	}
 
-    public void setIsLeaf(String isLeaf) {
-        this.isLeaf = isLeaf;
-    }
+	public void setIsLeaf(Boolean isLeaf) {
+		this.isLeaf = isLeaf;
+	}
 
-    public Short getDisplayOrder() {
+	public Integer getDisplayOrder() {
         return displayOrder;
     }
 
-    public void setDisplayOrder(Short displayOrder) {
+    public void setDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
     }
 

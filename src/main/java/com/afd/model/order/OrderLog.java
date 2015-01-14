@@ -1,8 +1,9 @@
 package com.afd.model.order;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OrderLog {
+public class OrderLog implements Serializable{
     private Long orderLogId;
 
     private Integer orderId;
