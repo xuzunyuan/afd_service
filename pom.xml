@@ -4,6 +4,7 @@
 	<groupId>com.afd.service</groupId>
 	<artifactId>afd_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>com.afd</groupId>
