@@ -1,8 +1,14 @@
 package com.afd.model.img;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UploadResponse {
+public class UploadResponse implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 511292377113030114L;
+
 	/* 返回状态码，大于0表示正常 */
 	private int code;
 
