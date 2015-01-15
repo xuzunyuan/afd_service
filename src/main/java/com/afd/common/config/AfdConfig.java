@@ -15,4 +15,7 @@ public final class AfdConfig {
 	}
 
 	public static final String charset = "utf-8"; // 通用编码
+	
+	public static final String staff_default_password = "123456"; // boss用户默认密码
+	public static final String seller_default_password = "123456"; // 卖家默认密码
 }
