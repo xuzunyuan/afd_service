@@ -3,39 +3,42 @@ package com.afd.model.order;
 import java.io.Serializable;
 
 public class PaymentDetail implements Serializable{
-    private Integer pDetailId;
 
-    private Integer paymentId;
+	private static final long serialVersionUID = 2888424980934302288L;
 
-    private Integer orderId;
+	private Long pDetailId;
+
+    private Long paymentId;
+
+    private Long orderId;
 
     private Float amount;
 
-    private Integer userAccountId;
+    private Long userAccountId;
 
     private String paymentType;
 
-    public Integer getpDetailId() {
+    public Long getpDetailId() {
         return pDetailId;
     }
 
-    public void setpDetailId(Integer pDetailId) {
+    public void setpDetailId(Long pDetailId) {
         this.pDetailId = pDetailId;
     }
 
-    public Integer getPaymentId() {
+    public Long getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(Integer paymentId) {
+    public void setPaymentId(Long paymentId) {
         this.paymentId = paymentId;
     }
 
-    public Integer getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
@@ -47,11 +50,11 @@ public class PaymentDetail implements Serializable{
         this.amount = amount;
     }
 
-    public Integer getUserAccountId() {
+    public Long getUserAccountId() {
         return userAccountId;
     }
 
-    public void setUserAccountId(Integer userAccountId) {
+    public void setUserAccountId(Long userAccountId) {
         this.userAccountId = userAccountId;
     }
 
