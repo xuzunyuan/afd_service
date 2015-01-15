@@ -38,8 +38,8 @@ public class CookieCartItem implements Serializable {
 	
 	public CartItem transferCartItem(){
 		CartItem cartItem = new CartItem();
-		cartItem.setNum(this.num);
 		cartItem.setBrandShowDetailId(this.brandShowDetailId);
+		cartItem.setNum(this.num);
 		cartItem.setSelected(this.selected);
 
 		return cartItem;
