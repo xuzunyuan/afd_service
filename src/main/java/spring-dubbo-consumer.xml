@@ -11,6 +11,11 @@
  	
  	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->   
  	<dubbo:reference check="false" retries="0" id="dubbo_orderService" interface="com.afd.service.order.IOrderService" />
+ 	
+ 	<dubbo:reference check="false" retries="0" id="dubbo_categoryService" interface="com.afd.service.product.ICategoryService" />
+ 	<dubbo:reference check="false" retries="0" id="dubbo_attributeService" interface="com.afd.service.product.IAttributeService" />
+ 	<dubbo:reference check="false" retries="0" id="dubbo_brandService" interface="com.afd.service.product.IBrandService" />
+ 	<dubbo:reference check="false" retries="0" id="dubbo_specService" interface="com.afd.service.product.ISpecService" />
 
    	<beans profile="develop">
    		<!-- 广播中心地址 -->
