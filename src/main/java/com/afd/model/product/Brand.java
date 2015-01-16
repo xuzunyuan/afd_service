@@ -6,7 +6,7 @@ import java.util.Date;
 public class Brand implements Serializable  {
 	private static final long serialVersionUID = -4327474639191784199L;
 
-	private Integer brandId;
+	private Long brandId;
 
     private String brandName;
 
@@ -26,11 +26,11 @@ public class Brand implements Serializable  {
 
     private String pinyin;
 
-    public Integer getBrandId() {
+    public Long getBrandId() {
         return brandId;
     }
 
-    public void setBrandId(Integer brandId) {
+    public void setBrandId(Long brandId) {
         this.brandId = brandId;
     }
 

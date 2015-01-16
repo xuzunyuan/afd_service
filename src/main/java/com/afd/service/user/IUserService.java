@@ -1,5 +1,7 @@
 package com.afd.service.user;
 
+import com.afd.model.user.User;
+
 public interface IUserService {
 	/**
 	 * 验证用户名是否唯一
@@ -7,4 +9,10 @@ public interface IUserService {
 	 * @return true：唯一；false：不唯一
 	 */
 	public boolean uniqueUserName(String userName);
+	/**
+	 * 根据用户id获取用户
+	 * @param userId
+	 * @return
+	 */
+	public User getUserById(Long userId);
 }

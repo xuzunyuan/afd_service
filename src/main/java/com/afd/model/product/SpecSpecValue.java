@@ -5,43 +5,44 @@ import java.io.Serializable;
 public class SpecSpecValue implements Serializable {
 	private static final long serialVersionUID = -3688341900733524724L;
 
-	private Integer sSVId;
+	private Long sSVId;
 
-    private Integer specId;
+    private Long specId;
 
-    private Integer specValueId;
+    private Long specValueId;
 
-    private Byte displayOrder;
+	private Integer displayOrder;
+	
+    public Long getsSVId() {
+		return sSVId;
+	}
 
-    public Integer getsSVId() {
-        return sSVId;
-    }
+	public void setsSVId(Long sSVId) {
+		this.sSVId = sSVId;
+	}
 
-    public void setsSVId(Integer sSVId) {
-        this.sSVId = sSVId;
-    }
+	public Long getSpecId() {
+		return specId;
+	}
 
-    public Integer getSpecId() {
-        return specId;
-    }
+	public void setSpecId(Long specId) {
+		this.specId = specId;
+	}
 
-    public void setSpecId(Integer specId) {
-        this.specId = specId;
-    }
+	public Long getSpecValueId() {
+		return specValueId;
+	}
 
-    public Integer getSpecValueId() {
-        return specValueId;
-    }
+	public void setSpecValueId(Long specValueId) {
+		this.specValueId = specValueId;
+	}
 
-    public void setSpecValueId(Integer specValueId) {
-        this.specValueId = specValueId;
-    }
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
 
-    public Byte getDisplayOrder() {
-        return displayOrder;
-    }
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
 
-    public void setDisplayOrder(Byte displayOrder) {
-        this.displayOrder = displayOrder;
-    }
 }

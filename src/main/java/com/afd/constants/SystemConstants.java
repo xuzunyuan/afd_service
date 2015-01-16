@@ -3,7 +3,7 @@ package com.afd.constants;
 public interface SystemConstants {
 	public static final String ENCODING = "utf-8";
 	//网站秘钥
-	public static final String WEB_KEY = "yiwang_2014";
+	public static final String WEB_KEY = "afd_2015";
 	//cookie中的用户
 	public static final String COOKIE_U = "_u";
 	//cookie中的_um
