@@ -20,7 +20,6 @@ public class Cart implements Serializable{
 	
 	private Long brandShowId;
 	private String storeName;
-	private String logoUrl;
 	private Long userId;
 	private boolean selected;
 	private boolean hasProdNormal;
@@ -95,14 +94,6 @@ public class Cart implements Serializable{
 		}
 		
 		return hasProdNormal;
-	}
-
-	public String getLogoUrl() {
-		return logoUrl;
-	}
-
-	public void setLogoUrl(String logoUrl) {
-		this.logoUrl = logoUrl;
 	}
 
 }

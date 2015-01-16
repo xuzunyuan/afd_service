@@ -47,6 +47,26 @@ public class BrandShowDetail  implements Serializable {
     private String createByName;
 
     private Date removeDate;
+    
+    private Sku sku;
+    
+    private Product product;
+
+	public Sku getSku() {
+		return sku;
+	}
+
+	public void setSku(Sku sku) {
+		this.sku = sku;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
 
 	public Long getbSDId() {
 		return bSDId;
