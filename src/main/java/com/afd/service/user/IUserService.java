@@ -29,5 +29,12 @@ public interface IUserService {
 	 * @return
 	 */
 	public User getUserByUserName(String userName);
+	
+	/**
+	 * 更新用户
+	 * @param user
+	 * @return
+	 */
+	public int updateUser(User user);
 
 }
