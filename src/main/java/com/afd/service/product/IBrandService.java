@@ -18,7 +18,7 @@ public interface IBrandService {
 	
 	/**
 	 * @param brandId 品牌ID
-	 * @return 1:成功,-1:已关联类目不允许删除,0:失败
+	 * @return 1:成功,-1:已关联卖家不允许删除,0:失败
 	 */
 	int deleteByBrandId(Long brandId);
 	

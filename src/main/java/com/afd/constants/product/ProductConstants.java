@@ -75,8 +75,7 @@ public interface ProductConstants {
 	/**
 	 * 销售类目缓存中的基本信息列表HASHKEY前缀
 	 */
-	public static final String SC_LIST = SystemConstants.CACHE_PREFIX
-			+ "sc_list_pid_";
+	public static final String SC_LIST = SystemConstants.CACHE_PREFIX + "sc_list_pid_";
 
 	/**
 	 * 基本类目和属性规格集体KEY
@@ -85,8 +84,7 @@ public interface ProductConstants {
 	/**
 	 * 基本类目和相关属性规格以如下为HASHKEY前缀(后面再加上类目的id)组成
 	 */
-	public static final String BC_ATTR_SPEC_BRAND = SystemConstants.CACHE_PREFIX
-			+ "bc_a_s_b_";
+	public static final String BC_ATTR_SPEC_BRAND = SystemConstants.CACHE_PREFIX + "bc_a_s_b_";
 	/**
 	 * 签约类目关联基本类目KEY
 	 */
@@ -107,8 +105,11 @@ public interface ProductConstants {
 	/**
 	 * 卖家上次选择类目缓存KEY
 	 */
-	public static final String BC_RECORD_ = SystemConstants.CACHE_PREFIX
-			+ "bc_record_";
+	public static final String BC_RECORD_ = SystemConstants.CACHE_PREFIX + "bc_record_";
+	
+	
+	public static final String BRAND = SystemConstants.CACHE_PREFIX + "br_";
+	
 
 	/**
 	 * 一级类目PID为0
