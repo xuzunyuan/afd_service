@@ -1,6 +1,7 @@
 package com.afd.model.order;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 public class PaymentDetail implements Serializable{
 
@@ -12,7 +13,7 @@ public class PaymentDetail implements Serializable{
 
     private Long orderId;
 
-    private Float amount;
+    private BigDecimal amount;
 
     private Long userAccountId;
 
@@ -42,11 +43,11 @@ public class PaymentDetail implements Serializable{
         this.orderId = orderId;
     }
 
-    public Float getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(Float amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

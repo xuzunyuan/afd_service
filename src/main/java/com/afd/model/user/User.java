@@ -9,7 +9,7 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = -2942237996139751825L;
 
-	private Integer userId;
+	private Long userId;
 
 	private String userName;
 
@@ -53,15 +53,15 @@ public class User implements Serializable {
 
 	private String freezeByName;
 
-	private Integer freezeById;
+	private Long freezeById;
 
 	private Date freezeByDate;
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -234,11 +234,11 @@ public class User implements Serializable {
 		this.freezeByName = freezeByName == null ? null : freezeByName.trim();
 	}
 
-	public Integer getFreezeById() {
+	public Long getFreezeById() {
 		return freezeById;
 	}
 
-	public void setFreezeById(Integer freezeById) {
+	public void setFreezeById(Long freezeById) {
 		this.freezeById = freezeById;
 	}
 

@@ -5,31 +5,31 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Order implements Serializable{
-    private Integer orderId;
+    private Long orderId;
 
     private String orderCode;
 
-    private Integer userId;
+    private Long userId;
 
     private String userName;
 
     private Date createdDate;
 
-    private Integer sellerId;
+    private Long sellerId;
 
     private String orderType;
 
     private String orderStatus;
 
-    private Float prodFee;
+    private BigDecimal prodFee;
 
     private String prodDiscountType;
 
-    private Float prodDiscountFee;
+    private BigDecimal prodDiscountFee;
 
-    private Float deliverFee;
+    private BigDecimal deliverFee;
 
-    private Float deliverDiscount;
+    private BigDecimal deliverDiscount;
 
     private BigDecimal orderFee;
 
@@ -105,11 +105,11 @@ public class Order implements Serializable{
 
     private String lastUpdateByName;
 
-    public Integer getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
@@ -121,11 +121,11 @@ public class Order implements Serializable{
         this.orderCode = orderCode == null ? null : orderCode.trim();
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -145,11 +145,11 @@ public class Order implements Serializable{
         this.createdDate = createdDate;
     }
 
-    public Integer getSellerId() {
+    public Long getSellerId() {
         return sellerId;
     }
 
-    public void setSellerId(Integer sellerId) {
+    public void setSellerId(Long sellerId) {
         this.sellerId = sellerId;
     }
 
@@ -169,11 +169,11 @@ public class Order implements Serializable{
         this.orderStatus = orderStatus == null ? null : orderStatus.trim();
     }
 
-    public Float getProdFee() {
+    public BigDecimal getProdFee() {
         return prodFee;
     }
 
-    public void setProdFee(Float prodFee) {
+    public void setProdFee(BigDecimal prodFee) {
         this.prodFee = prodFee;
     }
 
@@ -185,27 +185,27 @@ public class Order implements Serializable{
         this.prodDiscountType = prodDiscountType == null ? null : prodDiscountType.trim();
     }
 
-    public Float getProdDiscountFee() {
+    public BigDecimal getProdDiscountFee() {
         return prodDiscountFee;
     }
 
-    public void setProdDiscountFee(Float prodDiscountFee) {
+    public void setProdDiscountFee(BigDecimal prodDiscountFee) {
         this.prodDiscountFee = prodDiscountFee;
     }
 
-    public Float getDeliverFee() {
+    public BigDecimal getDeliverFee() {
         return deliverFee;
     }
 
-    public void setDeliverFee(Float deliverFee) {
+    public void setDeliverFee(BigDecimal deliverFee) {
         this.deliverFee = deliverFee;
     }
 
-    public Float getDeliverDiscount() {
+    public BigDecimal getDeliverDiscount() {
         return deliverDiscount;
     }
 
-    public void setDeliverDiscount(Float deliverDiscount) {
+    public void setDeliverDiscount(BigDecimal deliverDiscount) {
         this.deliverDiscount = deliverDiscount;
     }
 
