@@ -9,5 +9,10 @@ public interface IUserService {
 	 * @return true：唯一；false：不唯一
 	 */
 	public boolean uniqueUserName(String userName);
+	/**
+	 * 根据用户id获取用户
+	 * @param userId
+	 * @return
+	 */
 	public User getUserById(Long userId);
 }
