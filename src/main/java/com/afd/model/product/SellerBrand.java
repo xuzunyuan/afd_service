@@ -11,6 +11,8 @@ public class SellerBrand implements Serializable {
     private Integer sellerId;
 
     private Integer brandId;
+    
+    private String brandName;
 
     private Date submitDate;
 
@@ -58,7 +60,15 @@ public class SellerBrand implements Serializable {
         this.brandId = brandId;
     }
 
-    public Date getSubmitDate() {
+    public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
+	public Date getSubmitDate() {
         return submitDate;
     }
 
