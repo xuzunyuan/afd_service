@@ -15,4 +15,19 @@ public interface IUserService {
 	 * @return
 	 */
 	public User getUserById(Long userId);
+	
+	/**
+	 * 注册用户
+	 * @param user
+	 * @return
+	 */
+	public Long register(User user);
+	
+	/**
+	 * 用户登录
+	 * @param userName
+	 * @param pwd
+	 * @return
+	 */
+	public boolean logIn(String userName,String pwd);
 }
