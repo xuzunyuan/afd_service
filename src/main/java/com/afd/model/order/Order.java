@@ -3,6 +3,7 @@ package com.afd.model.order;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 public class Order implements Serializable{
     private Long orderId;
@@ -104,6 +105,8 @@ public class Order implements Serializable{
     private Date lastUpdateDate;
 
     private String lastUpdateByName;
+    
+    private List<OrderItem> orderItems;
 
     public Long getOrderId() {
         return orderId;
@@ -504,4 +507,12 @@ public class Order implements Serializable{
     public void setLastUpdateByName(String lastUpdateByName) {
         this.lastUpdateByName = lastUpdateByName == null ? null : lastUpdateByName.trim();
     }
+
+	public List<OrderItem> getOrderItems() {
+		return orderItems;
+	}
+
+	public void setOrderItems(List<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
 }
