@@ -24,10 +24,10 @@ public interface IUserService {
 	public Long register(User user);
 	
 	/**
-	 * 用户登录
+	 * 根据用户名查询用户
 	 * @param userName
-	 * @param pwd
 	 * @return
 	 */
-	public boolean logIn(String userName,String pwd);
+	public User getUserByUserName(String userName);
+
 }
