@@ -100,12 +100,12 @@ public interface IProductService {
 	public Page<Sku> getSkusByProdIdPage( String prodId,Page<Sku> page);
 	
 	/**
-	 * 根据prodId获sku分页列表
-	 * @param prodId
+	 * 批量查询sku
+	 * @param skuIds
 	 * @param page
 	 * @return
 	 */
-	public Page<Sku> getSkusBySkuIds(List<Integer> skuIds);
+	public List<Sku> getSkusBySkuIds(List<Integer> skuIds);
 
 	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----商品图片CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
 	/**
