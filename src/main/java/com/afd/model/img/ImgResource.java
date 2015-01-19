@@ -10,6 +10,13 @@ public class ImgResource implements Serializable {
 	 */
 	private static final long serialVersionUID = -2393850093336402555L;
 
+	public ImgResource() {
+	}
+
+	public ImgResource(String id) {
+		this.setId(id);
+	}
+
 	/* 分配给图片的ID，使用ID下载图片 */
 	private String id;
 
