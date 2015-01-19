@@ -29,4 +29,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public int cancelOrderByBoss(List<Long> orderIds, String optName, String cancelReason);
+	
+	/**
+	 * 根据用户id获取订单列表
+	 * @param userId
+	 * @return
+	 */
+	public List<Order> getOrdersByUserId(Long userId);
 }
