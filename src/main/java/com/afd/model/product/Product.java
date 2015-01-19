@@ -56,10 +56,14 @@ public class Product implements Serializable {
 
     private Date lastAuditDate;
 
-    private String detail;
-    
-    private List<Sku> skus;
+    private String material;
 
+    private String sourceArea;
+
+    private String detail;
+
+    private List<Sku> skus;
+    
     public Integer getProdId() {
         return prodId;
     }
@@ -73,7 +77,7 @@ public class Product implements Serializable {
     }
 
     public void setProdCode(String prodCode) {
-        this.prodCode = prodCode;
+        this.prodCode = prodCode == null ? null : prodCode.trim();
     }
 
     public String getBcCode() {
@@ -81,7 +85,7 @@ public class Product implements Serializable {
     }
 
     public void setBcCode(String bcCode) {
-        this.bcCode = bcCode;
+        this.bcCode = bcCode == null ? null : bcCode.trim();
     }
 
     public String getName() {
@@ -89,7 +93,7 @@ public class Product implements Serializable {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getTitle() {
@@ -97,7 +101,7 @@ public class Product implements Serializable {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public String getSubtitle() {
@@ -105,7 +109,7 @@ public class Product implements Serializable {
     }
 
     public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+        this.subtitle = subtitle == null ? null : subtitle.trim();
     }
 
     public Integer getBcId() {
@@ -129,7 +133,7 @@ public class Product implements Serializable {
     }
 
     public void setArtNo(String artNo) {
-        this.artNo = artNo;
+        this.artNo = artNo == null ? null : artNo.trim();
     }
 
     public Integer getBrandId() {
@@ -145,7 +149,7 @@ public class Product implements Serializable {
     }
 
     public void setBrandName(String brandName) {
-        this.brandName = brandName;
+        this.brandName = brandName == null ? null : brandName.trim();
     }
 
     public String getType() {
@@ -153,7 +157,7 @@ public class Product implements Serializable {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = type == null ? null : type.trim();
     }
 
     public String getStatus() {
@@ -161,7 +165,7 @@ public class Product implements Serializable {
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.status = status == null ? null : status.trim();
     }
 
     public String getBrief() {
@@ -169,7 +173,7 @@ public class Product implements Serializable {
     }
 
     public void setBrief(String brief) {
-        this.brief = brief;
+        this.brief = brief == null ? null : brief.trim();
     }
 
     public BigDecimal getWeight() {
@@ -185,7 +189,7 @@ public class Product implements Serializable {
     }
 
     public void setVolume(String volume) {
-        this.volume = volume;
+        this.volume = volume == null ? null : volume.trim();
     }
 
     public String getAttrValueId() {
@@ -193,7 +197,7 @@ public class Product implements Serializable {
     }
 
     public void setAttrValueId(String attrValueId) {
-        this.attrValueId = attrValueId;
+        this.attrValueId = attrValueId == null ? null : attrValueId.trim();
     }
 
     public String getAttrValueName() {
@@ -201,7 +205,7 @@ public class Product implements Serializable {
     }
 
     public void setAttrValueName(String attrValueName) {
-        this.attrValueName = attrValueName;
+        this.attrValueName = attrValueName == null ? null : attrValueName.trim();
     }
 
     public Date getExpireDate() {
@@ -233,7 +237,7 @@ public class Product implements Serializable {
     }
 
     public void setAuditStatus(String auditStatus) {
-        this.auditStatus = auditStatus;
+        this.auditStatus = auditStatus == null ? null : auditStatus.trim();
     }
 
     public String getLastAuditName() {
@@ -241,7 +245,7 @@ public class Product implements Serializable {
     }
 
     public void setLastAuditName(String lastAuditName) {
-        this.lastAuditName = lastAuditName;
+        this.lastAuditName = lastAuditName == null ? null : lastAuditName.trim();
     }
 
     public Date getLastAuditDate() {
@@ -252,12 +256,28 @@ public class Product implements Serializable {
         this.lastAuditDate = lastAuditDate;
     }
 
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material == null ? null : material.trim();
+    }
+
+    public String getSourceArea() {
+        return sourceArea;
+    }
+
+    public void setSourceArea(String sourceArea) {
+        this.sourceArea = sourceArea == null ? null : sourceArea.trim();
+    }
+
     public String getDetail() {
         return detail;
     }
 
     public void setDetail(String detail) {
-        this.detail = detail;
+        this.detail = detail == null ? null : detail.trim();
     }
 
 	public List<Sku> getSkus() {
