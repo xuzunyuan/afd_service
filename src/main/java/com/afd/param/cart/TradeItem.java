@@ -19,9 +19,9 @@ public class TradeItem implements Serializable {
 	// 专场标题
 	private String brandShowTitle;
 	// 商品id
-	private Long prodId;
+	private Integer prodId;
 	// skuid
-	private Long skuId;
+	private Integer skuId;
 	// 商品code
 	private String prodCode;
 	// 商品code
@@ -103,19 +103,19 @@ public class TradeItem implements Serializable {
 		this.prodSpecName = prodSpecName;
 	}
 
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
 
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
 	}
 
-	public Long getSkuId() {
+	public Integer getSkuId() {
 		return skuId;
 	}
 
-	public void setSkuId(Long skuId) {
+	public void setSkuId(Integer skuId) {
 		this.skuId = skuId;
 	}
 

@@ -19,9 +19,9 @@ public class CartItem implements Serializable {
 	// 特卖明细ID
 	private Long brandShowDetailId;
 	// 商品id
-	private Long prodId;
+	private Integer prodId;
 	// skuid
-	private Long skuId;
+	private Integer skuId;
 	// 商品code
 	private String prodCode;
 	// skuCode
@@ -51,7 +51,7 @@ public class CartItem implements Serializable {
 	// 排序权重
 	private int sortWeight;
 	// 基础类目三级id
-	private Long bcId;
+	private Integer bcId;
 	// 商品重量
 	private BigDecimal weight;
 	// 商品体积
@@ -115,19 +115,19 @@ public class CartItem implements Serializable {
 		this.selected = selected;
 	}
 
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
 
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
 	}
 
-	public Long getSkuId() {
+	public Integer getSkuId() {
 		return skuId;
 	}
 
-	public void setSkuId(Long skuId) {
+	public void setSkuId(Integer skuId) {
 		this.skuId = skuId;
 	}
 
@@ -222,11 +222,11 @@ public class CartItem implements Serializable {
 		this.sortWeight = sortWeight;
 	}
 
-	public Long getBcId() {
+	public Integer getBcId() {
 		return bcId;
 	}
 
-	public void setBcId(Long bcId) {
+	public void setBcId(Integer bcId) {
 		this.bcId = bcId;
 	}
 
