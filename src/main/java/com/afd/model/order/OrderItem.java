@@ -1,6 +1,6 @@
 package com.afd.model.order;
 
-public class orderItem {
+public class OrderItem {
     private Long orderItemId;
 
     private Integer orderId;
