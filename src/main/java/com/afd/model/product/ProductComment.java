@@ -34,7 +34,7 @@ public class ProductComment implements Serializable {
 
     private Date buyDate;
 
-    private Short score;
+    private Integer score;
 
     private String status;
 
@@ -44,7 +44,7 @@ public class ProductComment implements Serializable {
 
     private String replyContent;
 
-    private Short replyScore;
+    private Integer replyScore;
 
     private String replyStatus;
 
@@ -57,6 +57,15 @@ public class ProductComment implements Serializable {
     private String isHaveAdditional;
 
     private String isHaveContent;
+
+    /*
+     * 追加评论
+     */
+    private ProductCommentAdditional productCommentAdditional;
+    /*
+     * 评论统计
+     */
+    private  ProductCommentStat productCommentStat; // 评论统计
 
     public Integer getpCommentId() {
         return pCommentId;
@@ -170,11 +179,11 @@ public class ProductComment implements Serializable {
         this.buyDate = buyDate;
     }
 
-    public Short getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(Short score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
@@ -210,11 +219,11 @@ public class ProductComment implements Serializable {
         this.replyContent = replyContent;
     }
 
-    public Short getReplyScore() {
+    public Integer getReplyScore() {
         return replyScore;
     }
 
-    public void setReplyScore(Short replyScore) {
+    public void setReplyScore(Integer replyScore) {
         this.replyScore = replyScore;
     }
 
@@ -265,4 +274,22 @@ public class ProductComment implements Serializable {
     public void setIsHaveContent(String isHaveContent) {
         this.isHaveContent = isHaveContent;
     }
+
+	public ProductCommentAdditional getProductCommentAdditional() {
+		return productCommentAdditional;
+	}
+
+	public void setProductCommentAdditional(
+			ProductCommentAdditional productCommentAdditional) {
+		this.productCommentAdditional = productCommentAdditional;
+	}
+
+	public ProductCommentStat getProductCommentStat() {
+		return productCommentStat;
+	}
+
+	public void setProductCommentStat(ProductCommentStat productCommentStat) {
+		this.productCommentStat = productCommentStat;
+	}
+    
 }

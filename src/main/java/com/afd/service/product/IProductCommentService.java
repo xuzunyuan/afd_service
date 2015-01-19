@@ -3,9 +3,12 @@ package com.afd.service.product;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Service;
 
 import com.afd.common.mybatis.Page;
 import com.afd.model.product.ProductComment;
+import com.afd.model.product.ProductCommentAdditional;
+import com.afd.model.product.ProductCommentStat;
 import com.afd.model.product.vo.SellerCommentVo;
 import com.afd.model.product.vo.UserCommentVo;
 
@@ -14,21 +17,17 @@ import com.afd.model.product.vo.UserCommentVo;
  * @author hkM
  *
  */
+@Service("productCommentService")
 public interface IProductCommentService {
 
-	/**
-	 *  通过主键ID获取评论信息
-	 * @param pCommentId
-	 * @return
-	 */
-	public ProductComment getProductCommentByPrimaryKey(Long pCommentId);
-	
+
+	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----商品评论 CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
 	/**
 	 * 添加买家评论信息（网站端调用）
 	 * @param userCommentVo 买家回复信息
 	 * @return
 	 */
-	public boolean addUserComment(List<UserCommentVo> list);
+	public boolean addUserComment(UserCommentVo userCommentVo);
 	
 	/**
 	 * 添加卖家回复评论信息
@@ -38,20 +37,51 @@ public interface IProductCommentService {
 	public boolean addSellerComment(SellerCommentVo sellerCommentVo);
 	
 	/**
-	 * 买家删除自己评论信息（逻辑删除）
+	 * 买家删除自己评论信息（不影响评分和统计结果）
 	 * @param userId
 	 * @param pCommentId
 	 * @return
 	 */
-	public boolean delUserProductComment(Long pCommentId,Long userId);
-	
+	public boolean delUserProductComment(Integer pCommentId,Integer userId);
+
 	/**
-	 * 卖家删除回复信息（逻辑删除）
+	 * 卖家删除回复信息
 	 * @param pCommentId
-	 * @param storeId	
+	 * @param sellerId	
 	 * @return
 	 */
-	public boolean delStoreProductComment(Long pCommentId,Long storeId);
+	public boolean delSellerProductComment(Integer pCommentId,Integer sellerId);
+	
+	/**
+	 *  通过主键ID获取评论信息
+	 * @param pCommentId
+	 * @return
+	 */
+	public ProductComment getProductCommentByPrimaryKey(Integer pCommentId);
+	
+	/**
+	 *  买家评论列表
+	 * @param userId
+	 * @param page
+	 * @return
+	 */
+	public Page<ProductComment> getUserProductCommentPage(Integer userId,Page<ProductComment> page);	
+	
+	/**
+	 * 卖家评论列表 
+	 * @param sellerId
+	 * @param page
+	 * @return
+	 */
+	public Page<ProductComment> getSellerProductCommentPage(Integer sellerId,Page<ProductComment> page);
+
+	/**
+	 * 待评价回复列表 （Seller 后台）
+	 * @param sellerId
+	 * @param page
+	 * @return
+	 */
+	public Page<ProductComment> getWaitProductCommentPage(Integer sellerId,Page<ProductComment> page);
 	
 	/**
 	 *  通过好评率获得评论列表	 例： 只看好评 4-5分
@@ -60,69 +90,65 @@ public interface IProductCommentService {
 	 * @return
 	 */
 	public List<ProductComment> getProductCommentByReplyRate(Integer startScore,Integer endScore);
-
-	/**
-	 *  买家评论列表
-	 * @param storeId
-	 * @param page
-	 * @return
-	 */
-	public Page<ProductComment> getUserProductCommentPage(Long storeId,Page<ProductComment> page);
 	
 	/**
-	 * 卖家评论列表
-	 * @param storeId
-	 * @param page
-	 * @return
-	 */
-	public Page<ProductComment> getSellerProductCommentPage(Long storeId,Page<ProductComment> page);
-	
-	/**
-	 * 待评价回复列表
-	 * @param storeId
-	 * @param page
-	 * @return
-	 */
-	public Page<ProductComment> getWaitProductCommentPage(Long storeId,Page<ProductComment> page);
-	
-	/**
-	 *  通过评论Id获得评论用户Id
-	 * @param pCommentId
-	 * @return
-	 */
-	public Long getUserIdByPrimaryKey(String pCommentId);
-
-	/**
-	 *  设置评论已回复
-	 * @param pCommentId	评论Id
-	 * @param isReply		
-	 * @return
-	 */
-	public boolean updateIsReply(Long pCommentId,String isReply);
-
-
-	
-	/**
-	 * 批量删除卖家评论
-	 * @param idList
-	 * @return
-	 * @throws DataAccessException
-	 */
-	public boolean batchDelProductComment(List<Long> idList)throws DataAccessException;
-	
-	/**
-	 *  删除卖家评论
+	 *  删除卖家评论 (seller后台)
 	 * @param pCommentId
 	 * @throws DataAccessException
 	 */
-	public boolean delProductComment(long pCommentId) throws DataAccessException;
-
+	public boolean delSellerProductComment(Integer pCommentId) throws DataAccessException;
+	
+	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----商品统计 CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
 	/**
-	 * 获得当前页之外评论统计数 （Seller专用）
-	 * @param storeId	店铺ID
-	 * @param isReply	是否已回复评论   false 或者null
-	 * @param replyStatus 评价状态
+	 *  通过商品ID获取商品统计信息
+	 * @param prodId
 	 * @return
 	 */
-	public long[] getProductCommentCount(Long storeId,String isReply,String replyStatus);
+	public ProductCommentStat getProductCommentByProdId(Integer prodId);
+	
+	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----追加评论 CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
+	
+	/**
+	 *  添加追加评论
+	 * @param productCommentAdditional
+	 * @return
+	 */
+	public boolean addProductCommentAdditional(ProductCommentAdditional pCommentAdditional);
+	
+	/**
+	 * 修改追加评论信息
+	 * @param productCommentAdditional
+	 * @return
+	 */
+	public boolean editProductCommentAdditional(ProductCommentAdditional pCommentAdditional);
+	
+	/**
+	 * 通过主键ID删除追加评论信息
+	 * @param pCAId
+	 * @return
+	 */
+	public boolean deleteProductCommentAdditional(Integer pCAId);
+	
+	/**
+	 *  通过主键ID获取追加评论信息
+	 * @param pCAId
+	 * @return
+	 */
+	public ProductCommentAdditional getProductCommentAdditionalByPrimaryKey(Integer pCAId);
+	
+	/**
+	 *  只看追加评论信息
+	 * @param prodId 商品ID
+	 * @return
+	 */
+	public Page<ProductCommentAdditional> getProductCommentAdditionalByProdId(Integer prodId,String status,Page<ProductCommentAdditional> page);
+	
+	/**
+	 *  获得追加评论信息
+	 * @param pCommentId
+	 * @param status
+	 * @return
+	 */
+	public ProductCommentAdditional getProductCommentAdditionalByPCommentId(Integer pCommentId,String status);
+	
 }
