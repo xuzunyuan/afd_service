@@ -1,36 +1,34 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
-public class Order implements Serializable{
-    private Long orderId;
+public class Order {
+    private Integer orderId;
 
     private String orderCode;
 
-    private Long userId;
+    private Integer userId;
 
     private String userName;
 
     private Date createdDate;
 
-    private Long sellerId;
+    private Integer sellerId;
 
     private String orderType;
 
     private String orderStatus;
 
-    private BigDecimal prodFee;
+    private Float prodFee;
 
     private String prodDiscountType;
 
-    private BigDecimal prodDiscountFee;
+    private Float prodDiscountFee;
 
-    private BigDecimal deliverFee;
+    private Float deliverFee;
 
-    private BigDecimal deliverDiscount;
+    private Float deliverDiscount;
 
     private BigDecimal orderFee;
 
@@ -105,14 +103,12 @@ public class Order implements Serializable{
     private Date lastUpdateDate;
 
     private String lastUpdateByName;
-    
-    private List<OrderItem> orderItems;
 
-    public Long getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
@@ -124,11 +120,11 @@ public class Order implements Serializable{
         this.orderCode = orderCode == null ? null : orderCode.trim();
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -148,11 +144,11 @@ public class Order implements Serializable{
         this.createdDate = createdDate;
     }
 
-    public Long getSellerId() {
+    public Integer getSellerId() {
         return sellerId;
     }
 
-    public void setSellerId(Long sellerId) {
+    public void setSellerId(Integer sellerId) {
         this.sellerId = sellerId;
     }
 
@@ -172,11 +168,11 @@ public class Order implements Serializable{
         this.orderStatus = orderStatus == null ? null : orderStatus.trim();
     }
 
-    public BigDecimal getProdFee() {
+    public Float getProdFee() {
         return prodFee;
     }
 
-    public void setProdFee(BigDecimal prodFee) {
+    public void setProdFee(Float prodFee) {
         this.prodFee = prodFee;
     }
 
@@ -188,27 +184,27 @@ public class Order implements Serializable{
         this.prodDiscountType = prodDiscountType == null ? null : prodDiscountType.trim();
     }
 
-    public BigDecimal getProdDiscountFee() {
+    public Float getProdDiscountFee() {
         return prodDiscountFee;
     }
 
-    public void setProdDiscountFee(BigDecimal prodDiscountFee) {
+    public void setProdDiscountFee(Float prodDiscountFee) {
         this.prodDiscountFee = prodDiscountFee;
     }
 
-    public BigDecimal getDeliverFee() {
+    public Float getDeliverFee() {
         return deliverFee;
     }
 
-    public void setDeliverFee(BigDecimal deliverFee) {
+    public void setDeliverFee(Float deliverFee) {
         this.deliverFee = deliverFee;
     }
 
-    public BigDecimal getDeliverDiscount() {
+    public Float getDeliverDiscount() {
         return deliverDiscount;
     }
 
-    public void setDeliverDiscount(BigDecimal deliverDiscount) {
+    public void setDeliverDiscount(Float deliverDiscount) {
         this.deliverDiscount = deliverDiscount;
     }
 
@@ -507,12 +503,4 @@ public class Order implements Serializable{
     public void setLastUpdateByName(String lastUpdateByName) {
         this.lastUpdateByName = lastUpdateByName == null ? null : lastUpdateByName.trim();
     }
-
-	public List<OrderItem> getOrderItems() {
-		return orderItems;
-	}
-
-	public void setOrderItems(List<OrderItem> orderItems) {
-		this.orderItems = orderItems;
-	}
 }

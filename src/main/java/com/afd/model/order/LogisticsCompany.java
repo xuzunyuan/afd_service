@@ -1,9 +1,8 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class LogisticsCompany implements Serializable{
+public class LogisticsCompany {
     private Byte logisticsCompId;
 
     private String logisticsCompName;

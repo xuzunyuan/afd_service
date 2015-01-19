@@ -1,8 +1,6 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
-
-public class YWProdPromotionDetail implements Serializable{
+public class orderItem {
     private Long orderItemId;
 
     private Integer orderId;
