@@ -1,21 +1,25 @@
 package com.afd.model.order;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
-public class Payment {
-    private Integer paymentId;
+public class Payment implements Serializable{
+    private Long paymentId;
 
-    private Integer originPaymentId;
+    private Long originPaymentId;
 
     private Date createDate;
 
-    private Integer createId;
+    private Long createId;
+    
+    private Long userId;
 
     private String userName;
 
     private String createByIp;
 
-    private Float payAmount;
+    private BigDecimal payAmount;
 
     private String payGw;
 
@@ -33,19 +37,19 @@ public class Payment {
 
     private String paymentType;
 
-    public Integer getPaymentId() {
+    public Long getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(Integer paymentId) {
+    public void setPaymentId(Long paymentId) {
         this.paymentId = paymentId;
     }
 
-    public Integer getOriginPaymentId() {
+    public Long getOriginPaymentId() {
         return originPaymentId;
     }
 
-    public void setOriginPaymentId(Integer originPaymentId) {
+    public void setOriginPaymentId(Long originPaymentId) {
         this.originPaymentId = originPaymentId;
     }
 
@@ -57,11 +61,11 @@ public class Payment {
         this.createDate = createDate;
     }
 
-    public Integer getCreateId() {
+    public Long getCreateId() {
         return createId;
     }
 
-    public void setCreateId(Integer createId) {
+    public void setCreateId(Long createId) {
         this.createId = createId;
     }
 
@@ -81,11 +85,11 @@ public class Payment {
         this.createByIp = createByIp == null ? null : createByIp.trim();
     }
 
-    public Float getPayAmount() {
+    public BigDecimal getPayAmount() {
         return payAmount;
     }
 
-    public void setPayAmount(Float payAmount) {
+    public void setPayAmount(BigDecimal payAmount) {
         this.payAmount = payAmount;
     }
 
@@ -152,4 +156,12 @@ public class Payment {
     public void setPaymentType(String paymentType) {
         this.paymentType = paymentType == null ? null : paymentType.trim();
     }
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 }

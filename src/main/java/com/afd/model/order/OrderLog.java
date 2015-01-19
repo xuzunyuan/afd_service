@@ -1,11 +1,12 @@
 package com.afd.model.order;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OrderLog {
+public class OrderLog implements Serializable{
     private Long orderLogId;
 
-    private Integer orderId;
+    private Long orderId;
 
     private String orderCode;
 
@@ -29,11 +30,11 @@ public class OrderLog {
         this.orderLogId = orderLogId;
     }
 
-    public Integer getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
