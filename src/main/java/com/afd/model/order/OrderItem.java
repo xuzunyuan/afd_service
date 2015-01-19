@@ -1,9 +1,12 @@
 package com.afd.model.order;
 
-public class OrderItem {
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+public class OrderItem implements Serializable{
     private Long orderItemId;
 
-    private Integer orderId;
+    private Long orderId;
 
     private String orderCode;
 
@@ -21,13 +24,13 @@ public class OrderItem {
 
     private String prodTitle;
 
-    private Short bcId;
+    private Long bcId;
 
-    private Integer sellerId;
+    private Long sellerId;
 
-    private Float salePrice;
+    private BigDecimal salePrice;
 
-    private Float transPrice;
+    private BigDecimal transPrice;
 
     private Short number;
 
@@ -35,7 +38,7 @@ public class OrderItem {
 
     private String isComment;
 
-    private Integer brandShowId;
+    private Long brandShowId;
 
     private String brandShowTitle;
 
@@ -47,11 +50,11 @@ public class OrderItem {
         this.orderItemId = orderItemId;
     }
 
-    public Integer getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
@@ -119,35 +122,35 @@ public class OrderItem {
         this.prodTitle = prodTitle == null ? null : prodTitle.trim();
     }
 
-    public Short getBcId() {
+    public Long getBcId() {
         return bcId;
     }
 
-    public void setBcId(Short bcId) {
+    public void setBcId(Long bcId) {
         this.bcId = bcId;
     }
 
-    public Integer getSellerId() {
+    public Long getSellerId() {
         return sellerId;
     }
 
-    public void setSellerId(Integer sellerId) {
+    public void setSellerId(Long sellerId) {
         this.sellerId = sellerId;
     }
 
-    public Float getSalePrice() {
+    public BigDecimal getSalePrice() {
         return salePrice;
     }
 
-    public void setSalePrice(Float salePrice) {
+    public void setSalePrice(BigDecimal salePrice) {
         this.salePrice = salePrice;
     }
 
-    public Float getTransPrice() {
+    public BigDecimal getTransPrice() {
         return transPrice;
     }
 
-    public void setTransPrice(Float transPrice) {
+    public void setTransPrice(BigDecimal transPrice) {
         this.transPrice = transPrice;
     }
 
@@ -175,11 +178,11 @@ public class OrderItem {
         this.isComment = isComment == null ? null : isComment.trim();
     }
 
-    public Integer getBrandShowId() {
+    public Long getBrandShowId() {
         return brandShowId;
     }
 
-    public void setBrandShowId(Integer brandShowId) {
+    public void setBrandShowId(Long brandShowId) {
         this.brandShowId = brandShowId;
     }
 

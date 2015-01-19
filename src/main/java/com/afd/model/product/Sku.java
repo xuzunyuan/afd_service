@@ -31,7 +31,7 @@ public class Sku implements Serializable {
 
     private String skuStatus;
 
-    private Byte sortRank;
+    private Integer sortRank;
 
     private Date createDate;
 
@@ -137,15 +137,15 @@ public class Sku implements Serializable {
         this.skuStatus = skuStatus;
     }
 
-    public Byte getSortRank() {
-        return sortRank;
-    }
+    public Integer getSortRank() {
+		return sortRank;
+	}
 
-    public void setSortRank(Byte sortRank) {
-        this.sortRank = sortRank;
-    }
+	public void setSortRank(Integer sortRank) {
+		this.sortRank = sortRank;
+	}
 
-    public Date getCreateDate() {
+	public Date getCreateDate() {
         return createDate;
     }
 

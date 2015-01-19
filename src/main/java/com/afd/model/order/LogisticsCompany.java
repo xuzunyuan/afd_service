@@ -1,9 +1,10 @@
 package com.afd.model.order;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class LogisticsCompany {
-    private Byte logisticsCompId;
+public class LogisticsCompany implements Serializable{
+    private Long logisticsCompId;
 
     private String logisticsCompName;
 
@@ -13,19 +14,19 @@ public class LogisticsCompany {
 
     private String mobile;
 
-    private Short province;
+    private Long province;
 
     private String provinceName;
 
-    private Short city;
+    private Long city;
 
     private String cityName;
 
-    private Short district;
+    private Long district;
 
     private String districtName;
 
-    private Short town;
+    private Long town;
 
     private String townName;
 
@@ -47,11 +48,11 @@ public class LogisticsCompany {
 
     private String remark;
 
-    public Byte getLogisticsCompId() {
+    public Long getLogisticsCompId() {
         return logisticsCompId;
     }
 
-    public void setLogisticsCompId(Byte logisticsCompId) {
+    public void setLogisticsCompId(Long logisticsCompId) {
         this.logisticsCompId = logisticsCompId;
     }
 
@@ -87,11 +88,11 @@ public class LogisticsCompany {
         this.mobile = mobile == null ? null : mobile.trim();
     }
 
-    public Short getProvince() {
+    public Long getProvince() {
         return province;
     }
 
-    public void setProvince(Short province) {
+    public void setProvince(Long province) {
         this.province = province;
     }
 
@@ -103,11 +104,11 @@ public class LogisticsCompany {
         this.provinceName = provinceName == null ? null : provinceName.trim();
     }
 
-    public Short getCity() {
+    public Long getCity() {
         return city;
     }
 
-    public void setCity(Short city) {
+    public void setCity(Long city) {
         this.city = city;
     }
 
@@ -119,11 +120,11 @@ public class LogisticsCompany {
         this.cityName = cityName == null ? null : cityName.trim();
     }
 
-    public Short getDistrict() {
+    public Long getDistrict() {
         return district;
     }
 
-    public void setDistrict(Short district) {
+    public void setDistrict(Long district) {
         this.district = district;
     }
 
@@ -135,11 +136,11 @@ public class LogisticsCompany {
         this.districtName = districtName == null ? null : districtName.trim();
     }
 
-    public Short getTown() {
+    public Long getTown() {
         return town;
     }
 
-    public void setTown(Short town) {
+    public void setTown(Long town) {
         this.town = town;
     }
 

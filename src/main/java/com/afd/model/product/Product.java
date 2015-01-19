@@ -3,6 +3,7 @@ package com.afd.model.product;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 public class Product implements Serializable {
 	private static final long serialVersionUID = 139759041505047714L;
@@ -56,6 +57,8 @@ public class Product implements Serializable {
     private Date lastAuditDate;
 
     private String detail;
+    
+    private List<Sku> skus;
 
     public Integer getProdId() {
         return prodId;
@@ -256,4 +259,13 @@ public class Product implements Serializable {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+
+	public List<Sku> getSkus() {
+		return skus;
+	}
+
+	public void setSkus(List<Sku> skus) {
+		this.skus = skus;
+	}
+    
 }

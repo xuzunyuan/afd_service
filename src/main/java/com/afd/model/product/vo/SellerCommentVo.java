@@ -10,23 +10,22 @@ import java.util.Date;
  */
 public class SellerCommentVo implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private Long pCommentId;	//主键ID
-	private Long storeId;		//店铺ID
-    private Long prodId;		//商品ID
-    private Long skuId;			//skuID
-    private Long itemId;		//订单明细ID
-    private Long orderId;		//订单ID
+	private Integer pCommentId;	//主键ID
+	private Integer sellerId;	//卖家ID
+    private Integer prodId;		//商品ID
+    private Integer skuId;		//skuID
+    private Integer itemId;		//订单明细ID
+    private Integer orderId;	//订单ID
     private String orderCode;	//订单编号
     private String replyContent;//卖家回复内容
-    private Long replyById;		//卖家登录ID
+    private Integer replyById;	//卖家登录ID
     private String replyByName;	//卖家登录名
-    private Long userId;		//评论人ID	
+    private Integer userId;		//评论人ID	
     private String nickname;	//评论人昵称
     private Date replyDate;		//卖家回复日期
     private Integer score;		//评论分数
     private String isReply;		//是否已回复
-    private String replyByIp;		//评论人IP
-    private String isHaveAdditional;//是否有内容评价
+    private String replyByIp;	//评论人IP
     private String replyStatus;	//卖家评论状态
     private Integer replyScore;	//卖家回复评分
     
@@ -36,40 +35,40 @@ public class SellerCommentVo implements Serializable{
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public Long getStoreId() {
-		return storeId;
+	public Integer getSellerId() {
+		return sellerId;
 	}
-	public void setStoreId(Long storeId) {
-		this.storeId = storeId;
+	public void setSellerId(Integer sellerId) {
+		this.sellerId = sellerId;
 	}
-	public Long getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
-	public void setUserId(Long userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
 	}
-	public Long getSkuId() {
+	public Integer getSkuId() {
 		return skuId;
 	}
-	public void setSkuId(Long skuId) {
+	public void setSkuId(Integer skuId) {
 		this.skuId = skuId;
 	}
-	public Long getItemId() {
+	public Integer getItemId() {
 		return itemId;
 	}
-	public void setItemId(Long itemId) {
+	public void setItemId(Integer itemId) {
 		this.itemId = itemId;
 	}
-	public Long getOrderId() {
+	public Integer getOrderId() {
 		return orderId;
 	}
-	public void setOrderId(Long orderId) {
+	public void setOrderId(Integer orderId) {
 		this.orderId = orderId;
 	}
 	public String getOrderCode() {
@@ -78,10 +77,10 @@ public class SellerCommentVo implements Serializable{
 	public void setOrderCode(String orderCode) {
 		this.orderCode = orderCode;
 	}
-	public Long getpCommentId() {
+	public Integer getpCommentId() {
 		return pCommentId;
 	}
-	public void setpCommentId(Long pCommentId) {
+	public void setpCommentId(Integer pCommentId) {
 		this.pCommentId = pCommentId;
 	}
 	public String getReplyContent() {
@@ -90,10 +89,10 @@ public class SellerCommentVo implements Serializable{
 	public void setReplyContent(String replyContent) {
 		this.replyContent = replyContent;
 	}
-	public Long getReplyById() {
+	public Integer getReplyById() {
 		return replyById;
 	}
-	public void setReplyById(Long replyById) {
+	public void setReplyById(Integer replyById) {
 		this.replyById = replyById;
 	}
 	public String getReplyByName() {
@@ -125,12 +124,6 @@ public class SellerCommentVo implements Serializable{
 	}
 	public void setReplyByIp(String replyByIp) {
 		this.replyByIp = replyByIp;
-	}
-	public String getIsHaveAdditional() {
-		return isHaveAdditional;
-	}
-	public void setIsHaveAdditional(String isHaveAdditional) {
-		this.isHaveAdditional = isHaveAdditional;
 	}
 	public String getReplyStatus() {
 		return replyStatus;
