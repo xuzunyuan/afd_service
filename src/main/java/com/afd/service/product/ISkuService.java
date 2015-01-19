@@ -106,4 +106,10 @@ public interface ISkuService {
 	 */
 	public Page<Sku> getSkusByProdIdPage( String prodId,Page<Sku> page);
 
+	/**
+	 * 根据ID获取sku列表
+	 * @param skuIds
+	 * @return
+	 */
+	public List<Sku> getSkusByIds(List<Long> skuIds);
 }

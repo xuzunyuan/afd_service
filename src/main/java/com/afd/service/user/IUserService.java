@@ -15,4 +15,26 @@ public interface IUserService {
 	 * @return
 	 */
 	public User getUserById(Long userId);
+	
+	/**
+	 * 注册用户
+	 * @param user
+	 * @return
+	 */
+	public Long register(User user);
+	
+	/**
+	 * 根据用户名查询用户
+	 * @param userName
+	 * @return
+	 */
+	public User getUserByUserName(String userName);
+	
+	/**
+	 * 更新用户
+	 * @param user
+	 * @return
+	 */
+	public int updateUser(User user);
+
 }

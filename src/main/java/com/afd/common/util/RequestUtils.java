@@ -197,8 +197,7 @@ public class RequestUtils {
 			return;
 		}
 
-		if (maxAge > 0)
-			cookie.setMaxAge(maxAge);
+		cookie.setMaxAge(maxAge);
 
 		if (all_sub_domain) {
 			String serverName = request.getServerName();

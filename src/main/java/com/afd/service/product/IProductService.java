@@ -183,5 +183,11 @@ public interface IProductService {
 	 */
 	public List<Long> getProductByStoreId(Long storeId);
 
+	/**
+	 * 根据ID获取商品列表
+	 * @param prodIds
+	 * @return
+	 */
+	public List<Product> getProductsByIds(List<Long> prodIds);
 	
 }

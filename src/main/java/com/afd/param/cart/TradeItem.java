@@ -14,8 +14,10 @@ public class TradeItem implements Serializable {
 
 	// 特卖明细ID
 	private Long brandShowDetailId;
-	// 特卖ID
+	// 专场ID
 	private Long brandShowId;
+	// 专场标题
+	private String brandShowTitle;
 	// 商品id
 	private Long prodId;
 	// skuid
@@ -27,7 +29,7 @@ public class TradeItem implements Serializable {
 	// 数量
 	private Long num;
 
-	private BigDecimal orgPrice;
+	private BigDecimal marketPrice;
 
 	private BigDecimal showPrice;
 	// 基础类目三级id
@@ -53,12 +55,20 @@ public class TradeItem implements Serializable {
 		this.brandShowId = brandShowId;
 	}
 
-	public BigDecimal getOrgPrice() {
-		return orgPrice;
+	public String getBrandShowTitle() {
+		return brandShowTitle;
 	}
 
-	public void setOrgPrice(BigDecimal orgPrice) {
-		this.orgPrice = orgPrice;
+	public void setBrandShowTitle(String brandShowTitle) {
+		this.brandShowTitle = brandShowTitle;
+	}
+
+	public BigDecimal getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(BigDecimal marketPrice) {
+		this.marketPrice = marketPrice;
 	}
 
 	public BigDecimal getShowPrice() {

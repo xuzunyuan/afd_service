@@ -1,8 +1,6 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
-
-public class ReturnOrderItem implements Serializable{
+public class ReturnOrderItem {
     private Integer retOrderItemId;
 
     private Integer retOrderId;

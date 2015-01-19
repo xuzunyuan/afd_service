@@ -1,101 +1,162 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
-import java.util.Date;
+public class OrderItem {
+    private Long orderItemId;
 
-public class OrderItem implements Serializable{
-    private Integer paymentId;
+    private Integer orderId;
 
-    private Integer originPaymentId;
+    private String orderCode;
 
-    private Date createDate;
+    private Integer skuId;
 
-    private Integer createId;
+    private Integer prodId;
 
-    private String userName;
+    private String prodCode;
 
-    private String createByIp;
+    private String skuCode;
 
-    private Float payAmount;
+    private String prodSpecId;
 
-    private String payGw;
+    private String prodSpecName;
+
+    private String prodTitle;
+
+    private Short bcId;
+
+    private Integer sellerId;
+
+    private Float salePrice;
+
+    private Float transPrice;
+
+    private Short number;
 
     private String status;
 
-    private String type;
+    private String isComment;
 
-    private String tradeNo;
+    private Integer brandShowId;
 
-    private Date callbackDate;
+    private String brandShowTitle;
 
-    private String realPayGw;
-
-    private Date realPayDate;
-
-    private String paymentType;
-
-    public Integer getPaymentId() {
-        return paymentId;
+    public Long getOrderItemId() {
+        return orderItemId;
     }
 
-    public void setPaymentId(Integer paymentId) {
-        this.paymentId = paymentId;
+    public void setOrderItemId(Long orderItemId) {
+        this.orderItemId = orderItemId;
     }
 
-    public Integer getOriginPaymentId() {
-        return originPaymentId;
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public void setOriginPaymentId(Integer originPaymentId) {
-        this.originPaymentId = originPaymentId;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public String getOrderCode() {
+        return orderCode;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setOrderCode(String orderCode) {
+        this.orderCode = orderCode == null ? null : orderCode.trim();
     }
 
-    public Integer getCreateId() {
-        return createId;
+    public Integer getSkuId() {
+        return skuId;
     }
 
-    public void setCreateId(Integer createId) {
-        this.createId = createId;
+    public void setSkuId(Integer skuId) {
+        this.skuId = skuId;
     }
 
-    public String getUserName() {
-        return userName;
+    public Integer getProdId() {
+        return prodId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setProdId(Integer prodId) {
+        this.prodId = prodId;
     }
 
-    public String getCreateByIp() {
-        return createByIp;
+    public String getProdCode() {
+        return prodCode;
     }
 
-    public void setCreateByIp(String createByIp) {
-        this.createByIp = createByIp == null ? null : createByIp.trim();
+    public void setProdCode(String prodCode) {
+        this.prodCode = prodCode == null ? null : prodCode.trim();
     }
 
-    public Float getPayAmount() {
-        return payAmount;
+    public String getSkuCode() {
+        return skuCode;
     }
 
-    public void setPayAmount(Float payAmount) {
-        this.payAmount = payAmount;
+    public void setSkuCode(String skuCode) {
+        this.skuCode = skuCode == null ? null : skuCode.trim();
     }
 
-    public String getPayGw() {
-        return payGw;
+    public String getProdSpecId() {
+        return prodSpecId;
     }
 
-    public void setPayGw(String payGw) {
-        this.payGw = payGw == null ? null : payGw.trim();
+    public void setProdSpecId(String prodSpecId) {
+        this.prodSpecId = prodSpecId == null ? null : prodSpecId.trim();
+    }
+
+    public String getProdSpecName() {
+        return prodSpecName;
+    }
+
+    public void setProdSpecName(String prodSpecName) {
+        this.prodSpecName = prodSpecName == null ? null : prodSpecName.trim();
+    }
+
+    public String getProdTitle() {
+        return prodTitle;
+    }
+
+    public void setProdTitle(String prodTitle) {
+        this.prodTitle = prodTitle == null ? null : prodTitle.trim();
+    }
+
+    public Short getBcId() {
+        return bcId;
+    }
+
+    public void setBcId(Short bcId) {
+        this.bcId = bcId;
+    }
+
+    public Integer getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
+    }
+
+    public Float getSalePrice() {
+        return salePrice;
+    }
+
+    public void setSalePrice(Float salePrice) {
+        this.salePrice = salePrice;
+    }
+
+    public Float getTransPrice() {
+        return transPrice;
+    }
+
+    public void setTransPrice(Float transPrice) {
+        this.transPrice = transPrice;
+    }
+
+    public Short getNumber() {
+        return number;
+    }
+
+    public void setNumber(Short number) {
+        this.number = number;
     }
 
     public String getStatus() {
@@ -106,51 +167,27 @@ public class OrderItem implements Serializable{
         this.status = status == null ? null : status.trim();
     }
 
-    public String getType() {
-        return type;
+    public String getIsComment() {
+        return isComment;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setIsComment(String isComment) {
+        this.isComment = isComment == null ? null : isComment.trim();
     }
 
-    public String getTradeNo() {
-        return tradeNo;
+    public Integer getBrandShowId() {
+        return brandShowId;
     }
 
-    public void setTradeNo(String tradeNo) {
-        this.tradeNo = tradeNo == null ? null : tradeNo.trim();
+    public void setBrandShowId(Integer brandShowId) {
+        this.brandShowId = brandShowId;
     }
 
-    public Date getCallbackDate() {
-        return callbackDate;
+    public String getBrandShowTitle() {
+        return brandShowTitle;
     }
 
-    public void setCallbackDate(Date callbackDate) {
-        this.callbackDate = callbackDate;
-    }
-
-    public String getRealPayGw() {
-        return realPayGw;
-    }
-
-    public void setRealPayGw(String realPayGw) {
-        this.realPayGw = realPayGw == null ? null : realPayGw.trim();
-    }
-
-    public Date getRealPayDate() {
-        return realPayDate;
-    }
-
-    public void setRealPayDate(Date realPayDate) {
-        this.realPayDate = realPayDate;
-    }
-
-    public String getPaymentType() {
-        return paymentType;
-    }
-
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType == null ? null : paymentType.trim();
+    public void setBrandShowTitle(String brandShowTitle) {
+        this.brandShowTitle = brandShowTitle == null ? null : brandShowTitle.trim();
     }
 }

@@ -1,61 +1,55 @@
 package com.afd.model.order;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
+public class PaymentDetail {
+    private Integer pDetailId;
 
-public class PaymentDetail implements Serializable{
+    private Integer paymentId;
 
-	private static final long serialVersionUID = 2888424980934302288L;
+    private Integer orderId;
 
-	private Long pDetailId;
+    private Float amount;
 
-    private Long paymentId;
-
-    private Long orderId;
-
-    private BigDecimal amount;
-
-    private Long userAccountId;
+    private Integer userAccountId;
 
     private String paymentType;
 
-    public Long getpDetailId() {
+    public Integer getpDetailId() {
         return pDetailId;
     }
 
-    public void setpDetailId(Long pDetailId) {
+    public void setpDetailId(Integer pDetailId) {
         this.pDetailId = pDetailId;
     }
 
-    public Long getPaymentId() {
+    public Integer getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(Long paymentId) {
+    public void setPaymentId(Integer paymentId) {
         this.paymentId = paymentId;
     }
 
-    public Long getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public BigDecimal getAmount() {
+    public Float getAmount() {
         return amount;
     }
 
-    public void setAmount(BigDecimal amount) {
+    public void setAmount(Float amount) {
         this.amount = amount;
     }
 
-    public Long getUserAccountId() {
+    public Integer getUserAccountId() {
         return userAccountId;
     }
 
-    public void setUserAccountId(Long userAccountId) {
+    public void setUserAccountId(Integer userAccountId) {
         this.userAccountId = userAccountId;
     }
 

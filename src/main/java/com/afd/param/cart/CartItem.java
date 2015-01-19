@@ -43,7 +43,7 @@ public class CartItem implements Serializable {
 	// sku的规格
 	private List<Map<String, String>> specs;
 	// 市场价
-	private BigDecimal orgPrice;
+	private BigDecimal maketPrice;
 	// 特卖价
 	private BigDecimal showPrice;
 	// 库存
@@ -91,12 +91,12 @@ public class CartItem implements Serializable {
 		this.brandShowDetailId = brandShowDetailId;
 	}
 
-	public BigDecimal getOrgPrice() {
-		return orgPrice;
+	public BigDecimal getMaketPrice() {
+		return maketPrice;
 	}
 
-	public void setOrgPrice(BigDecimal orgPrice) {
-		this.orgPrice = orgPrice;
+	public void setMaketPrice(BigDecimal maketPrice) {
+		this.maketPrice = maketPrice;
 	}
 
 	public BigDecimal getShowPrice() {

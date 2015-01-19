@@ -19,7 +19,7 @@ public interface IOrderService {
 	 * @param userId
 	 * @return
 	 */
-	public List<Order> getOrdersByIdsAndUserIdNodelay(Long[] orderIds,Long userId);
+	public List<Order> getOrdersByIdsAndUserId(Long[] orderIds,Long userId);
 	
 	/**
 	 * 取消订单(boss系统取消订单)
@@ -29,4 +29,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public int cancelOrderByBoss(List<Long> orderIds, String optName, String cancelReason);
+	
+	/**
+	 * 根据用户id获取订单列表
+	 * @param userId
+	 * @return
+	 */
+	public List<Order> getOrdersByUserId(Long userId);
 }
