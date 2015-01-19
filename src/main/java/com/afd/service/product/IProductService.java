@@ -98,6 +98,14 @@ public interface IProductService {
 	 * @return
 	 */
 	public Page<Sku> getSkusByProdIdPage( String prodId,Page<Sku> page);
+	
+	/**
+	 * 根据prodId获sku分页列表
+	 * @param prodId
+	 * @param page
+	 * @return
+	 */
+	public Page<Sku> getSkusBySkuIds(List<Integer> skuIds);
 
 	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----商品图片CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
 	/**
@@ -271,6 +279,12 @@ public interface IProductService {
 	 * @return Product
 	 */
 	public Product getProductById(Integer prodId);
+	/**
+	 * 根据ID获取商品列表
+	 * @param prodIds
+	 * @return
+	 */
+	public List<Product> getProductsByProdIds(List<Integer> prodIds);
 	
 	/**
 	 *  通过商品编码获取商品详细信息（含sku，商品图片信息）
@@ -339,11 +353,5 @@ public interface IProductService {
 	 */
 	public List<Integer> getProductIdsBysellerId(Integer sellerId);
 
-	/**
-	 * 根据ID获取商品列表
-	 * @param prodIds
-	 * @return
-	 */
-	public List<Product> getProductsByIds(List<Long> prodIds);
 		
 }
