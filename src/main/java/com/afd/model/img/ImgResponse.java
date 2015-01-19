@@ -1,7 +1,7 @@
 package com.afd.model.img;
 
 
-public class UploadResponse extends ImgResource {
+public class ImgResponse extends ImgResource {
 	/**
 	 * 
 	 */
