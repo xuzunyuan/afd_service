@@ -19,7 +19,8 @@ public class Cart implements Serializable{
 	private static final long serialVersionUID = 2014294579537371352L;
 	
 	private Long brandShowId;
-	private String storeName;
+	private String brandShowTitle;
+	private Long sellerId;
 	private Long userId;
 	private boolean selected;
 	private boolean hasProdNormal;
@@ -49,12 +50,21 @@ public class Cart implements Serializable{
 		this.cartItems = cartItems;
 	}
 
-	public String getStoreName() {
-		return storeName;
+
+	public String getBrandShowTitle() {
+		return brandShowTitle;
 	}
 
-	public void setStoreName(String storeName) {
-		this.storeName = storeName;
+	public void setBrandShowTitle(String brandShowTitle) {
+		this.brandShowTitle = brandShowTitle;
+	}
+
+	public Long getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(Long sellerId) {
+		this.sellerId = sellerId;
 	}
 
 	public boolean isSelected() {
