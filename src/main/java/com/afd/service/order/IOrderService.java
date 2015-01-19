@@ -3,6 +3,8 @@ package com.afd.service.order;
 import java.util.List;
 
 import com.afd.model.order.Order;
+import com.afd.param.cart.Trade;
+import com.afd.param.order.OrderInfo;
 
 public interface IOrderService {
 
@@ -36,4 +38,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<Order> getOrdersByUserId(Long userId);
+	
+	/**
+	 * 批量生成订单
+	 * @param trades
+	 * @return
+	 */
+	public List<OrderInfo> batchCreateOrders(List<Trade> trades);
 }
