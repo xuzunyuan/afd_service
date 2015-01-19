@@ -19,7 +19,7 @@ public interface IOrderService {
 	 * @param userId
 	 * @return
 	 */
-	public List<Order> getOrdersByIdsAndUserIdNodelay(Long[] orderIds,Long userId);
+	public List<Order> getOrdersByIdsAndUserId(Long[] orderIds,Long userId);
 	
 	/**
 	 * 取消订单(boss系统取消订单)
