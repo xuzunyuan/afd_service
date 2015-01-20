@@ -221,7 +221,7 @@ public class RegUtils {
 	 * @param inputString
 	 * @return
 	 */
-	private static boolean validateString(String regExp, String inputString) {
+	public static boolean validateString(String regExp, String inputString) {
 		try {
 			Pattern pattern = Pattern.compile(regExp);
 			Matcher matcher = pattern.matcher(inputString);
