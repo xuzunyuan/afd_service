@@ -11,7 +11,7 @@ public class Trade implements Serializable {
 
 	private static final long serialVersionUID = 8478055469560292445L;
 	private Long userId;
-	private Long addressId;
+	private Integer addressId;
 	private String payType;
 	private String payMode;
 	private Long brandShowId;
@@ -70,10 +70,10 @@ public class Trade implements Serializable {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public Long getAddressId() {
+	public Integer getAddressId() {
 		return addressId;
 	}
-	public void setAddressId(Long addressId) {
+	public void setAddressId(Integer addressId) {
 		this.addressId = addressId;
 	}
 	public String getPayMode() {
