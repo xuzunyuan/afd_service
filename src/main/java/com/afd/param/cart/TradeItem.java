@@ -29,6 +29,8 @@ public class TradeItem implements Serializable {
 	// 数量
 	private Long num;
 
+	private Long sellerId;
+	
 	private BigDecimal marketPrice;
 
 	private BigDecimal showPrice;
@@ -125,6 +127,14 @@ public class TradeItem implements Serializable {
 
 	public void setNum(Long num) {
 		this.num = num;
+	}
+
+	public Long getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(Long sellerId) {
+		this.sellerId = sellerId;
 	}
 
 	public Long getBcId() {
