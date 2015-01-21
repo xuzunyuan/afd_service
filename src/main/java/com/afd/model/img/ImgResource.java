@@ -12,12 +12,12 @@ public class ImgResource implements Serializable {
 	public ImgResource() {
 	}
 
-	public ImgResource(String id) {
-		this.setId(id);
+	public ImgResource(String rid) {
+		this.setRid(rid);
 	}
 
 	/* 分配给图片的ID，使用ID下载图片 */
-	private String id;
+	private String rid;
 
 	/* 图片高度 */
 	private int height;
@@ -28,12 +28,12 @@ public class ImgResource implements Serializable {
 	/* 文件类型 */
 	private String type;
 
-	public String getId() {
-		return id;
+	public String getRid() {
+		return rid;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setRid(String rid) {
+		this.rid = rid;
 	}
 
 	public int getHeight() {
