@@ -19,6 +19,9 @@
  	<dubbo:reference check="false" retries="0" id="dubbo_brandService" interface="com.afd.service.product.IBrandService" />
  	<dubbo:reference check="false" retries="0" id="dubbo_specService" interface="com.afd.service.product.ISpecService" />
     <dubbo:reference check="false" retries="0" id="dubbo_paymentServices" interface="com.afd.service.payment.IPaymentServices" />
+   	
+   	<dubbo:reference check="false" retries="0" id="dubbo_productService" interface="com.afd.service.product.IProductService" />
+   	
    	<beans profile="develop">
    		<!-- 广播中心地址 -->
 	    <dubbo:registry protocol="zookeeper" port="2181" address="192.168.1.19" />
