@@ -43,6 +43,8 @@ public interface IOrderService {
 	 * 批量生成订单
 	 * @param trades
 	 * @return
+	 * @throws Exception 
+	 * @throws InventoryException 
 	 */
-	public List<OrderInfo> batchCreateOrders(List<Trade> trades);
+	public List<OrderInfo> batchSaveOrders(List<Trade> trades) throws Exception;
 }

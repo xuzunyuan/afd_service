@@ -7,9 +7,20 @@ import com.afd.param.cart.Cart;
 import com.afd.param.cart.CartItem;
 
 public interface ICartService {
-	public List<Cart> showCart(String cookieCart, boolean isLogin,
-			long userId, int source, boolean isBuyNow);
+	/**
+	 * 
+	 * @param cookieCart
+	 * @return
+	 */
+	public List<Cart> showCart(String cookieCart);
 	
+	
+	/**
+	 * 
+	 * @param cookieCart
+	 * @return
+	 */
+	public List<CartItem> getCartItemsByCookie(String cookieCart);
 	
 	/**
 	 * 
@@ -17,34 +28,24 @@ public interface ICartService {
 	 * @param bsDetailId
 	 * @param newQuantity
 	 * @param oldQuantity
-	 * @param isLogin
-	 * @param userId
-	 * @param source
-	 * @param isBuyNow
 	 * @return
 	 */
-	public List<CartItem> modifyQuantity(String cookieCart, long bsDetailId, long newQuantity, 
-			long oldQuantity, boolean isLogin, long userId, int source, boolean isBuyNow);
+	public List<CartItem> modifyQuantity(String cookieCart, long bsDetailId, long newQuantity, long oldQuantity);
 	
 	/**
 	 * 
 	 * @param cookieCart
 	 * @param bsDetailIds
-	 * @param isLogin
-	 * @param userId
 	 * @return
 	 */
-	public List<CartItem> deleteCartItems(String cookieCart,Set<Long> bsDetailIds, boolean isLogin, long userId);
+	public List<CartItem> deleteCartItems(String cookieCart,Set<Long> bsDetailIds);
 
 	/**
 	 * 
 	 * @param cookieCart
-	 * @param isLogin
-	 * @param userId
-	 * @param source
 	 * @return
 	 */
-	public List<CartItem> clearFailureProduct(String cookieCart, boolean isLogin, long userId, int source);
+	public List<CartItem> clearFailureProduct(String cookieCart);
 
 	/**
 	 * 过滤选中的商品
@@ -56,23 +57,16 @@ public interface ICartService {
 	/**
 	 * 
 	 * @param cartItems
-	 * @param source
-	 * @param isLogin
-	 * @param userId
 	 * @return
 	 */
-	public boolean hasErrorOnSelectedCart(List<CartItem> cartItems, int source,
-			boolean isLogin, long userId);
+	public boolean hasErrorOnSelectedCart(List<CartItem> cartItems);
 
 	/**
 	 * 
 	 * @param cookieCart
 	 * @param bsDetailIds
 	 * @param checked
-	 * @param isLogin
-	 * @param userId
 	 * @return
 	 */
-	public List<CartItem> chgChecked(String cookieCart, Set<Long> bsDetailIds,
-			boolean checked, boolean isLogin, long userId);
+	public List<CartItem> chgChecked(String cookieCart, Set<Long> bsDetailIds, boolean checked);
 }

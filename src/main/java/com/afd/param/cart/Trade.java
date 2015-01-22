@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.List;
 /**
  * 结算类
- * @author xiaotao
+ * @author wxp
  */
 public class Trade implements Serializable {
 

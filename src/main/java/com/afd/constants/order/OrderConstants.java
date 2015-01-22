@@ -59,6 +59,10 @@ public interface OrderConstants {
 	 */
 	public static final String SERVER_CART = "cart_";
 	/**
+	 * cookie中购物车有效期
+	 */
+	public static final int COOKIE_CART_PERIOD = 30*60;
+	/**
 	 * 商品在购物车中的排序
 	 */
 	public static final int CARTITEM_SORTWEIGHT_1 = 1;
