@@ -8,6 +8,8 @@
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         ">
 
+ 	<dubbo:application name="afd_service"/>
+ 	
  	<dubbo:consumer timeout="3000"/>
  	
  	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->   
