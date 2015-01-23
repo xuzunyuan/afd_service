@@ -7,57 +7,43 @@ public interface OrderConstants {
 	 */
 	public static final long CARTITEM_SUCCESS = 0;
 	/**
-	 * 购物车为空
+	 * 购物车商品专场明细为空
 	 */
-	public static final long CART_IS_EMPTY = -1;
+	public static final long CARTITEM_BS_DETAIL_IS_NULL = -1;
 	/**
-	 * 购物车数据异常
+	 * 购物商品专场明细异常
 	 */
-	public static final long CART_DATA_EXCEPTION = -2;
+	public static final long CARTITEM_BS_DETAIL_STATUS_UNNORMAL = -2;
 	/**
-	 * 购物商品数量异常
+	 * 购物车商品专场明细过期
 	 */
-	public static final long CARTITEM_NUM_EXCEPTION = -3;
+	public static final long CARTITEM_BS_DETAIL_EXPIRED = -3;
 	/**
-	 * 购物车商品sku为空
+	 * 购物车商品sku异常
 	 */
-	public static final long CARTITEM_SKU_IS_NULL = -4;
-	/**
-	 * 购物商品sku状态异常
-	 */
-	public static final long CARTITEM_SKU_STATUS_UNNORMAL = -5;
+	public static final long CARTITEM_SKU_STATUS_UNNORMAL = -4;
 	/**
 	 * 购物商品异常
 	 */
-	public static final long CARTITEM_PROD_STATUS_UNNORMAL = -6;
+	public static final long CARTITEM_PROD_STATUS_UNNORMAL = -5;
 	/**
-	 * 商品无货
+	 * 特卖商品无货
 	 */
-	public static final long CARTITEM_SKU_OUTOFSTOCK = -7;
+	public static final long CARTITEM_BS_DETAIL_OUTOFSTOCK = -7;
 	/**
-	 * 商品库存不足
+	 * 特卖商品库存不足
 	 */
-	public static final long CARTITEM_SKU_LOWSTOCK = -8;
+	public static final long CARTITEM_BS_DETAIL_LOWSTOCK = -8;
 	/**
-	 * 店铺状态异常
+	 * 特卖商品超出限购数量
 	 */
-	public static final long STORE_UNNORMAL = -9;
-	/**
-	 * 特卖商品超出购买数量
-	 */
-	public static final long CARTITEM_SHOW_EXCEED = -10;
+	public static final long CARTITEM_BS_DETAIL_EXCEED = -9;
 	/**
 	 * cookie中的购物车
 	 */
 	public static final String COOKIE_CART = "cart";
-	/**
-	 * 购物车中商品数量
-	 */
-	public static final String COOKIE_CART_COUNT = "cartCount";
-	/**
-	 * 服务器端的购物车
-	 */
-	public static final String SERVER_CART = "cart_";
+	
+	public static final String COOKIE_CART_CONFIRM = "cartconfirm";
 	/**
 	 * cookie中购物车有效期
 	 */
@@ -141,21 +127,9 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_TOBECOMMENT = "c";
 	/**
-	 * 支付方式：货到付款
-	 */
-	public static final String PAY_TYPE_COD = "0";
-	/**
 	 * 订单状态：在线支付
 	 */
 	public static final String PAY_TYPE_ONLINE = "1";
-	/**
-	 * 支付模式：货到付款--现金
-	 */
-	public static final String PAY_MODE_COD_CASH = "00";
-	/**
-	 * 支付模式：货到付款--POS
-	 */
-	public static final String PAY_MODE_COD_POS = "01";
 	/**
 	 * 支付模式：支付宝
 	 */

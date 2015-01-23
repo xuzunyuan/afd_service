@@ -48,29 +48,35 @@ public class CartItem implements Serializable {
 	private BigDecimal showPrice;
 	// 库存
 	private Long stock;
+	
+	private Integer purchaseCountLimit; 
 	// 排序权重
 	private int sortWeight;
 	// 基础类目三级id
 	private Integer bcId;
-	// 商品重量
-	private BigDecimal weight;
-	// 商品体积
-	private BigDecimal volume;
 
-	/**
-	 * 获取促销的剩余时间(单位：秒)
-	 * 
-	 * @return
-	 */
-	public long getRestOfTime() {
-		//TODO
-		return 0l;
+//	/**
+//	 * 获取促销的剩余时间(单位：秒)
+//	 * 
+//	 * @return
+//	 */
+//	public long getRestOfTime() {
+//		//TODO
+//		return 0l;
+//	}
+
+	public Integer getPurchaseCountLimit() {
+		return purchaseCountLimit;
 	}
 
+	public void setPurchaseCountLimit(Integer purchaseCountLimit) {
+		this.purchaseCountLimit = purchaseCountLimit;
+	}
+	
 	public String getSpecId() {
 		return specId;
 	}
-
+	
 	public void setSpecId(String specId) {
 		this.specId = specId;
 	}
@@ -228,22 +234,6 @@ public class CartItem implements Serializable {
 
 	public void setBcId(Integer bcId) {
 		this.bcId = bcId;
-	}
-
-	public BigDecimal getWeight() {
-		return weight;
-	}
-
-	public void setWeight(BigDecimal weight) {
-		this.weight = weight;
-	}
-
-	public BigDecimal getVolume() {
-		return volume;
-	}
-
-	public void setVolume(BigDecimal volume) {
-		this.volume = volume;
 	}
 
 	public String getProdCode() {
