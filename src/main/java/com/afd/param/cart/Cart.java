@@ -72,8 +72,8 @@ public class Cart implements Serializable{
 		if(this.cartItems != null && this.cartItems.size() > 0){
 			for(CartItem cartItem : this.cartItems){
 				if(cartItem.getStatusCode() != OrderConstants.CARTITEM_SUCCESS
-						&& cartItem.getStatusCode() != OrderConstants.CARTITEM_SKU_LOWSTOCK
-						&& cartItem.getStatusCode() != OrderConstants.CARTITEM_SHOW_EXCEED){
+						&& cartItem.getStatusCode() != OrderConstants.CARTITEM_BS_DETAIL_LOWSTOCK
+						&& cartItem.getStatusCode() != OrderConstants.CARTITEM_BS_DETAIL_EXCEED){
 					continue;
 				}
 				if(!cartItem.isSelected()){
@@ -95,8 +95,8 @@ public class Cart implements Serializable{
 		if(this.cartItems != null && this.cartItems.size() > 0){
 			for(CartItem cartItem : this.cartItems){
 				if(cartItem.getStatusCode() == OrderConstants.CARTITEM_SUCCESS
-						|| cartItem.getStatusCode() == OrderConstants.CARTITEM_SKU_LOWSTOCK
-						|| cartItem.getStatusCode() == OrderConstants.CARTITEM_SHOW_EXCEED){
+						|| cartItem.getStatusCode() == OrderConstants.CARTITEM_BS_DETAIL_LOWSTOCK
+						|| cartItem.getStatusCode() == OrderConstants.CARTITEM_BS_DETAIL_EXCEED){
 					hasProdNormal = true;
 					break;
 				}
