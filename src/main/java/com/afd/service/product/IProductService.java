@@ -89,15 +89,7 @@ public interface IProductService {
 	 * @param prodIds 商品ID
 	 * @return
 	 */
-	public Map<Integer, List<Sku>> getSkusByProdId(List<Integer> prodIds);
-	
-	/**
-	 * 根据prodId获sku分页列表
-	 * @param prodId
-	 * @param page
-	 * @return
-	 */
-	public Page<Sku> getSkusByProdIdPage( String prodId,Page<Sku> page);
+	public Map<Integer, List<Sku>> getSkusByProdIds(List<Integer> prodIds);
 	
 	/**
 	 * 批量查询sku
@@ -114,49 +106,41 @@ public interface IProductService {
 	 * 
 	 * @return prodImgId
 	 */
-	public long addProductImg(ProductImg productImg);
+	public Integer addProductImg(ProductImg productImg);
 	
 	/**
 	 * 修改商品图片
 	 * @param productImg 
 	 * @return
 	 */
-	public long updateProductImg(ProductImg productImg);
+	public Integer updateProductImg(ProductImg productImg);
 	
 	/**
 	 * 通过主键删图片
 	 * @param prodImgId
 	 * @return
 	 */
-	public boolean delProductImg(Long prodImgId);
+	public boolean delProductImgById(Integer prodImgId);
 	
 	/**
 	 * 通过商品ID删图片
 	 * @param prodId
 	 * @return
 	 */
-	public boolean delProductImgByProdId(Long prodId);
+	public boolean delProductImgByProdId(Integer prodId);
 	/**
 	 *  通过主键获取图片信息
 	 * @param prodImgId
 	 * @return
 	 */
-	public ProductImg getProductImgByPrimaryKey(Long prodImgId);
+	public ProductImg getProductImgByPrimaryKey(Integer prodImgId);
 	
 	/**
 	 * 	通过商品Id获得商品图片列表
 	 * @param prodId
 	 * @return
 	 */
-	public List<ProductImg> getProductImgByProdId(Long prodId);
-	
-	/**
-	 * 	通过商品Id获得商品图片列表
-	 * @param prodId
-	 * @param page
-	 * @return
-	 */
-	public Page<ProductImg> getProductImgByProdIdOfPage(long prodId,Page<ProductImg> page);
+	public List<ProductImg> getProductImgByProdId(Integer prodId);
 	
 	/*－－－－－－－－－－－－－－－－－－－-－－－-－－－－－-----商品CRUD----－－－－－－－-－－－－－－－－－－－－－－－－－－－－－*/	
 
@@ -343,7 +327,7 @@ public interface IProductService {
 	 * @param sellerId
 	 * @return 商品列表
 	 */
-	public List<Product> getProductBysellerId(Integer sellerId);
+	public List<Product> getOnlineProductBySellerId(Integer sellerId);
 	
 	/**
 	 * 获取当前卖家所有商品ID
@@ -351,7 +335,7 @@ public interface IProductService {
 	 * @param sellerId
 	 * @return 商品ID列表
 	 */
-	public List<Integer> getProductIdsBysellerId(Integer sellerId);
+	public List<Integer> getProductIdsBySellerId(Integer sellerId);
 
 		
 }

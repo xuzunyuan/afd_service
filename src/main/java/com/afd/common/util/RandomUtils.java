@@ -4,7 +4,7 @@ import java.util.Map;
 
 import com.google.common.collect.Maps;
 
-public class RandomUtil {
+public class RandomUtils {
 	/**
 	 * 产生指定范围内的一个随机数
 	 * 
@@ -47,11 +47,7 @@ public class RandomUtil {
 	}
 
 	public static void main(String[] args) {
-		// for (int i = 0; i < 11; i++) {
-		// System.out.println("random1:" + RandomUtil.randomInt(0, 10));
-		// }
-
-		int[] array = RandomUtil.randomInt(0, 10, 11);
+		int[] array = RandomUtils.randomInt(0, 10, 11);
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.println("random2:" + array[i]);

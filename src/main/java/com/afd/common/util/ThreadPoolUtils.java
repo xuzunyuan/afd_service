@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
  * @author xuzunyuan
  * @date 2014年12月26日
  */
-public class ThreadPoolUtil {
+public class ThreadPoolUtils {
 	private static final int threadCount = 100;
 	private static ExecutorService executorService;
 	static {
@@ -30,7 +30,7 @@ public class ThreadPoolUtil {
 		});
 	}
 
-	private ThreadPoolUtil() {
+	private ThreadPoolUtils() {
 	}
 
 	public static void execute(Runnable runnable) {
