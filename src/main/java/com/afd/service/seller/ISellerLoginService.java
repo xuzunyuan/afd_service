@@ -106,7 +106,7 @@ public interface ISellerLoginService {
 
 	public int changePassword(int loginId, String newPassword);
 
-	public static class SellerLoginValidate implements Serializable {
+	public static final class SellerLoginValidate implements Serializable {
 		public static final int PASSED = 1; // 通过
 		public static final int NOT_EXIST = 0; // 账号不存在
 		public static final int INCORRECT_PASSWORD = -1; // 密码不正确
