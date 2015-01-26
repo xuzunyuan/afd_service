@@ -12,7 +12,7 @@
  	<dubbo:consumer timeout="3000" check="false" retries="0"/> 	
  	
  	<!-- sms service -->  
- 	<dubbo:reference id="dubbo_smsService" interface="com.afd.service.sms.ISmsService" mock="com.afd.service.sms.MockSmsService"/>
+ 	<dubbo:reference id="dubbo_smsService" interface="com.afd.service.sms.ISmsService" mock="com.afd.service.sms.SmsServiceMock"/>
  	
  	<!-- order service -->   
  	<dubbo:reference id="dubbo_orderService" interface="com.afd.service.order.IOrderService" />
