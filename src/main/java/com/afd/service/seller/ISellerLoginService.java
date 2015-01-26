@@ -32,7 +32,7 @@ public interface ISellerLoginService {
 	 * @param login
 	 * @return 新账号的ID，失败返回0或负数（0:账号重复）
 	 */
-	public long newLogin(SellerLogin login);
+	public int newLogin(SellerLogin login);
 
 	/**
 	 * 冻结账号
