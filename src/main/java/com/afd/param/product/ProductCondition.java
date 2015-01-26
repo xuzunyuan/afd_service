@@ -5,9 +5,8 @@ import java.util.Date;
 
 public class ProductCondition implements Serializable {
 	private static final long serialVersionUID = 4303516093238416741L;
-	private Long storeId;	//店铺ID
-	private String storeName;//店铺名称
-	private Long prodId;	//商品ID
+	private Integer sellerId;	//卖家ID
+	private Integer prodId;	//商品ID
 	private String prodCode;//商品编号
 	private Integer bcId;	//基础类目ID（第三级）
 	private String bcCode;  // bc_code
@@ -21,22 +20,16 @@ public class ProductCondition implements Serializable {
 	private String auditStatus;	//审核状态
 	private String lastAuditName;//审核人
 	
-	public Long getStoreId() {
-		return storeId;
+	public Integer getSellerId() {
+		return sellerId;
 	}
-	public void setStoreId(Long storeId) {
-		this.storeId = storeId;
+	public void setSellerId(Integer sellerId) {
+		this.sellerId = sellerId;
 	}
-	public String getStoreName() {
-		return storeName;
-	}
-	public void setStoreName(String storeName) {
-		this.storeName = storeName;
-	}
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
 	}
 	public String getProdCode() {
