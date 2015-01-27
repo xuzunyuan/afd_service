@@ -21,4 +21,9 @@ public interface SellerConstants {
 		// 目前只有正常状态
 		public static final String NORAML = "1"; // 正常
 	}
+
+	public static interface Seller$IsPaidDeposit {
+		public static final String UNCHARGE = "0"; // 未交费
+		public static final String CHARGED = "1"; // 已交费
+	}
 }
