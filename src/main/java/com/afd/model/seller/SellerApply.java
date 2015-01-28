@@ -4,11 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SellerApply implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6480141776131126491L;
-
 	private Integer appId;
 
 	private Integer sellerLoginId;
@@ -26,6 +21,8 @@ public class SellerApply implements Serializable {
 	private Integer auditId;
 
 	private String coName;
+
+	private String coBln;
 
 	private Date btStartDate;
 
@@ -92,8 +89,6 @@ public class SellerApply implements Serializable {
 	private String bizManEmail;
 
 	private String remark;
-
-	private byte[] coBln;
 
 	public Integer getAppId() {
 		return appId;
@@ -165,6 +160,14 @@ public class SellerApply implements Serializable {
 
 	public void setCoName(String coName) {
 		this.coName = coName == null ? null : coName.trim();
+	}
+
+	public String getCoBln() {
+		return coBln;
+	}
+
+	public void setCoBln(String coBln) {
+		this.coBln = coBln == null ? null : coBln.trim();
 	}
 
 	public Date getBtStartDate() {
@@ -433,11 +436,8 @@ public class SellerApply implements Serializable {
 		this.remark = remark == null ? null : remark.trim();
 	}
 
-	public byte[] getCoBln() {
-		return coBln;
-	}
-
-	public void setCoBln(byte[] coBln) {
-		this.coBln = coBln;
-	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6480141776131126491L;
 }
