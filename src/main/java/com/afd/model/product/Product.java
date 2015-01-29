@@ -64,6 +64,11 @@ public class Product implements Serializable {
 
     private List<Sku> skus;
     
+    //
+    private String bcName;
+    private String salePrice;
+    private String marketPrice;
+
     public Integer getProdId() {
         return prodId;
     }
@@ -286,6 +291,30 @@ public class Product implements Serializable {
 
 	public void setSkus(List<Sku> skus) {
 		this.skus = skus;
+	}
+
+	public String getBcName() {
+		return bcName;
+	}
+
+	public void setBcName(String bcName) {
+		this.bcName = bcName;
+	}
+
+	public String getSalePrice() {
+		return salePrice;
+	}
+
+	public void setSalePrice(String salePrice) {
+		this.salePrice = salePrice;
+	}
+
+	public String getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(String marketPrice) {
+		this.marketPrice = marketPrice;
 	}
     
 }
