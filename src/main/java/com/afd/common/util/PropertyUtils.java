@@ -52,10 +52,7 @@ public class PropertyUtils {
 		String activeProfile = System.getProperty("spring.profiles.active");
 
 		if (activeProfile == null)
-			activeProfile = System.getProperty("spring.profiles.default");
-
-		if (activeProfile == null)
-			return;
+			activeProfile = "develop";
 
 		Resource resource = new ClassPathResource("/properties/my.properties");
 		InputStream is = null;
