@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 public class ProductVo implements Serializable{
 	private static final long serialVersionUID = -4853605375333087897L;
 	
-	private Long prodId;	 	// 商品Id
+	private Integer prodId;	 	// 商品Id
+	private String prodCode;	// 编码
 	private String title; 	 	// 商品标题
 	private String subtitle; 	// 卖点(子标题)
 	private Integer bcId;		// 品类ID
@@ -24,11 +25,17 @@ public class ProductVo implements Serializable{
 	private BigDecimal[] skuMarketPrice;//特卖价
 	private String[] skuImgUrl;	// sku图片
 
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
+	}
+	public String getProdCode() {
+		return prodCode;
+	}
+	public void setProdCode(String prodCode) {
+		this.prodCode = prodCode;
 	}
 	public String getTitle() {
 		return title;
