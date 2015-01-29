@@ -30,6 +30,7 @@
    	
    	<!-- product service --> 
    	<dubbo:reference id="dubbo_productService" interface="com.afd.service.product.IProductService" />
+   	<dubbo:reference id="dubbo_brandShowService" interface="com.afd.service.product.IBrandShowService" />
    	
    	<!-- seller service --> 
    	<dubbo:reference id="dubbo_sellerLoginService" interface="com.afd.service.seller.ISellerLoginService" />
