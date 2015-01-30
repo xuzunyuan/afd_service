@@ -35,6 +35,8 @@ public interface ProductConstants {
 	public static final String CACHE_PERFIX_INVENTORY = "inventory_";
 	// 产品缓存
 	public static final String CACHE_PERFIX_PRODUCT = "product_";
+	// 缓存中特卖明细库存
+	public static final String CACHE_PERFIX_BSD_STOCK = "bsd_stock_";
 
 	/************************************* 类目相关常量 *************************************/
 
