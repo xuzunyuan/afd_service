@@ -58,7 +58,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setLoginName(String loginName) {
-		this.loginName = loginName == null ? null : loginName.trim();
+		this.loginName = loginName;
 	}
 
 	public String getLoginPwd() {
@@ -66,7 +66,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setLoginPwd(String loginPwd) {
-		this.loginPwd = loginPwd == null ? null : loginPwd.trim();
+		this.loginPwd = loginPwd;
 	}
 
 	public String getPwdKey() {
@@ -74,7 +74,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setPwdKey(String pwdKey) {
-		this.pwdKey = pwdKey == null ? null : pwdKey.trim();
+		this.pwdKey = pwdKey;
 	}
 
 	public String getMobile() {
@@ -82,7 +82,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setMobile(String mobile) {
-		this.mobile = mobile == null ? null : mobile.trim();
+		this.mobile = mobile;
 	}
 
 	public String getNickname() {
@@ -90,7 +90,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setNickname(String nickname) {
-		this.nickname = nickname == null ? null : nickname.trim();
+		this.nickname = nickname;
 	}
 
 	public String getStatus() {
@@ -98,7 +98,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setStatus(String status) {
-		this.status = status == null ? null : status.trim();
+		this.status = status;
 	}
 
 	public String getType() {
@@ -106,7 +106,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setType(String type) {
-		this.type = type == null ? null : type.trim();
+		this.type = type;
 	}
 
 	public Date getRegDate() {
@@ -122,7 +122,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setRegIp(String regIp) {
-		this.regIp = regIp == null ? null : regIp.trim();
+		this.regIp = regIp;
 	}
 
 	public Integer getSellerId() {
@@ -154,7 +154,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setLastLoginIp(String lastLoginIp) {
-		this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
+		this.lastLoginIp = lastLoginIp;
 	}
 
 	public Date getFreezeDate() {
@@ -170,7 +170,7 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setFreezeByName(String freezeByName) {
-		this.freezeByName = freezeByName == null ? null : freezeByName.trim();
+		this.freezeByName = freezeByName;
 	}
 
 	public Date getUnfreezeDate() {
@@ -186,7 +186,6 @@ public class SellerLogin implements Serializable {
 	}
 
 	public void setUnfreezeByName(String unfreezeByName) {
-		this.unfreezeByName = unfreezeByName == null ? null : unfreezeByName
-				.trim();
+		this.unfreezeByName = unfreezeByName;
 	}
 }

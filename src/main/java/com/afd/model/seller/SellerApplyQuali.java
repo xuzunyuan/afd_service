@@ -45,7 +45,7 @@ public class SellerApplyQuali implements Serializable {
 	}
 
 	public void setQualiName(String qualiName) {
-		this.qualiName = qualiName == null ? null : qualiName.trim();
+		this.qualiName = qualiName;
 	}
 
 	public String getQuailUrl() {
@@ -53,7 +53,7 @@ public class SellerApplyQuali implements Serializable {
 	}
 
 	public void setQuailUrl(String quailUrl) {
-		this.quailUrl = quailUrl == null ? null : quailUrl.trim();
+		this.quailUrl = quailUrl;
 	}
 
 	public String getExpireDate() {
@@ -61,7 +61,7 @@ public class SellerApplyQuali implements Serializable {
 	}
 
 	public void setExpireDate(String expireDate) {
-		this.expireDate = expireDate == null ? null : expireDate.trim();
+		this.expireDate = expireDate;
 	}
 
 	public Integer getCcId() {
@@ -77,7 +77,7 @@ public class SellerApplyQuali implements Serializable {
 	}
 
 	public void setCcName(String ccName) {
-		this.ccName = ccName == null ? null : ccName.trim();
+		this.ccName = ccName;
 	}
 
 	public String getAuditType() {
@@ -85,6 +85,6 @@ public class SellerApplyQuali implements Serializable {
 	}
 
 	public void setAuditType(String auditType) {
-		this.auditType = auditType == null ? null : auditType.trim();
+		this.auditType = auditType;
 	}
 }

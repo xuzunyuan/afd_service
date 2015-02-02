@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SellerApply implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6480141776131126491L;
 	private Integer appId;
 
 	private Integer sellerLoginId;
@@ -90,6 +94,10 @@ public class SellerApply implements Serializable {
 
 	private String remark;
 
+	private String bankLicenseImg;
+
+	private String tel;
+
 	public Integer getAppId() {
 		return appId;
 	}
@@ -111,7 +119,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setApplyType(String applyType) {
-		this.applyType = applyType == null ? null : applyType.trim();
+		this.applyType = applyType;
 	}
 
 	public Date getApplyDate() {
@@ -127,7 +135,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setApplyIp(String applyIp) {
-		this.applyIp = applyIp == null ? null : applyIp.trim();
+		this.applyIp = applyIp;
 	}
 
 	public String getStatus() {
@@ -135,7 +143,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setStatus(String status) {
-		this.status = status == null ? null : status.trim();
+		this.status = status;
 	}
 
 	public String getAuditStatus() {
@@ -143,7 +151,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setAuditStatus(String auditStatus) {
-		this.auditStatus = auditStatus == null ? null : auditStatus.trim();
+		this.auditStatus = auditStatus;
 	}
 
 	public Integer getAuditId() {
@@ -159,7 +167,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setCoName(String coName) {
-		this.coName = coName == null ? null : coName.trim();
+		this.coName = coName;
 	}
 
 	public String getCoBln() {
@@ -167,7 +175,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setCoBln(String coBln) {
-		this.coBln = coBln == null ? null : coBln.trim();
+		this.coBln = coBln;
 	}
 
 	public Date getBtStartDate() {
@@ -191,7 +199,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBtGeo(String btGeo) {
-		this.btGeo = btGeo == null ? null : btGeo.trim();
+		this.btGeo = btGeo;
 	}
 
 	public String getRegisterCapital() {
@@ -199,8 +207,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setRegisterCapital(String registerCapital) {
-		this.registerCapital = registerCapital == null ? null : registerCapital
-				.trim();
+		this.registerCapital = registerCapital;
 	}
 
 	public String getBizScope() {
@@ -208,7 +215,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizScope(String bizScope) {
-		this.bizScope = bizScope == null ? null : bizScope.trim();
+		this.bizScope = bizScope;
 	}
 
 	public String getLpName() {
@@ -216,7 +223,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setLpName(String lpName) {
-		this.lpName = lpName == null ? null : lpName.trim();
+		this.lpName = lpName;
 	}
 
 	public String getLpMobile() {
@@ -224,7 +231,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setLpMobile(String lpMobile) {
-		this.lpMobile = lpMobile == null ? null : lpMobile.trim();
+		this.lpMobile = lpMobile;
 	}
 
 	public String getContactAddr() {
@@ -232,7 +239,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setContactAddr(String contactAddr) {
-		this.contactAddr = contactAddr == null ? null : contactAddr.trim();
+		this.contactAddr = contactAddr;
 	}
 
 	public String getFax() {
@@ -240,7 +247,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setFax(String fax) {
-		this.fax = fax == null ? null : fax.trim();
+		this.fax = fax;
 	}
 
 	public String getCoSite() {
@@ -248,7 +255,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setCoSite(String coSite) {
-		this.coSite = coSite == null ? null : coSite.trim();
+		this.coSite = coSite;
 	}
 
 	public String getCoBrand() {
@@ -256,7 +263,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setCoBrand(String coBrand) {
-		this.coBrand = coBrand == null ? null : coBrand.trim();
+		this.coBrand = coBrand;
 	}
 
 	public String getBtImg() {
@@ -264,7 +271,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBtImg(String btImg) {
-		this.btImg = btImg == null ? null : btImg.trim();
+		this.btImg = btImg;
 	}
 
 	public String getOrgCodeImg() {
@@ -272,7 +279,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setOrgCodeImg(String orgCodeImg) {
-		this.orgCodeImg = orgCodeImg == null ? null : orgCodeImg.trim();
+		this.orgCodeImg = orgCodeImg;
 	}
 
 	public String getTaxImg() {
@@ -280,7 +287,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setTaxImg(String taxImg) {
-		this.taxImg = taxImg == null ? null : taxImg.trim();
+		this.taxImg = taxImg;
 	}
 
 	public String getIdAImg() {
@@ -288,7 +295,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setIdAImg(String idAImg) {
-		this.idAImg = idAImg == null ? null : idAImg.trim();
+		this.idAImg = idAImg;
 	}
 
 	public String getIdBImg() {
@@ -296,7 +303,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setIdBImg(String idBImg) {
-		this.idBImg = idBImg == null ? null : idBImg.trim();
+		this.idBImg = idBImg;
 	}
 
 	public String getOrgCode() {
@@ -304,7 +311,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setOrgCode(String orgCode) {
-		this.orgCode = orgCode == null ? null : orgCode.trim();
+		this.orgCode = orgCode;
 	}
 
 	public String getTaxNo() {
@@ -312,7 +319,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setTaxNo(String taxNo) {
-		this.taxNo = taxNo == null ? null : taxNo.trim();
+		this.taxNo = taxNo;
 	}
 
 	public String getTaxType() {
@@ -320,7 +327,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setTaxType(String taxType) {
-		this.taxType = taxType == null ? null : taxType.trim();
+		this.taxType = taxType;
 	}
 
 	public String getTaxRatio() {
@@ -328,7 +335,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setTaxRatio(String taxRatio) {
-		this.taxRatio = taxRatio == null ? null : taxRatio.trim();
+		this.taxRatio = taxRatio;
 	}
 
 	public String getBankAcctName() {
@@ -336,7 +343,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBankAcctName(String bankAcctName) {
-		this.bankAcctName = bankAcctName == null ? null : bankAcctName.trim();
+		this.bankAcctName = bankAcctName;
 	}
 
 	public String getBankAcctNo() {
@@ -344,7 +351,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBankAcctNo(String bankAcctNo) {
-		this.bankAcctNo = bankAcctNo == null ? null : bankAcctNo.trim();
+		this.bankAcctNo = bankAcctNo;
 	}
 
 	public String getBranchName() {
@@ -352,7 +359,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBranchName(String branchName) {
-		this.branchName = branchName == null ? null : branchName.trim();
+		this.branchName = branchName;
 	}
 
 	public String getBranchNo() {
@@ -360,7 +367,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBranchNo(String branchNo) {
-		this.branchNo = branchNo == null ? null : branchNo.trim();
+		this.branchNo = branchNo;
 	}
 
 	public String getContractType() {
@@ -368,7 +375,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setContractType(String contractType) {
-		this.contractType = contractType == null ? null : contractType.trim();
+		this.contractType = contractType;
 	}
 
 	public String getContractImg() {
@@ -376,7 +383,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setContractImg(String contractImg) {
-		this.contractImg = contractImg == null ? null : contractImg.trim();
+		this.contractImg = contractImg;
 	}
 
 	public String getBizManName() {
@@ -384,7 +391,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManName(String bizManName) {
-		this.bizManName = bizManName == null ? null : bizManName.trim();
+		this.bizManName = bizManName;
 	}
 
 	public String getBizManPosition() {
@@ -392,8 +399,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManPosition(String bizManPosition) {
-		this.bizManPosition = bizManPosition == null ? null : bizManPosition
-				.trim();
+		this.bizManPosition = bizManPosition;
 	}
 
 	public String getBizManIdNo() {
@@ -401,7 +407,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManIdNo(String bizManIdNo) {
-		this.bizManIdNo = bizManIdNo == null ? null : bizManIdNo.trim();
+		this.bizManIdNo = bizManIdNo;
 	}
 
 	public String getBizManMobile() {
@@ -409,7 +415,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManMobile(String bizManMobile) {
-		this.bizManMobile = bizManMobile == null ? null : bizManMobile.trim();
+		this.bizManMobile = bizManMobile;
 	}
 
 	public String getBizManQq() {
@@ -417,7 +423,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManQq(String bizManQq) {
-		this.bizManQq = bizManQq == null ? null : bizManQq.trim();
+		this.bizManQq = bizManQq;
 	}
 
 	public String getBizManEmail() {
@@ -425,7 +431,7 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setBizManEmail(String bizManEmail) {
-		this.bizManEmail = bizManEmail == null ? null : bizManEmail.trim();
+		this.bizManEmail = bizManEmail;
 	}
 
 	public String getRemark() {
@@ -433,11 +439,22 @@ public class SellerApply implements Serializable {
 	}
 
 	public void setRemark(String remark) {
-		this.remark = remark == null ? null : remark.trim();
+		this.remark = remark;
 	}
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6480141776131126491L;
+	public String getBankLicenseImg() {
+		return bankLicenseImg;
+	}
+
+	public void setBankLicenseImg(String bankLicenseImg) {
+		this.bankLicenseImg = bankLicenseImg;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 }

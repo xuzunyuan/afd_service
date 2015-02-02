@@ -61,7 +61,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setReceiver(String receiver) {
-		this.receiver = receiver == null ? null : receiver.trim();
+		this.receiver = receiver;
 	}
 
 	public Integer getProvince() {
@@ -77,7 +77,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setProvinceName(String provinceName) {
-		this.provinceName = provinceName == null ? null : provinceName.trim();
+		this.provinceName = provinceName;
 	}
 
 	public Integer getCity() {
@@ -93,7 +93,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setCityName(String cityName) {
-		this.cityName = cityName == null ? null : cityName.trim();
+		this.cityName = cityName;
 	}
 
 	public Integer getDistrict() {
@@ -109,7 +109,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setDistrictName(String districtName) {
-		this.districtName = districtName == null ? null : districtName.trim();
+		this.districtName = districtName;
 	}
 
 	public Integer getTown() {
@@ -125,7 +125,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setTownName(String townName) {
-		this.townName = townName == null ? null : townName.trim();
+		this.townName = townName;
 	}
 
 	public String getAddr() {
@@ -133,7 +133,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setAddr(String addr) {
-		this.addr = addr == null ? null : addr.trim();
+		this.addr = addr;
 	}
 
 	public String getTel() {
@@ -141,7 +141,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setTel(String tel) {
-		this.tel = tel == null ? null : tel.trim();
+		this.tel = tel;
 	}
 
 	public String getMobile() {
@@ -149,7 +149,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setMobile(String mobile) {
-		this.mobile = mobile == null ? null : mobile.trim();
+		this.mobile = mobile;
 	}
 
 	public String getZipCode() {
@@ -157,7 +157,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode == null ? null : zipCode.trim();
+		this.zipCode = zipCode;
 	}
 
 	public String getStatus() {
@@ -165,6 +165,7 @@ public class SellerRetAddress implements Serializable {
 	}
 
 	public void setStatus(String status) {
-		this.status = status == null ? null : status.trim();
+		this.status = status;
 	}
+
 }

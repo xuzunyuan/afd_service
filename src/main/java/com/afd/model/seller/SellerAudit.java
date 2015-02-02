@@ -48,7 +48,7 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setAuditResult(String auditResult) {
-		this.auditResult = auditResult == null ? null : auditResult.trim();
+		this.auditResult = auditResult;
 	}
 
 	public String getAuditType() {
@@ -56,7 +56,7 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setAuditType(String auditType) {
-		this.auditType = auditType == null ? null : auditType.trim();
+		this.auditType = auditType;
 	}
 
 	public String getAuditor() {
@@ -64,7 +64,7 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setAuditor(String auditor) {
-		this.auditor = auditor == null ? null : auditor.trim();
+		this.auditor = auditor;
 	}
 
 	public String getAuditOpinion() {
@@ -72,7 +72,7 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setAuditOpinion(String auditOpinion) {
-		this.auditOpinion = auditOpinion == null ? null : auditOpinion.trim();
+		this.auditOpinion = auditOpinion;
 	}
 
 	public Date getAuditDate() {
@@ -88,7 +88,7 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setAuditIp(String auditIp) {
-		this.auditIp = auditIp == null ? null : auditIp.trim();
+		this.auditIp = auditIp;
 	}
 
 	public String getColumn9() {
@@ -96,6 +96,6 @@ public class SellerAudit implements Serializable {
 	}
 
 	public void setColumn9(String column9) {
-		this.column9 = column9 == null ? null : column9.trim();
+		this.column9 = column9;
 	}
 }

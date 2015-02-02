@@ -78,7 +78,7 @@ public class SellerCredit implements Serializable {
 	}
 
 	public void setStoreName(String storeName) {
-		this.storeName = storeName == null ? null : storeName.trim();
+		this.storeName = storeName;
 	}
 
 	public Integer getCreditAmount() {
@@ -102,8 +102,7 @@ public class SellerCredit implements Serializable {
 	}
 
 	public void setStoreLevelName(String storeLevelName) {
-		this.storeLevelName = storeLevelName == null ? null : storeLevelName
-				.trim();
+		this.storeLevelName = storeLevelName;
 	}
 
 	public BigDecimal getServiceScore() {
