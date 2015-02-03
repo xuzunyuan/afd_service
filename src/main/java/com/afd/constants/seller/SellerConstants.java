@@ -26,4 +26,19 @@ public interface SellerConstants {
 		public static final String UNCHARGE = "0"; // 未交费
 		public static final String CHARGED = "1"; // 已交费
 	}
+
+	public static interface SellerApply$Status {
+		public static final String WAIT_AUDIT = "1"; // 待审核
+		public static final String PASSED = "2"; // 通过
+		public static final String REJECTED = "3"; // 驳回
+	}
+
+	public static interface SellerAudit$AuditType {
+		public static final String BASE_INFO = "1";
+	}
+
+	public static interface SellerAudit$AuditResult {
+		public static final String REJECTED = "0";
+		public static final String PASSED = "1";
+	}
 }

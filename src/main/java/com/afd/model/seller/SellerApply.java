@@ -3,6 +3,10 @@ package com.afd.model.seller;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
+
+import com.afd.common.util.DateUtils;
+
 public class SellerApply implements Serializable {
 	/**
 	 * 
@@ -184,6 +188,8 @@ public class SellerApply implements Serializable {
 
 	public void setBtStartDate(Date btStartDate) {
 		this.btStartDate = btStartDate;
+		this.sBtStartDate = DateUtils.formatDate(btStartDate,
+				DateUtils.PART_TIME_PATTERN);
 	}
 
 	public Date getBtEndDate() {
@@ -192,6 +198,8 @@ public class SellerApply implements Serializable {
 
 	public void setBtEndDate(Date btEndDate) {
 		this.btEndDate = btEndDate;
+		this.sBtEndDate = DateUtils.formatDate(btEndDate,
+				DateUtils.PART_TIME_PATTERN);
 	}
 
 	public String getBtGeo() {
@@ -248,6 +256,19 @@ public class SellerApply implements Serializable {
 
 	public void setFax(String fax) {
 		this.fax = fax;
+
+		if (fax == null) {
+			faxArea = faxExt = faxNo = null;
+		} else {
+			String[] faxs = StringUtils.split(fax, SPLITTER);
+
+			if (faxs.length >= 1)
+				faxArea = faxs[0];
+			if (faxs.length >= 2)
+				faxNo = faxs[1];
+			if (faxs.length >= 3)
+				faxExt = faxs[2];
+		}
 	}
 
 	public String getCoSite() {
@@ -456,5 +477,110 @@ public class SellerApply implements Serializable {
 
 	public void setTel(String tel) {
 		this.tel = tel;
+		if (tel == null) {
+			telArea = telExt = telNo = null;
+		} else {
+			String[] tels = StringUtils.split(tel, SPLITTER);
+
+			if (tels.length >= 1)
+				telArea = tels[0];
+			if (tels.length >= 2)
+				telNo = tels[1];
+			if (tels.length >= 3)
+				telExt = tels[2];
+		}
 	}
+
+	// 扩展
+	private static final String SPLITTER = "-";
+	private String sBtStartDate, sBtEndDate;
+	private String telArea, telExt, telNo;
+	private String faxArea, faxExt, faxNo;
+
+	public String getsBtStartDate() {
+		return sBtStartDate;
+	}
+
+	public void setsBtStartDate(String sBtStartDate) {
+		this.sBtStartDate = sBtStartDate;
+		this.btStartDate = DateUtils.parseDate(sBtStartDate,
+				DateUtils.PART_TIME_PATTERN);
+	}
+
+	public String getsBtEndDate() {
+		return sBtEndDate;
+	}
+
+	public void setsBtEndDate(String sBtEndDate) {
+		this.sBtEndDate = sBtEndDate;
+		this.btEndDate = DateUtils.parseDate(sBtEndDate,
+				DateUtils.PART_TIME_PATTERN);
+	}
+
+	public String getTelArea() {
+		return telArea;
+	}
+
+	public void setTelArea(String telArea) {
+		this.telArea = telArea;
+		this.tel = (telArea == null ? "" : telArea) + SPLITTER
+				+ (telNo == null ? "" : telNo) + SPLITTER
+				+ (telExt == null ? "" : telExt);
+	}
+
+	public String getTelExt() {
+		return telExt;
+	}
+
+	public void setTelExt(String telExt) {
+		this.telExt = telExt;
+		this.tel = (telArea == null ? "" : telArea) + SPLITTER
+				+ (telNo == null ? "" : telNo) + SPLITTER
+				+ (telExt == null ? "" : telExt);
+	}
+
+	public String getTelNo() {
+		return telNo;
+	}
+
+	public void setTelNo(String telNo) {
+		this.telNo = telNo;
+		this.tel = (telArea == null ? "" : telArea) + SPLITTER
+				+ (telNo == null ? "" : telNo) + SPLITTER
+				+ (telExt == null ? "" : telExt);
+	}
+
+	public String getFaxArea() {
+		return faxArea;
+	}
+
+	public void setFaxArea(String faxArea) {
+		this.faxArea = faxArea;
+		this.fax = (faxArea == null ? "" : faxArea) + SPLITTER
+				+ (faxNo == null ? "" : faxNo) + SPLITTER
+				+ (faxExt == null ? "" : faxExt);
+	}
+
+	public String getFaxExt() {
+		return faxExt;
+	}
+
+	public void setFaxExt(String faxExt) {
+		this.faxExt = faxExt;
+		this.fax = (faxArea == null ? "" : faxArea) + SPLITTER
+				+ (faxNo == null ? "" : faxNo) + SPLITTER
+				+ (faxExt == null ? "" : faxExt);
+	}
+
+	public String getFaxNo() {
+		return faxNo;
+	}
+
+	public void setFaxNo(String faxNo) {
+		this.faxNo = faxNo;
+		this.fax = (faxArea == null ? "" : faxArea) + SPLITTER
+				+ (faxNo == null ? "" : faxNo) + SPLITTER
+				+ (faxExt == null ? "" : faxExt);
+	}
+
 }
