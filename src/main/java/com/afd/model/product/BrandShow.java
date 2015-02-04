@@ -1,6 +1,7 @@
 package com.afd.model.product;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class BrandShow implements Serializable {
@@ -44,6 +45,8 @@ public class BrandShow implements Serializable {
     private Integer buyLimit;
 
     private Long sRAId;
+    
+    private BigDecimal lowestPrice;
 
 	public Long getBrandShowId() {
 		return brandShowId;
@@ -195,6 +198,14 @@ public class BrandShow implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public BigDecimal getLowestPrice() {
+		return lowestPrice;
+	}
+
+	public void setLowestPrice(BigDecimal lowestPrice) {
+		this.lowestPrice = lowestPrice;
 	}
 
     

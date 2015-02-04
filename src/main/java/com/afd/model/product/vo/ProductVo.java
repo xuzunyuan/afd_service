@@ -18,7 +18,7 @@ public class ProductVo implements Serializable{
 	private String attrValueId;	//属性ID串 “|||”
 	private String attrValueName;//属性名称串
 	private String detail;		//描述
-	private String[] imgUrl;	//图片url
+	private String imgUrl;	//图片url
 	private String[] skuSpecId;	//规格
 	private String[] skuSpecName;//规格名称
 	private BigDecimal[] skuSalePrice;//销售价
@@ -98,10 +98,10 @@ public class ProductVo implements Serializable{
 	public void setDetail(String detail) {
 		this.detail = detail;
 	}
-	public String[] getImgUrl() {
+	public String getImgUrl() {
 		return imgUrl;
 	}
-	public void setImgUrl(String[] imgUrl) {
+	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
 	public String[] getSkuSpecId() {

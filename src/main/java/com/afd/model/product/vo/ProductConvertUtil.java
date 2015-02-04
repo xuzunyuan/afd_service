@@ -25,7 +25,6 @@ public class ProductConvertUtil {
 		if(StringUtils.isNotBlank(vo.getBrandName())){
 			product.setBrandName(vo.getBrandName());
 		}
-		
 		if(StringUtils.isNotBlank(vo.getArtNo())){
 			product.setArtNo(vo.getArtNo());
 		}
