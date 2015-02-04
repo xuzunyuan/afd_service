@@ -5,23 +5,16 @@ import com.afd.constants.SystemConstants;
 
 public interface ProductConstants {
 	// 商品状态
-	public static final String PROD_STATUS_NORMAL = "1";// 待上架
-	public static final String PROD_STATUS_REMOVE = "2";// 删除
-	public static final String PROD_STATUS_ON = "3";// 上架
-	public static final String PROD_STATUS_DOWN = "4";// 下架
-	public static final String PROD_STATUS_VIOLATION = "5";// 违规
-	public static final String PROD_STATUS_SUSPEND_SALE = "6";// 暂停销售（店铺冻结）
+	public static final String PROD_STATUS_ON = "0";		// 上架
+	public static final String PROD_STATUS_DOWN = "1";		// 下架
+	public static final String PROD_STATUS_REMOVE = "2";	//删除
+	public static final String PROD_STATUS_SUSPEND_SALE = "3";// 暂停销售（店铺冻结）
 
 	// 商品审核状态
-	public static final String PROD_AUDIT_NORMAL = "0"; // 原始数据为null或0
-	public static final String PROD_AUDIT_STATUS_PASS = "1"; // 审核通过
+	public static final String PROD_AUDIT_STATUS_WAIT = "0";	// 待审核
+	public static final String PROD_AUDIT_STATUS_PASS = "1"; 	// 审核通过
 	public static final String PROD_AUDIT_STATUS_NO_PASS = "2"; // 驳回申请
 	public static final String PROD_AUDIT_STATUS_PROCESS = "3"; // 审核中
-	public static final String PROD_AUDIT_STATUS_WAIT = "4"; // 待审核
-
-	// 是否橱窗/推荐商品
-	public static final String PROD_STATUS_IS_TRUE = "1"; // 是
-	public static final String PROD_STATUS_IS_FALSE = "0"; // 否
 
 	// sku状态
 	public static final String SKU_STATUS_NORMAL = "1";// 正常
@@ -29,7 +22,7 @@ public interface ProductConstants {
 
 	// 商品图片状态
 	public static final String PROD_IMG_STATUS_NORMAL = "1";// 正常
-	public static final String PROD_IMG_STATUS_REMOVE = "0";// 删除
+	public static final String PROD_IMG_STATUS_REMOVE = "2";// 删除
 
 	// 缓存中库存id的前缀
 	public static final String CACHE_PERFIX_INVENTORY = "inventory_";

@@ -20,6 +20,8 @@ public class BrandShow implements Serializable {
     private String bgColor;
 
     private String type;
+    
+    private String status;
 
     private Date createByDate;
 
@@ -185,6 +187,14 @@ public class BrandShow implements Serializable {
 
 	public void setsRAId(Long sRAId) {
 		this.sRAId = sRAId;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
     

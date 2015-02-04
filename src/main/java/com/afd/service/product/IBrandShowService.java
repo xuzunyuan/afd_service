@@ -34,4 +34,11 @@ public interface IBrandShowService {
 	 * @return
 	 */
 	public List<BrandShowDetail> getBrandShowDetailsByIds(List<Long> brandShowDetailIds);
+	
+	/**
+	 * 
+	 * @param brandShowDetailIds 有效的特卖明细列表
+	 * @return
+	 */
+	public List<BrandShow> getValidBrandShows(BrandShow record);
 }
