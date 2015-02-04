@@ -5,7 +5,9 @@
 package com.afd.service.seller;
 
 import java.util.List;
+import java.util.Map;
 
+import com.afd.common.mybatis.Page;
 import com.afd.model.seller.SellerApply;
 import com.afd.model.seller.SellerAudit;
 
@@ -125,4 +127,14 @@ public interface ISellerApplyService {
 	 * @return
 	 */
 	public List<SellerAudit> getAuditList(int appId);
+
+	/**
+	 * 查询待审核申请，按申请时间倒叙
+	 * 
+	 * @param queryCond
+	 * @param page
+	 * @return
+	 */
+	public Page<SellerApply> queryWaitAuditApply(Map<String, Object> queryCond,
+			int... page);
 }

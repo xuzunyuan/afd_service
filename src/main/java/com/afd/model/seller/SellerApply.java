@@ -583,4 +583,14 @@ public class SellerApply implements Serializable {
 				+ (faxExt == null ? "" : faxExt);
 	}
 
+	// 扩展
+	private String loginName;
+
+	public String getLoginName() {
+		return loginName;
+	}
+
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
 }
