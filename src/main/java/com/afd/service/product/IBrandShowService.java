@@ -1,7 +1,10 @@
 package com.afd.service.product;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
+import com.afd.common.mybatis.Page;
 import com.afd.model.product.BrandShow;
 import com.afd.model.product.BrandShowDetail;
 
@@ -41,4 +44,8 @@ public interface IBrandShowService {
 	 * @return
 	 */
 	public List<BrandShow> getValidBrandShows(BrandShow record);
+	
+	public BigDecimal getLowestPrice(Long bsid);
+	
+	public Page<BrandShowDetail> getBrandShowDetailByPage(Map<?, ?> map,Page<BrandShowDetail> page);
 }
