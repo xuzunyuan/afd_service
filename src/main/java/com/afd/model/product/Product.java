@@ -59,6 +59,8 @@ public class Product implements Serializable {
     private String material;
 
     private String sourceArea;
+    
+    private String imgUrl;
 
     private String detail;
 
@@ -277,7 +279,15 @@ public class Product implements Serializable {
         this.sourceArea = sourceArea == null ? null : sourceArea.trim();
     }
 
-    public String getDetail() {
+    public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public String getDetail() {
         return detail;
     }
 
