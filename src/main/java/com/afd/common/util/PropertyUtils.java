@@ -8,6 +8,7 @@ import java.util.Set;
 
 import javax.servlet.ServletRequest;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -117,6 +118,22 @@ public class PropertyUtils {
 	public static Object getProperty(String key) {
 		return getInstance().props == null ? null : getInstance().props
 				.get(key);
+	}
+
+	public static Object getRandomProperty(String key) {
+		Map<String, Object> props = getInstance().props;
+		Object o = null;
+
+		if (props != null) {
+			o = props.get(key);
+			if (o != null && o instanceof Object[]) {
+				Object[] arr = (Object[]) o;
+				o = ArrayUtils.isEmpty(arr) ? null : arr[RandomUtils.randomInt(
+						0, arr.length - 1)];
+			}
+		}
+
+		return o;
 	}
 
 	/**
