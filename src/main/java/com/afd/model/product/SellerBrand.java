@@ -35,8 +35,28 @@ public class SellerBrand implements Serializable {
     private String otherCert;
 
     private String authCert;
+    
+    private String loginName;
+    
+    private String co_name;
+    
+    public String getLoginName() {
+		return loginName;
+	}
 
-    public Integer getSellerBrandId() {
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+
+	public String getCo_name() {
+		return co_name;
+	}
+
+	public void setCo_name(String co_name) {
+		this.co_name = co_name;
+	}
+
+	public Integer getSellerBrandId() {
         return sellerBrandId;
     }
 
