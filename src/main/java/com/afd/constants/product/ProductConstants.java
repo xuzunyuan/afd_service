@@ -2,17 +2,16 @@ package com.afd.constants.product;
 
 import com.afd.constants.SystemConstants;
 
-
 public interface ProductConstants {
 	// 商品状态
-	public static final String PROD_STATUS_ON = "0";		// 上架
-	public static final String PROD_STATUS_DOWN = "1";		// 下架
-	public static final String PROD_STATUS_REMOVE = "2";	//删除
+	public static final String PROD_STATUS_ON = "0"; // 上架
+	public static final String PROD_STATUS_DOWN = "1"; // 下架
+	public static final String PROD_STATUS_REMOVE = "2"; // 删除
 	public static final String PROD_STATUS_SUSPEND_SALE = "3";// 暂停销售（店铺冻结）
 
 	// 商品审核状态
-	public static final String PROD_AUDIT_STATUS_WAIT = "0";	// 待审核
-	public static final String PROD_AUDIT_STATUS_PASS = "1"; 	// 审核通过
+	public static final String PROD_AUDIT_STATUS_WAIT = "0"; // 待审核
+	public static final String PROD_AUDIT_STATUS_PASS = "1"; // 审核通过
 	public static final String PROD_AUDIT_STATUS_NO_PASS = "2"; // 审核驳回
 
 	// sku状态
@@ -69,7 +68,8 @@ public interface ProductConstants {
 	/**
 	 * 销售类目缓存中的基本信息列表HASHKEY前缀
 	 */
-	public static final String SC_LIST = SystemConstants.CACHE_PREFIX + "sc_list_pid_";
+	public static final String SC_LIST = SystemConstants.CACHE_PREFIX
+			+ "sc_list_pid_";
 
 	/**
 	 * 基本类目和属性规格集体KEY
@@ -78,7 +78,8 @@ public interface ProductConstants {
 	/**
 	 * 基本类目和相关属性规格以如下为HASHKEY前缀(后面再加上类目的id)组成
 	 */
-	public static final String BC_ATTR_SPEC_BRAND = SystemConstants.CACHE_PREFIX + "bc_a_s_b_";
+	public static final String BC_ATTR_SPEC_BRAND = SystemConstants.CACHE_PREFIX
+			+ "bc_a_s_b_";
 	/**
 	 * 签约类目关联基本类目KEY
 	 */
@@ -99,11 +100,10 @@ public interface ProductConstants {
 	/**
 	 * 卖家上次选择类目缓存KEY
 	 */
-	public static final String BC_RECORD_ = SystemConstants.CACHE_PREFIX + "bc_record_";
-	
-	
+	public static final String BC_RECORD_ = SystemConstants.CACHE_PREFIX
+			+ "bc_record_";
+
 	public static final String BRAND = SystemConstants.CACHE_PREFIX + "br_";
-	
 
 	/**
 	 * 一级类目PID为0
@@ -155,4 +155,11 @@ public interface ProductConstants {
 	public static final String BRAND_LINKED = "1";
 
 	/************************************* 类目相关常量 *************************************/
+
+	public static interface SellerBrand$Status {
+		public static final String DELETED = "0";
+		public static final String VALID = "1";
+		public static final String WAIT_AUDIT = "2";
+		public static final String REJECT = "3";
+	}
 }
