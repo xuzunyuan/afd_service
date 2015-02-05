@@ -4,15 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SellerBrand implements Serializable {
-	private static final long serialVersionUID = 5533598323042451403L;
+	private static final long serialVersionUID = -5142538361893949401L;
 
 	private Integer sellerBrandId;
 
     private Integer sellerId;
 
     private Integer brandId;
-    
-    private String brandName;
 
     private Date submitDate;
 
@@ -30,11 +28,13 @@ public class SellerBrand implements Serializable {
 
     private Date authEndDate;
 
-    private String bcIds;
+    private String categories;
 
     private String trademarkCert;
 
     private String otherCert;
+
+    private String authCert;
 
     public Integer getSellerBrandId() {
         return sellerBrandId;
@@ -60,15 +60,7 @@ public class SellerBrand implements Serializable {
         this.brandId = brandId;
     }
 
-    public String getBrandName() {
-		return brandName;
-	}
-
-	public void setBrandName(String brandName) {
-		this.brandName = brandName;
-	}
-
-	public Date getSubmitDate() {
+    public Date getSubmitDate() {
         return submitDate;
     }
 
@@ -132,12 +124,12 @@ public class SellerBrand implements Serializable {
         this.authEndDate = authEndDate;
     }
 
-    public String getBcIds() {
-        return bcIds;
+    public String getCategories() {
+        return categories;
     }
 
-    public void setBcIds(String bcIds) {
-        this.bcIds = bcIds;
+    public void setCategories(String categories) {
+        this.categories = categories;
     }
 
     public String getTrademarkCert() {
@@ -154,5 +146,13 @@ public class SellerBrand implements Serializable {
 
     public void setOtherCert(String otherCert) {
         this.otherCert = otherCert;
+    }
+
+    public String getAuthCert() {
+        return authCert;
+    }
+
+    public void setAuthCert(String authCert) {
+        this.authCert = authCert;
     }
 }
