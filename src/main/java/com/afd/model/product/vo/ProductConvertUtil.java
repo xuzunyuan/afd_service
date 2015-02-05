@@ -20,6 +20,12 @@ public class ProductConvertUtil {
 		if(StringUtils.isNotBlank(vo.getArtNo())){
 			product.setArtNo(vo.getArtNo());
 		}
+		if(StringUtils.isNotBlank(vo.getAttrValueId())){
+			product.setAttrValueId(vo.getAttrValueId());
+		}
+		if(StringUtils.isNotBlank(vo.getAttrValueName())){
+			product.setAttrValueName(vo.getAttrValueName());
+		}
 		if(null != vo.getBrandId() &&  vo.getBrandId() < 0){
 			product.setBrandId(vo.getBrandId());
 		}
