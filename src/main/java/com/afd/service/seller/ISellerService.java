@@ -4,6 +4,8 @@
  */
 package com.afd.service.seller;
 
+import java.util.Date;
+
 import com.afd.model.seller.Seller;
 
 /**
@@ -26,4 +28,15 @@ public interface ISellerService {
 	 * @return 失败返回0
 	 */
 	public int updateSeller(Seller seller);
+
+	/**
+	 * 保证金到账确认
+	 * 
+	 * @param sellerId
+	 * @param depositDate
+	 * @param depositAuditor
+	 * @return
+	 */
+	public int confirmDeposit(int sellerId, Date depositDate,
+			String depositAuditor);
 }

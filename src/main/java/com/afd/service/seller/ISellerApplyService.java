@@ -137,4 +137,14 @@ public interface ISellerApplyService {
 	 */
 	public Page<SellerApply> queryWaitAuditApply(Map<String, Object> queryCond,
 			int... page);
+
+	/**
+	 * 查询待保证金审核申请，按申请时间倒叙
+	 * 
+	 * @param queryCond
+	 * @param page
+	 * @return
+	 */
+	public Page<SellerApply> queryWaitDepositAuditApply(
+			Map<String, Object> queryCond, int... page);
 }
