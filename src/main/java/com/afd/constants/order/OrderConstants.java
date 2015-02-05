@@ -47,7 +47,7 @@ public interface OrderConstants {
 	/**
 	 * cookie中购物车有效期
 	 */
-	public static final int COOKIE_CART_PERIOD = 30*60;
+	public static final int COOKIE_CART_PERIOD = 60*60*24*7;
 	/**
 	 * 商品在购物车中的排序
 	 */
