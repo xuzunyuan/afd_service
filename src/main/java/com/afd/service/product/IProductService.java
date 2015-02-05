@@ -285,11 +285,11 @@ public interface IProductService {
 	 * @param page	
 	 * @return
 	 */
-	public Page<Product> searchOnlineProduct(ProductCondition productCondition,
+	public Page<Product> searchOnlineProductPage(ProductCondition productCondition,
 			String sortField, String sortDirection, Page<Product> page);
 	
 	/**
-	 *  待审核商品列表（seller）
+	 *  审核驳回商品列表（seller）
 	 * @param productCondition 	查询条件
 	 * @param sortField			排序字段
 	 * @param sortDirection		排序方向
@@ -297,17 +297,6 @@ public interface IProductService {
 	 * @return
 	 */
 	public Page<Product> searchAuditProductPage(ProductCondition productCondition,
-			String sortField, String sortDirection, Page<Product> page);
-	
-	/**
-	 *  库存商品列表（seller）
-	 * @param productCondition 	查询条件
-	 * @param sortField			排序字段
-	 * @param sortDirection		排序方向
-	 * @param page	
-	 * @return
-	 */
-	public Page<Product> searchStockProductPage(ProductCondition productCondition,
 			String sortField, String sortDirection, Page<Product> page);
 	
 	/**
