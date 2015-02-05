@@ -1,5 +1,8 @@
 package com.afd.service.product;
 
+import java.util.Map;
+
+import com.afd.common.mybatis.Page;
 import com.afd.model.product.Brand;
 
 
@@ -18,7 +21,7 @@ public interface IBrandService {
 	
 	/**
 	 * @param brandId 品牌ID
-	 * @return 1:成功,-1:已关联卖家不允许删除,0:失败
+	 * @return 1:成功,-1:卖家已申请不允许删除,0:失败
 	 */
 	int deleteByBrandId(Long brandId);
 	
@@ -31,4 +34,6 @@ public interface IBrandService {
 	 * @return
 	 */
 	Brand getBrandByName(String brandName, String brandEname, String status);
+	
+	public Page<Brand> getBrandsByPage(Map<?, ?> map, Page<Brand> page);
 }
