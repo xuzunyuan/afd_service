@@ -1,5 +1,6 @@
 package com.afd.service.product;
 
+import java.util.List;
 import java.util.Map;
 
 import com.afd.common.mybatis.Page;
@@ -34,6 +35,20 @@ public interface IBrandService {
 	 * @return
 	 */
 	Brand getBrandByName(String brandName, String brandEname, String status);
+	
+	/**
+	 * 根据名称模糊查询(中文名或英文名)
+	 * @param name
+	 * @return 
+	 */
+	public List<Brand> getBrandsByName(String name);
+	
+	/**
+	 * 根据名称精确查询(先查中文名再查英文名)
+	 * @param name 
+	 * @return 
+	 */
+	public Brand getBrandByName(String name);
 	
 	public Page<Brand> getBrandsByPage(Map<?, ?> map, Page<Brand> page);
 }
