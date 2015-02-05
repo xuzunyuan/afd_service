@@ -13,8 +13,7 @@ public interface ProductConstants {
 	// 商品审核状态
 	public static final String PROD_AUDIT_STATUS_WAIT = "0";	// 待审核
 	public static final String PROD_AUDIT_STATUS_PASS = "1"; 	// 审核通过
-	public static final String PROD_AUDIT_STATUS_NO_PASS = "2"; // 驳回申请
-	public static final String PROD_AUDIT_STATUS_PROCESS = "3"; // 审核中
+	public static final String PROD_AUDIT_STATUS_NO_PASS = "2"; // 审核驳回
 
 	// sku状态
 	public static final String SKU_STATUS_NORMAL = "1";// 正常

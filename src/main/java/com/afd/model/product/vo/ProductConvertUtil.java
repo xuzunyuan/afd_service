@@ -2,6 +2,7 @@ package com.afd.model.product.vo;
 
 import org.apache.commons.lang.StringUtils;
 
+import com.afd.common.util.DateUtils;
 import com.afd.model.product.Product;
 
 public class ProductConvertUtil {
@@ -34,7 +35,8 @@ public class ProductConvertUtil {
 		if(null != vo.getBcId() &&  vo.getBcId() < 0){
 			product.setBcId(vo.getBcId());
 		}
-		
+		product.setCreateDate(DateUtils.currentDate());
+		product.setLastUpdateDate(DateUtils.currentDate());
 		return product;
 		
 	}
