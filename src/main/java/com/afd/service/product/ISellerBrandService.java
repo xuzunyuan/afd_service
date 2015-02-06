@@ -37,10 +37,10 @@ public interface ISellerBrandService {
 			Map<String, Object> cond, int... page);
 
 	// 通过审核
-	public int passApply(int sellerBrandId, String auditor, String opinion);
+	public int passApply(String auditor, String opinion, int... sellerBrandId);
 
 	// 驳回审核
-	public int rejectApply(int sellerBrandId, String auditor, String opinion);
+	public int rejectApply(String auditor, String opinion, int... sellerBrandId);
 
 	// 是否已经存在卖家品牌（含有效、正在申请流程中的）
 	public boolean existSellerBrand(int sellerId, int brandId);

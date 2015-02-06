@@ -183,6 +183,8 @@ public class SellerBrand implements Serializable {
 
 	private String logoUrl;
 
+	private String brandAbbr;
+
 	public String getBrandName() {
 		return brandName;
 	}
@@ -205,6 +207,14 @@ public class SellerBrand implements Serializable {
 
 	public void setLogoUrl(String logoUrl) {
 		this.logoUrl = logoUrl;
+	}
+
+	public String getBrandAbbr() {
+		return brandAbbr;
+	}
+
+	public void setBrandAbbr(String brandAbbr) {
+		this.brandAbbr = brandAbbr;
 	}
 
 }
