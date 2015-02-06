@@ -17,7 +17,7 @@ public class SellerBrand implements Serializable {
 	private Date submitDate;
 
 	private String status;
-
+	
 	private String auditStatus;
 
 	private Date auditDate;
@@ -26,6 +26,8 @@ public class SellerBrand implements Serializable {
 
 	private String auditContent;
 
+	private String authType;
+	
 	private Date authStartDate;
 
 	private Date authEndDate;
@@ -41,6 +43,14 @@ public class SellerBrand implements Serializable {
 	private String loginName;
 
 	private String co_name;
+
+	public String getAuthType() {
+		return authType;
+	}
+
+	public void setAuthType(String authType) {
+		this.authType = authType;
+	}
 
 	public String getLoginName() {
 		return loginName;
@@ -187,6 +197,19 @@ public class SellerBrand implements Serializable {
 
 	private String brandAbbr;
 
+	public String getName() {
+    	String name = null;
+    	if(StringUtils.isNotEmpty(brandName) && StringUtils.isNotEmpty(brandEname)){
+    		name = brandName + "/" + brandEname;
+    	}else if(StringUtils.isNotEmpty(brandName)){
+    		name = brandName;
+    	}else if(StringUtils.isNotEmpty(brandEname)){
+    		name = brandEname;
+    	}
+    	
+		return name;
+	}
+	
 	public String getBrandName() {
 		return brandName;
 	}
@@ -219,10 +242,4 @@ public class SellerBrand implements Serializable {
 		this.brandAbbr = brandAbbr;
 	}
 
-	public String getShowName() {
-		return (StringUtils.isNotBlank(brandName) ? brandName : "")
-				+ (StringUtils.isNotBlank(brandName)
-						&& StringUtils.isNotBlank(brandEname) ? "/" : "")
-				+ (StringUtils.isNotBlank(brandEname) ? brandEname : "");
-	}
 }
