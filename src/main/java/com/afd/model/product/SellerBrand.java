@@ -5,6 +5,8 @@ import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
 
+import com.afd.common.util.DateUtils;
+
 public class SellerBrand implements Serializable {
 	private static final long serialVersionUID = -5142538361893949401L;
 
@@ -17,7 +19,7 @@ public class SellerBrand implements Serializable {
 	private Date submitDate;
 
 	private String status;
-	
+
 	private String auditStatus;
 
 	private Date auditDate;
@@ -27,7 +29,7 @@ public class SellerBrand implements Serializable {
 	private String auditContent;
 
 	private String authType;
-	
+
 	private Date authStartDate;
 
 	private Date authEndDate;
@@ -146,6 +148,8 @@ public class SellerBrand implements Serializable {
 
 	public void setAuthStartDate(Date authStartDate) {
 		this.authStartDate = authStartDate;
+		this.sAuthStartDate = DateUtils.formatDate(authStartDate,
+				DateUtils.PART_TIME_PATTERN);
 	}
 
 	public Date getAuthEndDate() {
@@ -154,6 +158,8 @@ public class SellerBrand implements Serializable {
 
 	public void setAuthEndDate(Date authEndDate) {
 		this.authEndDate = authEndDate;
+		this.sAuthEndDate = DateUtils.formatDate(authEndDate,
+				DateUtils.PART_TIME_PATTERN);
 	}
 
 	public String getCategories() {
@@ -197,21 +203,25 @@ public class SellerBrand implements Serializable {
 
 	private String brandAbbr;
 
+	private String sAuthStartDate;
+
+	private String sAuthEndDate;
+
 	public String getShowName() {
-    	String name = "";
-    	if(StringUtils.isNotEmpty(brandName)){
-    		if(StringUtils.isNotEmpty(brandEname)){
-    			name = brandName + "/" + brandEname;
-    		}else{
-    			name = brandName;
-    		}
-    	}else if(StringUtils.isNotEmpty(brandEname)){
-    		name = brandEname;
-    	}
-    	
+		String name = "";
+		if (StringUtils.isNotEmpty(brandName)) {
+			if (StringUtils.isNotEmpty(brandEname)) {
+				name = brandName + "/" + brandEname;
+			} else {
+				name = brandName;
+			}
+		} else if (StringUtils.isNotEmpty(brandEname)) {
+			name = brandEname;
+		}
+
 		return name;
 	}
-	
+
 	public String getBrandName() {
 		return brandName;
 	}
@@ -242,6 +252,26 @@ public class SellerBrand implements Serializable {
 
 	public void setBrandAbbr(String brandAbbr) {
 		this.brandAbbr = brandAbbr;
+	}
+
+	public String getsAuthStartDate() {
+		return sAuthStartDate;
+	}
+
+	public void setsAuthStartDate(String sAuthStartDate) {
+		this.sAuthStartDate = sAuthStartDate;
+		this.authStartDate = DateUtils.parseDate(sAuthStartDate,
+				DateUtils.PART_TIME_PATTERN);
+	}
+
+	public String getsAuthEndDate() {
+		return sAuthEndDate;
+	}
+
+	public void setsAuthEndDate(String sAuthEndDate) {
+		this.sAuthEndDate = sAuthEndDate;
+		this.authEndDate = DateUtils.parseDate(sAuthEndDate,
+				DateUtils.PART_TIME_PATTERN);
 	}
 
 }
