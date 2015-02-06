@@ -3,6 +3,8 @@ package com.afd.model.product;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
+
 public class SellerBrand implements Serializable {
 	private static final long serialVersionUID = -5142538361893949401L;
 
@@ -217,4 +219,10 @@ public class SellerBrand implements Serializable {
 		this.brandAbbr = brandAbbr;
 	}
 
+	public String getShowName() {
+		return (StringUtils.isNotBlank(brandName) ? brandName : "")
+				+ (StringUtils.isNotBlank(brandName)
+						&& StringUtils.isNotBlank(brandEname) ? "/" : "")
+				+ (StringUtils.isNotBlank(brandEname) ? brandEname : "");
+	}
 }
