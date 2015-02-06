@@ -42,7 +42,7 @@ public class SellerBrand implements Serializable {
 
 	private String loginName;
 
-	private String co_name;
+	private String coName;
 
 	public String getAuthType() {
 		return authType;
@@ -60,12 +60,12 @@ public class SellerBrand implements Serializable {
 		this.loginName = loginName;
 	}
 
-	public String getCo_name() {
-		return co_name;
+	public String getCoName() {
+		return coName;
 	}
 
-	public void setCo_name(String co_name) {
-		this.co_name = co_name;
+	public void setCoName(String coName) {
+		this.coName = coName;
 	}
 
 	public Integer getSellerBrandId() {
@@ -197,12 +197,14 @@ public class SellerBrand implements Serializable {
 
 	private String brandAbbr;
 
-	public String getName() {
-    	String name = null;
-    	if(StringUtils.isNotEmpty(brandName) && StringUtils.isNotEmpty(brandEname)){
-    		name = brandName + "/" + brandEname;
-    	}else if(StringUtils.isNotEmpty(brandName)){
-    		name = brandName;
+	public String getShowName() {
+    	String name = "";
+    	if(StringUtils.isNotEmpty(brandName)){
+    		if(StringUtils.isNotEmpty(brandEname)){
+    			name = brandName + "/" + brandEname;
+    		}else{
+    			name = brandName;
+    		}
     	}else if(StringUtils.isNotEmpty(brandEname)){
     		name = brandEname;
     	}
