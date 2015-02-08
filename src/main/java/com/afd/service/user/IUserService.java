@@ -10,6 +10,12 @@ public interface IUserService {
 	 */
 	public boolean uniqueUserName(String userName);
 	/**
+	 * 验证手机号是否唯一
+	 * @param userName 用户名
+	 * @return true：唯一；false：不唯一
+	 */
+	public boolean uniqueMobile(String mobile);
+	/**
 	 * 根据用户id获取用户
 	 * @param userId
 	 * @return
