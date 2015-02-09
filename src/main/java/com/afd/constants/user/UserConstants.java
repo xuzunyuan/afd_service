@@ -31,9 +31,13 @@ public interface UserConstants {
 	 * 收货地址无效
 	 */
 	public static final String ADDRESS_STATUS_INVALID = "0";
-	
+	/*********************用户注册相关*******************************/
 	/**
 	 * 验证码前缀
 	 */
 	public static final String VALID_CODE = "validCode_";
+	/**
+	 * 验证码前缀
+	 */
+	public static final String FIND_PWD_U = "findPwdU_";
 }

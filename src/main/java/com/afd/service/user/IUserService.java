@@ -37,10 +37,24 @@ public interface IUserService {
 	public User getUserByUserName(String userName);
 	
 	/**
+	 * 根据手机号查询用户
+	 * @param userName
+	 * @return
+	 */
+	public User getUserByMobile(String mobile);
+	
+	/**
 	 * 更新用户
 	 * @param user
 	 * @return
 	 */
 	public int updateUser(User user);
+	
+	/**
+	 * 更新用户密码
+	 * @param user
+	 * @return
+	 */
+	public int chgPwd(String mobile,String pwd);
 
 }
