@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.afd.param.cart.Cart;
 import com.afd.param.cart.CartItem;
+import com.afd.param.cart.MiniCart;
 
 public interface ICartService {
 	/**
@@ -22,6 +23,13 @@ public interface ICartService {
 	 */
 	public List<CartItem> getCartItemsByCookie(String cookieCart);
 	
+	/**
+	 * 
+	 * @param cookieCart
+	 * @return
+	 */
+	public MiniCart showMiniCart(String cookieCart);
+
 	/**
 	 * 
 	 * @param cookieCart
