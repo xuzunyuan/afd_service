@@ -41,6 +41,8 @@ public class OrderItem implements Serializable{
 	private Long brandShowId;
 
 	private String brandShowTitle;
+	
+	private Long bsdId;
 
 	public Long getOrderItemId() {
 		return orderItemId;
@@ -193,6 +195,14 @@ public class OrderItem implements Serializable{
 	public void setBrandShowTitle(String brandShowTitle) {
 		this.brandShowTitle = brandShowTitle == null ? null : brandShowTitle
 				.trim();
+	}
+
+	public Long getBsdId() {
+		return bsdId;
+	}
+
+	public void setBsdId(Long bsdId) {
+		this.bsdId = bsdId;
 	}
 
 }

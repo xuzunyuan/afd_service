@@ -12,7 +12,7 @@ import java.util.Map;
 public class TradesInfo implements Serializable {
 	private static final long serialVersionUID = -4085013559636722232L;
 	
-	private Integer addressId;
+	private Integer payAddrId;
     
     private String payMode;
     
@@ -20,12 +20,12 @@ public class TradesInfo implements Serializable {
     
     private String orderSource;
 
-	public Integer getAddressId() {
-		return addressId;
+	public Integer getPayAddrId() {
+		return payAddrId;
 	}
 
-	public void setAddressId(Integer addressId) {
-		this.addressId = addressId;
+	public void setPayAddrId(Integer payAddrId) {
+		this.payAddrId = payAddrId;
 	}
 
 	public String getPayMode() {
