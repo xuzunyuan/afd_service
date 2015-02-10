@@ -14,8 +14,9 @@ public class Trade implements Serializable {
 	private Integer addressId;
 	private String payType;
 	private String payMode;
-	private Long brandShowId;
 	private Long sellerId;
+	private Long brandShowId;
+	private String brandShowTitle;
 	private BigDecimal deliverFee;
 	private BigDecimal deliverDiscountFee;
 	private BigDecimal discountFee;
@@ -123,5 +124,11 @@ public class Trade implements Serializable {
 	}
 	public void setOptName(String optName) {
 		this.optName = optName;
+	}
+	public String getBrandShowTitle() {
+		return brandShowTitle;
+	}
+	public void setBrandShowTitle(String brandShowTitle) {
+		this.brandShowTitle = brandShowTitle;
 	}
 }
