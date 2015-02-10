@@ -1,7 +1,9 @@
 package com.afd.service.order;
 
 import java.util.List;
+import java.util.Map;
 
+import com.afd.common.mybatis.Page;
 import com.afd.model.order.Order;
 import com.afd.param.cart.Trade;
 import com.afd.param.order.OrderInfo;
@@ -24,13 +26,13 @@ public interface IOrderService {
 	public List<Order> getOrdersByIdsAndUserId(Long[] orderIds,Long userId);
 	
 	/**
-	 * 取消订单(boss系统取消订单)
+	 * 取消订单
+	 * @param optName 操作人
+	 * @param cancelReason 取消原因
 	 * @param orderIds 订单id
-	 * @param cancelReason 
-	 * @param userId  用户id
 	 * @return
 	 */
-	public int cancelOrderByBoss(List<Long> orderIds, String optName, String cancelReason);
+	public int cancelOrderByIds(String optName, String cancelReason, Long... orderIds);
 	
 	/**
 	 * 根据用户id获取订单列表
@@ -47,4 +49,12 @@ public interface IOrderService {
 	 * @throws InventoryException 
 	 */
 	public List<OrderInfo> batchSaveOrders(List<Trade> trades) throws Exception;
+	
+	/**
+	 * boss系统查询订单
+	 * @param map
+	 * @param page
+	 * @return
+	 */
+	public Page<Order> queryOrderByCondition(Map<String, ?> map, Page<Order> page);
 }
