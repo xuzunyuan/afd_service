@@ -2,9 +2,15 @@ package com.afd.model.order;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.alibaba.dubbo.common.utils.StringUtils;
 
 public class OrderItem implements Serializable{
-    private Long orderItemId;
+	private static final long serialVersionUID = 4467820503959940139L;
+
+	private Long orderItemId;
 
 	private Integer orderId;
 
@@ -213,6 +219,28 @@ public class OrderItem implements Serializable{
 
 	public void setProdImg(String prodImg) {
 		this.prodImg = prodImg;
+	}
+	
+	public Map<String, String> getSpecNames() {
+		String specNames = this.prodSpecName;
+		
+		Map<String, String> specTemp = new HashMap<String, String>();
+		
+		if (!StringUtils.isBlank(specNames)) {
+			String[] specs = specNames.split("\\|\\|\\|");
+			if (specs != null && specs.length > 0) {
+				for (String spec : specs) {
+					String[] opt = spec.split("\\:\\:\\:");
+					if (opt != null && opt.length > 1) {
+						String specName = opt[0];
+						String specVal = opt[1];
+						specTemp.put(specName, specVal);
+					}
+				}
+			}
+		}
+		
+		return specTemp;
 	}
 
 }

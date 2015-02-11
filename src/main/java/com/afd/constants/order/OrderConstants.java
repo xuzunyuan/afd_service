@@ -127,9 +127,21 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_TOBECOMMENT = "c";
 	/**
+	 * 支付方式：货到付款
+	 */
+	public static final String PAY_TYPE_COD = "0";
+	/**
 	 * 订单状态：在线支付
 	 */
 	public static final String PAY_TYPE_ONLINE = "1";
+	/**
+	 * 支付模式：货到付款--现金
+	 */
+	public static final String PAY_MODE_COD_CASH = "00";
+	/**
+	 * 支付模式：货到付款--POS
+	 */
+	public static final String PAY_MODE_COD_POS = "01";
 	/**
 	 * 支付模式：支付宝
 	 */

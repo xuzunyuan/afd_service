@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.afd.common.mybatis.Page;
 import com.afd.model.order.Order;
+import com.afd.model.order.OrderItem;
 import com.afd.param.cart.Trade;
 import com.afd.param.order.OrderInfo;
 
@@ -58,4 +59,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public Page<Order> queryOrderByCondition(Map<String, ?> map, Page<Order> page);
+	
+	/**
+	 * 获取订单详情列表
+	 * @param orderId 订单Id
+	 * @return
+	 */
+	public List<OrderItem> getOrderItemsByOrderId(Integer orderId);
 }

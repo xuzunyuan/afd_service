@@ -11,6 +11,7 @@ public class ProductVo implements Serializable{
 	private String title; 	 	// 商品标题
 	private String subtitle; 	// 卖点(子标题)
 	private Integer bcId;		// 品类ID
+	private String bcCode;		// 品类编码
 	private Integer sellerId; 	// 卖家ID
 	private String artNo; 		// 货号
     private Integer brandId;	// 品牌ID
@@ -55,6 +56,12 @@ public class ProductVo implements Serializable{
 	}
 	public void setBcId(Integer bcId) {
 		this.bcId = bcId;
+	}
+	public String getBcCode() {
+		return bcCode;
+	}
+	public void setBcCode(String bcCode) {
+		this.bcCode = bcCode;
 	}
 	public Integer getSellerId() {
 		return sellerId;

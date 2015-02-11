@@ -5,8 +5,16 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
+import com.afd.constants.order.OrderConstants;
+import com.afd.constants.order.PayModeEnum;
+
+
 public class Order implements Serializable{
-    private Long orderId;
+	private static final long serialVersionUID = -5041606926132260957L;
+
+	private Long orderId;
 
     private String orderCode;
 
@@ -535,4 +543,90 @@ public class Order implements Serializable{
 	public void setBrandShowTitle(String brandShowTitle) {
 		this.brandShowTitle = brandShowTitle;
 	}
+	
+	public String getStrOrderStatus() {
+		String orderStatusName = "";
+		if(OrderConstants.ORDER_STATUS_TOBEPROCESS.equals(this.orderStatus)){
+			orderStatusName = "待处理";
+		}else if(OrderConstants.ORDER_STATUS_WAITPAYMENT.equals(this.orderStatus)){
+			orderStatusName = "等待付款";
+		}else if(OrderConstants.ORDER_STATUS_WAITDELIVERED.equals(this.orderStatus)){
+			orderStatusName = "等待发货";
+		}else if(OrderConstants.ORDER_STATUS_CANCELLED.equals(this.orderStatus)){
+			orderStatusName = "已取消";
+		}else if(OrderConstants.ORDER_STATUS_DELIVERED.equals(this.orderStatus)){
+			orderStatusName = "已发货";
+		}else if(OrderConstants.ORDER_STATUS_DELIVERY_FAILURE.equals(this.orderStatus)){
+			orderStatusName = "配送失败";
+		}else if(OrderConstants.ORDER_STATUS_REJECT.equals(this.orderStatus)){
+			orderStatusName = "拒收";
+		}else if(OrderConstants.ORDER_STATUS_COMPLETED.equals(this.orderStatus)){
+			orderStatusName = "交易完成";
+		}else if(OrderConstants.ORDER_STATUS_RETURN.equals(this.orderStatus)){
+			orderStatusName = "已退货";
+		}
+		
+		return orderStatusName;
+	}
+	
+	public String getStrPayStatus() {
+		String payStatusName = "";
+		if(OrderConstants.PAY_STATUS_UNPAY.equals(this.payStatus)){
+			payStatusName = "未支付";
+		}else if(OrderConstants.PAY_STATUS_PAYED.equals(this.payStatus)){
+			payStatusName = "已支付";
+		}
+		
+		return payStatusName;
+	}
+	
+	public String getStrOrderSource() {
+		String orderSourceName = "";
+		if(OrderConstants.ORDER_SOURCE_WEB.equals(this.orderSource)){
+			orderSourceName = "网站";
+		}else if(OrderConstants.ORDER_SOURCE_CC.equals(this.orderSource)){
+			orderSourceName = "电话";
+		}else if(OrderConstants.ORDER_SOURCE_IOS.equals(this.orderSource)){
+			orderSourceName = "手机IOS";
+		}else if(OrderConstants.ORDER_SOURCE_ANDROID.equals(this.orderSource)){
+			orderSourceName = "手机安卓";
+		}
+		
+		return orderSourceName;
+	}
+	
+	public String getStrPayType() {
+		String payTypeName = "";
+		if(OrderConstants.PAY_TYPE_COD.equals(this.payType)){
+			payTypeName = "货到付款";
+		}else if(OrderConstants.PAY_TYPE_ONLINE.equals(this.payType)){
+			payTypeName = "在线支付";
+		}
+		return payTypeName;
+	}
+	
+	public String getStrPayMode() {
+		String payModeName = "";
+		if(StringUtils.isBlank(this.payMode)){
+			return payModeName;
+		}
+		
+		if(OrderConstants.PAY_MODE_COD_POS.equals(this.payMode)){
+			payModeName = "货到付款（POS）";
+		}else if(OrderConstants.PAY_MODE_COD_CASH.equals(this.payMode)){
+			payModeName = "货到付款（现金）";
+		}else if(OrderConstants.PAY_MODE_APIPAY.equals(this.payMode)){
+			payModeName = "支付宝";
+		}else {			
+			PayModeEnum pme = PayModeEnum.get(this.payMode);
+	        if(null != pme) {
+	        	payModeName =pme.getDesc();
+	        }else{
+	        	payModeName = "银联";
+	        }
+		}
+		
+		return payModeName;
+	}
+	
 }
