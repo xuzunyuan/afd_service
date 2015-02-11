@@ -1,5 +1,6 @@
 package com.afd.param.cart;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +8,9 @@ import java.util.List;
 import com.afd.param.cart.Cart;
 import com.afd.common.util.NumberUtils;
 
-public class MiniCart {
+public class MiniCart implements Serializable{
+	private static final long serialVersionUID = 1150920684376315390L;
+
 	private Long totalNum;
 	private BigDecimal totalMoney;
 	private List<Cart> carts = new ArrayList<Cart>();

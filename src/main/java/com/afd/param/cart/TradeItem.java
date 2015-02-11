@@ -38,6 +38,7 @@ public class TradeItem implements Serializable {
 	private Long bcId;
 
 	private String prodTitle;
+	private String prodImg;
 	private String prodSpecId;
 	private String prodSpecName;
 
@@ -159,5 +160,13 @@ public class TradeItem implements Serializable {
 
 	public void setSkuCode(String skuCode) {
 		this.skuCode = skuCode;
+	}
+
+	public String getProdImg() {
+		return prodImg;
+	}
+
+	public void setProdImg(String prodImg) {
+		this.prodImg = prodImg;
 	}
 }

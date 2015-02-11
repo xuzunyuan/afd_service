@@ -23,6 +23,8 @@ public class OrderItem implements Serializable{
 	private String prodSpecName;
 
 	private String prodTitle;
+	
+	private String prodImg;
 
 	private Long bcId;
 
@@ -203,6 +205,14 @@ public class OrderItem implements Serializable{
 
 	public void setBsdId(Long bsdId) {
 		this.bsdId = bsdId;
+	}
+
+	public String getProdImg() {
+		return prodImg;
+	}
+
+	public void setProdImg(String prodImg) {
+		this.prodImg = prodImg;
 	}
 
 }
