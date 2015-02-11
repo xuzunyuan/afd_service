@@ -17,6 +17,7 @@ public interface IOrderService {
 	 */
 	public Order getOrderById(Long orderId);
 	
+	public List<Order> getOrdersByIds(Long[] orderIds);
 	/**
 	 * 根据订单id和用户id获取订单
 	 * @param orderIds

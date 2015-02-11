@@ -10,7 +10,7 @@ import com.afd.model.order.PaymentOrder;
 import com.afd.model.payment.vo.ResultVO;
 
 public interface IPaymentServices {
-	public Long getPaymentId(List<Long> orderids,String paytype,String ip,Long userId,String payGw,String paymentType);
+	public Long savePaymentId(List<Long> orderids,String paytype,String ip,Long userId,String payGw,String paymentType);
 	public ResultVO checkPaymentIdIsValid(Long paymentId);
 	public ResultVO checkAmountIsValid(Long paymentId,BigDecimal payamount);
 	public int updatePayment(Payment payment);	
