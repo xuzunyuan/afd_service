@@ -160,4 +160,16 @@ public interface ProductConstants {
 		public static final String WAIT_AUDIT = "2";
 		public static final String REJECT = "3";
 	}
+
+	public static interface BrandShow$Status {
+		public static final String INVALID = "0";
+		public static final String ONLINE = "1"; // 进行中
+		public static final String FINISHED = "2"; // 结束
+		public static final String EXCEPTION = "3"; // 异常终止
+		public static final String EDITING = "4"; // 编辑中
+		public static final String WAIT_AUDIT = "5"; // 待审核
+		public static final String AUDITING = "6"; // 审核中
+		public static final String WAIT_ONLINE = "7"; // 等待上线
+		public static final String REJECTED = "8"; // 驳回
+	}
 }
