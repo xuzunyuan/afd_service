@@ -56,6 +56,8 @@ public class User implements Serializable {
 	private Long freezeById;
 
 	private Date freezeByDate;
+	
+	private UserExt userExt;
 
 	public Long getUserId() {
 		return userId;
@@ -248,5 +250,13 @@ public class User implements Serializable {
 
 	public void setFreezeByDate(Date freezeByDate) {
 		this.freezeByDate = freezeByDate;
+	}
+
+	public UserExt getUserExt() {
+		return userExt;
+	}
+
+	public void setUserExt(UserExt userExt) {
+		this.userExt = userExt;
 	}
 }

@@ -4,12 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class UserExt implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7472107395875344154L;
+	private static final long serialVersionUID = -7394756453493849126L;
 
-	private Integer userId;
+	private Long userId;
 
 	private String realName;
 
@@ -27,11 +24,11 @@ public class UserExt implements Serializable {
 
 	private String headerPic;
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
