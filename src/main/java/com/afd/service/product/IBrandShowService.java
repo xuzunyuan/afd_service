@@ -48,4 +48,6 @@ public interface IBrandShowService {
 	public BigDecimal getLowestPrice(Long bsid);
 	
 	public Page<BrandShowDetail> getBrandShowDetailByPage(Map<?, ?> map,Page<BrandShowDetail> page);
+	
+	public void addStock(Map<Long, Long> stockMap);
 }
