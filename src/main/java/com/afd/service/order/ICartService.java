@@ -38,7 +38,7 @@ public interface ICartService {
 	 * @param oldQuantity
 	 * @return
 	 */
-	public List<CartItem> modifyQuantity(String cookieCart, long bsDetailId, long newQuantity, long oldQuantity);
+	public List<CartItem> modifyQuantity(String cookieCart, Long bsDetailId, long newQuantity, long oldQuantity);
 	
 	/**
 	 * 
