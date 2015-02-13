@@ -41,4 +41,26 @@ public interface IAddressService {
 	 * @return
 	 */
 	public int updateAddress(UserAddress address);
+
+	/**
+	 * 设置默认收货地址
+	 * @param address
+	 * @return
+	 */
+	public void setDefault(String addrId, String userId);
+
+	/**
+	 * 删除收货地址
+	 * @param addrId
+	 * @param userId
+	 */
+	public void delAddr(Long addrId, long userId);
+
+	/**
+	 * 获取收货地址
+	 * @param addrId
+	 * @param userId
+	 * @return
+	 */
+	public UserAddress getAddressByIdUid(Long addrId, long userId);
 }
