@@ -2,17 +2,20 @@ package com.afd.model.order;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class ReturnOrder implements Serializable{
-    private Integer retOrderId;
+	private static final long serialVersionUID = 235156282514243901L;
+
+	private Long retOrderId;
 
     private String retOrderCode;
 
-    private Integer orderId;
+    private Long orderId;
 
-    private Integer sellerId;
+    private Long sellerId;
 
-    private Integer userId;
+    private Long userId;
 
     private String returnType;
 
@@ -39,12 +42,14 @@ public class ReturnOrder implements Serializable{
     private String rejectReason;
 
     private String remarks;
+    
+    private List<ReturnOrderItem> retOrderItems;
 
-    public Integer getRetOrderId() {
+    public Long getRetOrderId() {
         return retOrderId;
     }
 
-    public void setRetOrderId(Integer retOrderId) {
+    public void setRetOrderId(Long retOrderId) {
         this.retOrderId = retOrderId;
     }
 
@@ -56,27 +61,27 @@ public class ReturnOrder implements Serializable{
         this.retOrderCode = retOrderCode == null ? null : retOrderCode.trim();
     }
 
-    public Integer getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
-    public Integer getSellerId() {
+    public Long getSellerId() {
         return sellerId;
     }
 
-    public void setSellerId(Integer sellerId) {
+    public void setSellerId(Long sellerId) {
         this.sellerId = sellerId;
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -183,4 +188,12 @@ public class ReturnOrder implements Serializable{
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
     }
+
+	public List<ReturnOrderItem> getRetOrderItems() {
+		return retOrderItems;
+	}
+
+	public void setRetOrderItems(List<ReturnOrderItem> retOrderItems) {
+		this.retOrderItems = retOrderItems;
+	}
 }
