@@ -20,6 +20,7 @@
  	<dubbo:reference id="dubbo_userService" interface="com.afd.service.user.IUserService" />
  	<dubbo:reference id="dubbo_geoService" interface="com.afd.service.user.IGeoService" />
  	<dubbo:reference id="dubbo_addressService" interface="com.afd.service.user.IAddressService" />
+ 	<dubbo:reference id="dubbo_retOrderService" interface="com.afd.service.order.IRetOrderService" />
  	
  	<!-- user service --> 
  	<dubbo:reference id="dubbo_categoryService" interface="com.afd.service.product.ICategoryService" />
