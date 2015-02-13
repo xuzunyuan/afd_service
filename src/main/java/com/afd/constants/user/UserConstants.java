@@ -31,6 +31,14 @@ public interface UserConstants {
 	 * 收货地址无效
 	 */
 	public static final String ADDRESS_STATUS_INVALID = "0";
+	/**
+	 * 默认收货地址
+	 */
+	public static final String ADDRESS_IS_DEFAULT = "1";
+	/**
+	 * 非默认收货地址
+	 */
+	public static final String ADDRESS_IS_NOT_DEFAULT = "0";
 	/*********************用户注册相关*******************************/
 	/**
 	 * 验证码前缀

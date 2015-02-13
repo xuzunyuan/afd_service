@@ -3,6 +3,8 @@ package com.afd.model.user;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
+
 public class UserAddress implements Serializable {
 	/**
 	 * 
@@ -48,7 +50,7 @@ public class UserAddress implements Serializable {
 	private Date updateDate;
 
 	private String landMark;
-
+	
 	public Long getAddrId() {
 		return addrId;
 	}
