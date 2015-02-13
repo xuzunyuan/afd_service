@@ -16,7 +16,7 @@ public interface IBrandShowService {
 	 * @param brandShow
 	 * @return
 	 */
-	public long newBrandShow(BrandShow brandShow);
+	public int newBrandShow(BrandShow brandShow);
 
 	/**
 	 * 提交特卖至审核
@@ -25,7 +25,7 @@ public interface IBrandShowService {
 	 * @param details
 	 * @return
 	 */
-	public long submitNewBrandShow(long brandShowId, BrandShowDetail[] details);
+	public int submitNewBrandShow(int brandShowId, BrandShowDetail[] details);
 
 	/**
 	 * 修改特卖信息
@@ -33,7 +33,7 @@ public interface IBrandShowService {
 	 * @param brandShow
 	 * @return
 	 */
-	public long modifyBrandShow(BrandShow brandShow);
+	public int modifyBrandShow(BrandShow brandShow);
 
 	/**
 	 * 修改特卖明细
@@ -42,8 +42,7 @@ public interface IBrandShowService {
 	 * @param details
 	 * @return
 	 */
-	public long submitModifyBrandShow(long brandShowId,
-			BrandShowDetail[] details);
+	public int submitModifyBrandShow(int brandShowId, BrandShowDetail[] details);
 
 	/**
 	 * 分页查询卖家的特卖
@@ -55,6 +54,14 @@ public interface IBrandShowService {
 	 */
 	public Page<BrandShow> queryMyBrandShowByPage(int sellerId,
 			Map<String, ?> cond, int... page);
+
+	/**
+	 * 获得卖家正在进行的特卖
+	 * 
+	 * @param sellerId
+	 * @return
+	 */
+	public List<BrandShow> getOnlineBrandShowsOfSeller(int sellerId);
 
 	/**
 	 * 查询待审核的特卖
@@ -76,7 +83,7 @@ public interface IBrandShowService {
 	 * @param opinion
 	 * @return
 	 */
-	public long passAuditBrandShow(long brandShowId, Date startDate,
+	public int passAuditBrandShow(int brandShowId, Date startDate,
 			Date endDate, String auditor, String opinion);
 
 	/**
@@ -87,7 +94,7 @@ public interface IBrandShowService {
 	 * @param opinion
 	 * @return
 	 */
-	public long rejectAuditBrandShow(long brandShowId, String auditor,
+	public int rejectAuditBrandShow(int brandShowId, String auditor,
 			String opinion);
 
 	/**
@@ -96,7 +103,7 @@ public interface IBrandShowService {
 	 * @param brandShowId
 	 * @return
 	 */
-	public long startBrandShow(long brandShowId);
+	public int startBrandShow(int brandShowId);
 
 	/**
 	 * 结束活动
@@ -104,7 +111,7 @@ public interface IBrandShowService {
 	 * @param brandShowId
 	 * @return
 	 */
-	public long endBrandSow(long brandShowId);
+	public int endBrandSow(int brandShowId);
 
 	/**
 	 * 
@@ -112,7 +119,7 @@ public interface IBrandShowService {
 	 *            特卖Id
 	 * @return
 	 */
-	public BrandShow getBrandShowById(Long brandShowId);
+	public BrandShow getBrandShowById(int brandShowId);
 
 	/**
 	 * 取活动明细
@@ -120,7 +127,7 @@ public interface IBrandShowService {
 	 * @param brandShowId
 	 * @return
 	 */
-	public List<BrandShowDetail> getDetailsOfBrandShow(long brandShowId);
+	public List<BrandShowDetail> getDetailsOfBrandShow(int brandShowId);
 
 	/**
 	 * 
@@ -128,7 +135,7 @@ public interface IBrandShowService {
 	 *            特卖明细ID
 	 * @return
 	 */
-	public BrandShowDetail getBrandShowDetailById(Long brandShowDetailId);
+	public BrandShowDetail getBrandShowDetailById(int brandShowDetailId);
 
 	/**
 	 * 
@@ -136,7 +143,7 @@ public interface IBrandShowService {
 	 *            特卖ID列表
 	 * @return
 	 */
-	public List<BrandShow> getBrandShowByIds(List<Long> brandShowIds);
+	public List<BrandShow> getBrandShowByIds(List<Integer> brandShowIds);
 
 	/**
 	 * 
@@ -145,7 +152,7 @@ public interface IBrandShowService {
 	 * @return
 	 */
 	public List<BrandShowDetail> getBrandShowDetailsByIds(
-			List<Long> brandShowDetailIds);
+			List<Integer> brandShowDetailIds);
 
 	/**
 	 * 
@@ -155,7 +162,7 @@ public interface IBrandShowService {
 	 */
 	public List<BrandShow> getValidBrandShows(BrandShow record);
 
-	public BigDecimal getLowestPrice(Long bsid);
+	public BigDecimal getLowestPrice(int bsid);
 
 	public Page<BrandShowDetail> getBrandShowDetailByPage(Map<?, ?> map,
 			Page<BrandShowDetail> page);

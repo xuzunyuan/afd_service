@@ -5,70 +5,70 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class BrandShow implements Serializable {
-	
+
 	private static final long serialVersionUID = 5389072887838511958L;
 
-	private Long brandShowId;
+	private Integer brandShowId;
 
-    private Long sellerId;
+	private Integer sellerId;
 
-    private Long brandId;
+	private Integer brandId;
 
-    private String title;
+	private String title;
 
-    private String bannerImg;
+	private String bannerImg;
 
-    private String bgColor;
+	private String bgColor;
 
-    private String type;
-    
-    private String status;
+	private String type;
 
-    private Date createByDate;
+	private String status;
 
-    private Date auditDate;
+	private Date createByDate;
 
-    private String auditByName;
+	private Date auditDate;
 
-    private String auditContent;
+	private String auditByName;
 
-    private Date startDate;
+	private String auditContent;
 
-    private Date endDate;
+	private Date startDate;
 
-    private Date endByDate;
+	private Date endDate;
 
-    private String endByName;
+	private Date endByDate;
 
-    private Long endById;
+	private String endByName;
 
-    private Integer buyLimit;
+	private Long endById;
 
-    private Long sRAId;
-    
-    private BigDecimal lowestPrice;
+	private Integer buyLimit;
 
-	public Long getBrandShowId() {
+	private Long sRAId;
+
+	private BigDecimal lowestPrice;
+
+	public Integer getBrandShowId() {
 		return brandShowId;
 	}
 
-	public void setBrandShowId(Long brandShowId) {
+	public void setBrandShowId(Integer brandShowId) {
 		this.brandShowId = brandShowId;
 	}
 
-	public Long getSellerId() {
+	public Integer getSellerId() {
 		return sellerId;
 	}
 
-	public void setSellerId(Long sellerId) {
+	public void setSellerId(Integer sellerId) {
 		this.sellerId = sellerId;
 	}
 
-	public Long getBrandId() {
+	public Integer getBrandId() {
 		return brandId;
 	}
 
-	public void setBrandId(Long brandId) {
+	public void setBrandId(Integer brandId) {
 		this.brandId = brandId;
 	}
 
@@ -208,5 +208,4 @@ public class BrandShow implements Serializable {
 		this.lowestPrice = lowestPrice;
 	}
 
-    
 }

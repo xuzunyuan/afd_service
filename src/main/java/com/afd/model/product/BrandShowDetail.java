@@ -4,53 +4,53 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class BrandShowDetail  implements Serializable {
-	
+public class BrandShowDetail implements Serializable {
+
 	private static final long serialVersionUID = 6593936821611440310L;
 
-	private Long bSDId;
+	private Integer bSDId;
 
-    private Long brandShowId;
+	private Integer brandShowId;
 
-    private Long prodId;
+	private Integer prodId;
 
-    private String prodCode;
+	private String prodCode;
 
-    private String skuCode;
+	private String skuCode;
 
-    private Long skuId;
+	private Integer skuId;
 
-    private String prodName;
+	private String prodName;
 
-    private String prodTitle;
+	private String prodTitle;
 
-    private String prodImg;
+	private String prodImg;
 
-    private String skuSpecName;
+	private String skuSpecName;
 
-    private BigDecimal showPrice;
+	private BigDecimal showPrice;
 
-    private Long showBalance;
+	private Integer showBalance;
 
-    private Long saleAmount;
+	private Integer saleAmount;
 
-    private Integer purchaseCountLimit;
+	private Integer purchaseCountLimit;
 
-    private Date startDate;
+	private Date startDate;
 
-    private Date endDate;
+	private Date endDate;
 
-    private String status;
+	private String status;
 
-    private Date createByDate;
+	private Date createByDate;
 
-    private String createByName;
+	private String createByName;
 
-    private Date removeDate;
-    
-    private Sku sku;
-    
-    private Product product;
+	private Date removeDate;
+
+	private Sku sku;
+
+	private Product product;
 
 	public Sku getSku() {
 		return sku;
@@ -68,27 +68,27 @@ public class BrandShowDetail  implements Serializable {
 		this.product = product;
 	}
 
-	public Long getbSDId() {
+	public Integer getbSDId() {
 		return bSDId;
 	}
 
-	public void setbSDId(Long bSDId) {
+	public void setbSDId(Integer bSDId) {
 		this.bSDId = bSDId;
 	}
 
-	public Long getBrandShowId() {
+	public Integer getBrandShowId() {
 		return brandShowId;
 	}
 
-	public void setBrandShowId(Long brandShowId) {
+	public void setBrandShowId(Integer brandShowId) {
 		this.brandShowId = brandShowId;
 	}
 
-	public Long getProdId() {
+	public Integer getProdId() {
 		return prodId;
 	}
 
-	public void setProdId(Long prodId) {
+	public void setProdId(Integer prodId) {
 		this.prodId = prodId;
 	}
 
@@ -108,11 +108,11 @@ public class BrandShowDetail  implements Serializable {
 		this.skuCode = skuCode;
 	}
 
-	public Long getSkuId() {
+	public Integer getSkuId() {
 		return skuId;
 	}
 
-	public void setSkuId(Long skuId) {
+	public void setSkuId(Integer skuId) {
 		this.skuId = skuId;
 	}
 
@@ -156,19 +156,19 @@ public class BrandShowDetail  implements Serializable {
 		this.showPrice = showPrice;
 	}
 
-	public Long getShowBalance() {
+	public Integer getShowBalance() {
 		return showBalance;
 	}
 
-	public void setShowBalance(Long showBalance) {
+	public void setShowBalance(Integer showBalance) {
 		this.showBalance = showBalance;
 	}
 
-	public Long getSaleAmount() {
+	public Integer getSaleAmount() {
 		return saleAmount;
 	}
 
-	public void setSaleAmount(Long saleAmount) {
+	public void setSaleAmount(Integer saleAmount) {
 		this.saleAmount = saleAmount;
 	}
 
@@ -228,5 +228,4 @@ public class BrandShowDetail  implements Serializable {
 		this.removeDate = removeDate;
 	}
 
-    
 }
