@@ -9,9 +9,9 @@ public class UserAddress implements Serializable {
 	 */
 	private static final long serialVersionUID = -5592386443078728805L;
 
-	private Integer addrId;
+	private Long addrId;
 
-	private Integer userId;
+	private Long userId;
 
 	private String receiver;
 
@@ -49,19 +49,19 @@ public class UserAddress implements Serializable {
 
 	private String landMark;
 
-	public Integer getAddrId() {
+	public Long getAddrId() {
 		return addrId;
 	}
 
-	public void setAddrId(Integer addrId) {
+	public void setAddrId(Long addrId) {
 		this.addrId = addrId;
 	}
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

@@ -12,7 +12,7 @@ public interface IAddressService {
 	 * @param addressId
 	 * @return
 	 */
-	public UserAddress getAddressById(int addressId);
+	public UserAddress getAddressById(long addressId);
 	
 	/**
 	 * 根据用户id获取用户地址列表
@@ -33,7 +33,7 @@ public interface IAddressService {
 	 * @param addrId
 	 * @return
 	 */
-	public int delAddress(int addrId);
+	public int delAddress(long addrId);
 	
 	/**
 	 * 修改收货地址
