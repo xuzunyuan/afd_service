@@ -56,12 +56,12 @@ public interface IBrandShowService {
 			Map<String, ?> cond, int... page);
 
 	/**
-	 * 获得卖家正在进行的特卖
+	 * 获得卖家所有正在进行的、结束的和终止的（曾经上线的）特卖
 	 * 
 	 * @param sellerId
 	 * @return
 	 */
-	public List<BrandShow> getOnlineBrandShowsOfSeller(int sellerId);
+	public List<BrandShow> getOnlinedBrandShowsOfSeller(int sellerId);
 
 	/**
 	 * 查询待审核的特卖
@@ -153,6 +153,12 @@ public interface IBrandShowService {
 	 */
 	public List<BrandShowDetail> getBrandShowDetailsByIds(
 			List<Integer> brandShowDetailIds);
+
+	/**
+	 * 
+	 * @param stockMap
+	 */
+	public void addStock(Map<Long, Long> stockMap);
 
 	/**
 	 * 
