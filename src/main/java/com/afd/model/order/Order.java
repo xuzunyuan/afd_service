@@ -551,11 +551,11 @@ public class Order implements Serializable{
 		}else if(OrderConstants.ORDER_STATUS_WAITPAYMENT.equals(this.orderStatus)){
 			orderStatusName = "等待付款";
 		}else if(OrderConstants.ORDER_STATUS_WAITDELIVERED.equals(this.orderStatus)){
-			orderStatusName = "等待发货";
+			orderStatusName = "买家已付款";
 		}else if(OrderConstants.ORDER_STATUS_CANCELLED.equals(this.orderStatus)){
-			orderStatusName = "已取消";
+			orderStatusName = "交易取消";
 		}else if(OrderConstants.ORDER_STATUS_DELIVERED.equals(this.orderStatus)){
-			orderStatusName = "已发货";
+			orderStatusName = "商家已发货";
 		}else if(OrderConstants.ORDER_STATUS_DELIVERY_FAILURE.equals(this.orderStatus)){
 			orderStatusName = "配送失败";
 		}else if(OrderConstants.ORDER_STATUS_REJECT.equals(this.orderStatus)){

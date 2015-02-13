@@ -91,19 +91,19 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_TOBEPROCESS = "1";
 	/**
-	 * 订单状态：等待支付
+	 * 订单状态：等待付款
 	 */
 	public static final String ORDER_STATUS_WAITPAYMENT = "2";
 	/**
-	 * 订单状态：等待发货
+	 * 订单状态：买家已付款
 	 */
 	public static final String ORDER_STATUS_WAITDELIVERED = "3";
 	/**
-	 * 订单状态：已取消
+	 * 订单状态：交易取消
 	 */
 	public static final String ORDER_STATUS_CANCELLED = "4";
 	/**
-	 * 订单状态：已发货
+	 * 订单状态：商家已发货
 	 */
 	public static final String ORDER_STATUS_DELIVERED = "5";
 	/**

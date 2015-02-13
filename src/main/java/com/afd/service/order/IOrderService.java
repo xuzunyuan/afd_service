@@ -8,6 +8,7 @@ import com.afd.model.order.Order;
 import com.afd.model.order.OrderItem;
 import com.afd.param.cart.Trade;
 import com.afd.param.order.OrderInfo;
+import com.afd.param.order.OrderCondition;
 
 public interface IOrderService {
 
@@ -74,4 +75,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public List<OrderItem> getOrderItemsByOrderId(Integer orderId);
+	
+	/**
+	 * 根据查询条件获取订单
+	 * @param orderCondition
+	 * @return
+	 */
+	public Page<Order> getOrdersByOrderConditon(OrderCondition orderCondition, Page<Order> page);
 }
