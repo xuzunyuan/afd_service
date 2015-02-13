@@ -44,6 +44,14 @@ public interface IOrderService {
 	public List<Order> getOrdersByUserId(Long userId);
 	
 	/**
+	 * 根据用户Id和订单状态取得订单列表
+	 * @param userId
+	 * @param status
+	 * @return
+	 */
+	public List<Order> getOrdersByUserIdAndStatus(Long userId, String status);
+	
+	/**
 	 * 批量生成订单
 	 * @param trades
 	 * @return
