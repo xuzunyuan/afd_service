@@ -33,15 +33,55 @@ public class ReturnOrder implements Serializable{
 
     private Byte logisticsCompId;
 
-    private String logisticsCompName;
+    public Date getAuditDate() {
+		return auditDate;
+	}
 
-    private Date auditDit;
+	public void setAuditDate(Date auditDate) {
+		this.auditDate = auditDate;
+	}
+
+	public Date getConfirmDate() {
+		return confirmDate;
+	}
+
+	public void setConfirmDate(Date confirmDate) {
+		this.confirmDate = confirmDate;
+	}
+
+	public Date getRefundDate() {
+		return refundDate;
+	}
+
+	public void setRefundDate(Date refundDate) {
+		this.refundDate = refundDate;
+	}
+
+	public Date getRejectDate() {
+		return rejectDate;
+	}
+
+	public void setRejectDate(Date rejectDate) {
+		this.rejectDate = rejectDate;
+	}
+
+	private String logisticsCompName;
+
+    private Date auditDate;
 
     private String auditByName;
 
     private String rejectReason;
 
     private String remarks;
+    
+    private Date confirmDate;
+    
+    private Date refundDate;
+    
+    private Date rejectDate;
+    
+    
     
     private List<ReturnOrderItem> retOrderItems;
 
@@ -155,14 +195,6 @@ public class ReturnOrder implements Serializable{
 
     public void setLogisticsCompName(String logisticsCompName) {
         this.logisticsCompName = logisticsCompName == null ? null : logisticsCompName.trim();
-    }
-
-    public Date getAuditDit() {
-        return auditDit;
-    }
-
-    public void setAuditDit(Date auditDit) {
-        this.auditDit = auditDit;
     }
 
     public String getAuditByName() {
