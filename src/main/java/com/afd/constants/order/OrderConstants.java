@@ -208,6 +208,10 @@ public interface OrderConstants {
 	 */
 	public static final String ORDERITEM_STATUS_NORMAL = "1";
 	/**
+	 * 订单明细状态：申请退货
+	 */
+	public static final String ORDERITEM_STATUS_RETURN_APPLY = "2";
+	/**
 	 * 更改订单成功
 	 */
 	public static final int ORDER_UPDATE_SUCCESS = 0;
@@ -223,4 +227,11 @@ public interface OrderConstants {
 	 * 更改订单失败：确认订单失败
 	 */
 	public static final int ORDER_UPDATE_FAILURE = -3;
+	/***************************退货常量*************************************/
+	/**
+	 * 退货单状态：等待卖家处理
+	 */
+	public static final String RET_ORDER_STATUS_WAIT = "1";
+	
+	
 }

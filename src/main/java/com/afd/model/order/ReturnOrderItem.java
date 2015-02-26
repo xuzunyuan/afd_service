@@ -1,85 +1,86 @@
 package com.afd.model.order;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 public class ReturnOrderItem implements Serializable{
-    private Integer retOrderItemId;
+    private Long retOrderItemId;
 
-    private Integer retOrderId;
+    private Long retOrderId;
 
-    private Integer prodId;
+    private Long prodId;
 
-    private Integer sellerId;
+    private Long sellerId;
 
-    private Integer itemId;
+    private Long itemId;
 
-    private Integer skuId;
+    private Long skuId;
 
-    private Integer returnNumber;
+    private Long returnNumber;
 
-    private Float retFee;
+    private BigDecimal retFee;
 
-    public Integer getRetOrderItemId() {
+    public Long getRetOrderItemId() {
         return retOrderItemId;
     }
 
-    public void setRetOrderItemId(Integer retOrderItemId) {
+    public void setRetOrderItemId(Long retOrderItemId) {
         this.retOrderItemId = retOrderItemId;
     }
 
-    public Integer getRetOrderId() {
+    public Long getRetOrderId() {
         return retOrderId;
     }
 
-    public void setRetOrderId(Integer retOrderId) {
+    public void setRetOrderId(Long retOrderId) {
         this.retOrderId = retOrderId;
     }
 
-    public Integer getProdId() {
+    public Long getProdId() {
         return prodId;
     }
 
-    public void setProdId(Integer prodId) {
+    public void setProdId(Long prodId) {
         this.prodId = prodId;
     }
 
-    public Integer getSellerId() {
+    public Long getSellerId() {
         return sellerId;
     }
 
-    public void setSellerId(Integer sellerId) {
+    public void setSellerId(Long sellerId) {
         this.sellerId = sellerId;
     }
 
-    public Integer getItemId() {
+    public Long getItemId() {
         return itemId;
     }
 
-    public void setItemId(Integer itemId) {
+    public void setItemId(Long itemId) {
         this.itemId = itemId;
     }
 
-    public Integer getSkuId() {
+    public Long getSkuId() {
         return skuId;
     }
 
-    public void setSkuId(Integer skuId) {
+    public void setSkuId(Long skuId) {
         this.skuId = skuId;
     }
 
-    public Integer getReturnNumber() {
+    public Long getReturnNumber() {
         return returnNumber;
     }
 
-    public void setReturnNumber(Integer returnNumber) {
+    public void setReturnNumber(Long returnNumber) {
         this.returnNumber = returnNumber;
     }
 
-    public Float getRetFee() {
+    public BigDecimal getRetFee() {
         return retFee;
     }
 
-    public void setRetFee(Float retFee) {
+    public void setRetFee(BigDecimal retFee) {
         this.retFee = retFee;
     }
 }
