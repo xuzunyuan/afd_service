@@ -17,4 +17,7 @@ public interface IRetOrderService {
 	 * @param retOrder
 	 */
 	public int addRetOrder(ReturnOrder retOrder);
+	
+	
+	public ReturnOrder getRetOrderByRetOrderId(Integer retOrderId);
 }
