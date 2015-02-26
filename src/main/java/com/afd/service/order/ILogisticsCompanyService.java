@@ -17,7 +17,7 @@ import com.afd.model.order.LogisticsCompany;
 public interface ILogisticsCompanyService {
 	public List<LogisticsCompany> getValidLogisticsCompany();
 
-	public List<LogisticsCompany> getLogisticsCompanyByIds(long[] ids);
+	public List<LogisticsCompany> getLogisticsCompanyByIds(List<Long> ids);
 
 	public LogisticsCompany getLogisticsCompanyById(Long id);
 

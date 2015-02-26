@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.afd.common.mybatis.Page;
+import com.afd.model.order.LogisticsCompany;
 import com.afd.model.product.BrandShow;
 import com.afd.model.product.BrandShowDetail;
 
@@ -120,6 +121,9 @@ public interface IBrandShowService {
 	 * @return
 	 */
 	public BrandShow getBrandShowById(int brandShowId);
+
+	public List<LogisticsCompany> getLogisticsCompanyListOfBrandShow(
+			int brandShowId);
 
 	/**
 	 * 取活动明细
