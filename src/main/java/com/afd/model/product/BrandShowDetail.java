@@ -23,7 +23,7 @@ public class BrandShowDetail implements Serializable {
 	private BigDecimal showPrice;
 	private Integer showBalance;
 	private Integer saleAmount;
-	private Short purchaseCountLimit;
+	private Integer purchaseCountLimit;
 	private Date startDate;
 	private Date endDate;
 	private String status;
@@ -156,11 +156,11 @@ public class BrandShowDetail implements Serializable {
 		this.saleAmount = saleAmount;
 	}
 
-	public Short getPurchaseCountLimit() {
+	public Integer getPurchaseCountLimit() {
 		return purchaseCountLimit;
 	}
 
-	public void setPurchaseCountLimit(Short purchaseCountLimit) {
+	public void setPurchaseCountLimit(Integer purchaseCountLimit) {
 		this.purchaseCountLimit = purchaseCountLimit;
 	}
 
