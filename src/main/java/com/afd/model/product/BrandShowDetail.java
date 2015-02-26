@@ -6,67 +6,32 @@ import java.util.Date;
 
 public class BrandShowDetail implements Serializable {
 
-	private static final long serialVersionUID = 6593936821611440310L;
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4282655431598932203L;
 	private Integer bSDId;
-
 	private Integer brandShowId;
-
 	private Integer prodId;
-
 	private String prodCode;
-
 	private String skuCode;
-
 	private Integer skuId;
-
 	private String prodName;
-
 	private String prodTitle;
-
 	private String prodImg;
-
 	private String skuSpecName;
-
 	private BigDecimal showPrice;
-
 	private Integer showBalance;
-
 	private Integer saleAmount;
-
-	private Integer purchaseCountLimit;
-
+	private Short purchaseCountLimit;
 	private Date startDate;
-
 	private Date endDate;
-
 	private String status;
-
 	private Date createByDate;
-
 	private String createByName;
-
 	private Date removeDate;
-
-	private Sku sku;
-
-	private Product product;
-
-	public Sku getSku() {
-		return sku;
-	}
-
-	public void setSku(Sku sku) {
-		this.sku = sku;
-	}
-
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+	private BigDecimal orgPrice;
+	private BigDecimal discount;
 
 	public Integer getbSDId() {
 		return bSDId;
@@ -172,11 +137,11 @@ public class BrandShowDetail implements Serializable {
 		this.saleAmount = saleAmount;
 	}
 
-	public Integer getPurchaseCountLimit() {
+	public Short getPurchaseCountLimit() {
 		return purchaseCountLimit;
 	}
 
-	public void setPurchaseCountLimit(Integer purchaseCountLimit) {
+	public void setPurchaseCountLimit(Short purchaseCountLimit) {
 		this.purchaseCountLimit = purchaseCountLimit;
 	}
 
@@ -226,6 +191,22 @@ public class BrandShowDetail implements Serializable {
 
 	public void setRemoveDate(Date removeDate) {
 		this.removeDate = removeDate;
+	}
+
+	public BigDecimal getOrgPrice() {
+		return orgPrice;
+	}
+
+	public void setOrgPrice(BigDecimal orgPrice) {
+		this.orgPrice = orgPrice;
+	}
+
+	public BigDecimal getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(BigDecimal discount) {
+		this.discount = discount;
 	}
 
 }

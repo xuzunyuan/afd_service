@@ -1,52 +1,34 @@
 package com.afd.model.product;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 public class BrandShow implements Serializable {
-
-	private static final long serialVersionUID = 5389072887838511958L;
-
 	private Integer brandShowId;
-
 	private Integer sellerId;
-
 	private Integer brandId;
-
 	private String title;
-
-	private String bannerImg;
-
+	private String showBannerImg;
 	private String bgColor;
-
 	private String type;
-
 	private String status;
-
 	private Date createByDate;
-
 	private Date auditDate;
-
 	private String auditByName;
-
 	private String auditContent;
-
 	private Date startDate;
-
 	private Date endDate;
-
 	private Date endByDate;
-
 	private String endByName;
-
-	private Long endById;
-
-	private Integer buyLimit;
-
-	private Long sRAId;
-
-	private BigDecimal lowestPrice;
+	private Integer endById;
+	private Short buyLimit;
+	private Integer sRAId;
+	private String homeBannerImg;
+	private String serviceQq;
+	private String serviceTel;
+	private Integer deliverProvince;
+	private Integer deliverCity;
+	private String logisticsCompIds;
 
 	public Integer getBrandShowId() {
 		return brandShowId;
@@ -80,12 +62,12 @@ public class BrandShow implements Serializable {
 		this.title = title;
 	}
 
-	public String getBannerImg() {
-		return bannerImg;
+	public String getShowBannerImg() {
+		return showBannerImg;
 	}
 
-	public void setBannerImg(String bannerImg) {
-		this.bannerImg = bannerImg;
+	public void setShowBannerImg(String showBannerImg) {
+		this.showBannerImg = showBannerImg;
 	}
 
 	public String getBgColor() {
@@ -102,6 +84,14 @@ public class BrandShow implements Serializable {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Date getCreateByDate() {
@@ -168,44 +158,81 @@ public class BrandShow implements Serializable {
 		this.endByName = endByName;
 	}
 
-	public Long getEndById() {
+	public Integer getEndById() {
 		return endById;
 	}
 
-	public void setEndById(Long endById) {
+	public void setEndById(Integer endById) {
 		this.endById = endById;
 	}
 
-	public Integer getBuyLimit() {
+	public Short getBuyLimit() {
 		return buyLimit;
 	}
 
-	public void setBuyLimit(Integer buyLimit) {
+	public void setBuyLimit(Short buyLimit) {
 		this.buyLimit = buyLimit;
 	}
 
-	public Long getsRAId() {
+	public Integer getsRAId() {
 		return sRAId;
 	}
 
-	public void setsRAId(Long sRAId) {
+	public void setsRAId(Integer sRAId) {
 		this.sRAId = sRAId;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getHomeBannerImg() {
+		return homeBannerImg;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setHomeBannerImg(String homeBannerImg) {
+		this.homeBannerImg = homeBannerImg;
 	}
 
-	public BigDecimal getLowestPrice() {
-		return lowestPrice;
+	public String getServiceQq() {
+		return serviceQq;
 	}
 
-	public void setLowestPrice(BigDecimal lowestPrice) {
-		this.lowestPrice = lowestPrice;
+	public void setServiceQq(String serviceQq) {
+		this.serviceQq = serviceQq;
 	}
+
+	public String getServiceTel() {
+		return serviceTel;
+	}
+
+	public void setServiceTel(String serviceTel) {
+		this.serviceTel = serviceTel;
+	}
+
+	public Integer getDeliverProvince() {
+		return deliverProvince;
+	}
+
+	public void setDeliverProvince(Integer deliverProvince) {
+		this.deliverProvince = deliverProvince;
+	}
+
+	public Integer getDeliverCity() {
+		return deliverCity;
+	}
+
+	public void setDeliverCity(Integer deliverCity) {
+		this.deliverCity = deliverCity;
+	}
+
+	public String getLogisticsCompIds() {
+		return logisticsCompIds;
+	}
+
+	public void setLogisticsCompIds(String logisticsCompIds) {
+		this.logisticsCompIds = logisticsCompIds;
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5266608886537929458L;
 
 }
