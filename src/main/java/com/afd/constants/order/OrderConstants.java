@@ -257,5 +257,13 @@ public interface OrderConstants {
 	 * 订单退货状态：卖家退款
 	 */
 	public static final String  order_return_refund="4";
+	/**
+	 * 订单退货类型：全部退货
+	 */
+	public static final String  ORDER_RETURN_TYPE_ALL="1";
+	/**
+	 * 订单退货类型：部分退货
+	 */
+	public static final String  ORDER_RETURN_TYPE_PART="2";
 	
 }
