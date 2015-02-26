@@ -33,6 +33,25 @@ public class BrandShowDetail implements Serializable {
 	private BigDecimal orgPrice;
 	private BigDecimal discount;
 
+	private Sku sku;
+	private Product product;
+
+	public Sku getSku() {
+		return sku;
+	}
+
+	public void setSku(Sku sku) {
+		this.sku = sku;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 	public Integer getbSDId() {
 		return bSDId;
 	}
