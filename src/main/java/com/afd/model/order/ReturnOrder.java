@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
+import com.afd.constants.order.OrderConstants;
+
 public class ReturnOrder implements Serializable{
 	private static final long serialVersionUID = 235156282514243901L;
 
@@ -48,6 +52,8 @@ public class ReturnOrder implements Serializable{
     private Date refundDate;
     
     private Date rejectDate;
+    
+    private String strStatus;
 
     public Date getAuditDate() {
 		return auditDate;
@@ -225,5 +231,36 @@ public class ReturnOrder implements Serializable{
 
 	public void setRetOrderItems(List<ReturnOrderItem> retOrderItems) {
 		this.retOrderItems = retOrderItems;
+	}
+	
+	public String getStrStatus(){
+		String strStatus = "";
+		if(StringUtils.isNotBlank(this.status)){
+			switch(this.status){
+				case OrderConstants.order_return_reject:
+					strStatus = "驳回";
+					break;
+				case OrderConstants.order_return_comfirm:
+					strStatus = "卖家确认";
+					break;
+				case OrderConstants.order_return_cancel:
+					strStatus = "买家取消";
+					break;
+				case OrderConstants.order_return_wait:
+					strStatus = "等待卖家确认";
+					break;
+				case OrderConstants.order_return_audit:
+					strStatus = "卖家受理";
+					break;
+				case OrderConstants.order_return_refund:
+					strStatus = "卖家退款";
+					break;
+			}
+		}
+		return strStatus;
+	}
+
+	public void setStrStatus(String strStatus) {
+		this.strStatus = strStatus;
 	}
 }
