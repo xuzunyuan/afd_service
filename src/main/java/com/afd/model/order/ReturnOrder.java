@@ -32,6 +32,22 @@ public class ReturnOrder implements Serializable{
     private String logisticsCode;
 
     private Byte logisticsCompId;
+    
+    private String logisticsCompName;
+
+    private Date auditDate;
+
+    private String auditByName;
+
+    private String rejectReason;
+
+    private String remarks;
+    
+    private Date confirmDate;
+    
+    private Date refundDate;
+    
+    private Date rejectDate;
 
     public Date getAuditDate() {
 		return auditDate;
@@ -65,24 +81,6 @@ public class ReturnOrder implements Serializable{
 		this.rejectDate = rejectDate;
 	}
 
-	private String logisticsCompName;
-
-    private Date auditDate;
-
-    private String auditByName;
-
-    private String rejectReason;
-
-    private String remarks;
-    
-    private Date confirmDate;
-    
-    private Date refundDate;
-    
-    private Date rejectDate;
-    
-    
-    
     private List<ReturnOrderItem> retOrderItems;
 
     public Long getRetOrderId() {
