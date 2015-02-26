@@ -158,7 +158,7 @@ public interface IBrandShowService {
 	 * 
 	 * @param stockMap
 	 */
-	public void addStock(Map<Long, Long> stockMap);
+	public void addStock(Map<Integer, Integer> stockMap);
 
 	/**
 	 * 
