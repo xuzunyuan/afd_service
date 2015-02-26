@@ -227,11 +227,35 @@ public interface OrderConstants {
 	 * 更改订单失败：确认订单失败
 	 */
 	public static final int ORDER_UPDATE_FAILURE = -3;
-	/***************************退货常量*************************************/
-	/**
-	 * 退货单状态：等待卖家处理
-	 */
-	public static final String RET_ORDER_STATUS_WAIT = "1";
 	
+	/*************************************订单退货状常量*************************************/
+	
+	/**
+	 * 订单退货状态：驳回
+	 */
+	public static final String  order_return_reject="-1";
+	
+	/**
+	 * 订单退货状态：买家取消
+	 */
+	public static final String  order_return_cancel="0";
+	
+	/**
+	 * 订单退货状态：等待卖家确认
+	 */
+	public static final String  order_return_wait="1";
+	
+	/**
+	 * 订单退货状态：卖家受理
+	 */
+	public static final String  order_return_audit="2";
+	/**
+	 * 订单退货状态：卖家确认
+	 */
+	public static final String  order_return_comfirm="3";
+	/**
+	 * 订单退货状态：卖家退款
+	 */
+	public static final String  order_return_refund="4";
 	
 }
