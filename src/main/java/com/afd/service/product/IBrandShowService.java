@@ -36,7 +36,7 @@ public interface IBrandShowService {
 	public int modifyBrandShow(BrandShow brandShow);
 
 	/**
-	 * 修改特卖明细
+	 * 修改特卖明细并提交
 	 * 
 	 * @param brandShowId
 	 * @param details
