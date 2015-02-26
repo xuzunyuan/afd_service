@@ -172,4 +172,9 @@ public interface ProductConstants {
 		public static final String WAIT_ONLINE = "7"; // 等待上线
 		public static final String REJECTED = "8"; // 驳回
 	}
+
+	public static interface BrandShowDetail$Status {
+		public static final String REMOVED = "0";
+		public static final String VALID = "1";
+	}
 }
