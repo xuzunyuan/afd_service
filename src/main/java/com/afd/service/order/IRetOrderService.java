@@ -11,4 +11,10 @@ public interface IRetOrderService {
 	 * @return
 	 */
 	public List<ReturnOrder> getRetOrdersByUserId(long userId);
+
+	/**
+	 * 生成退货单
+	 * @param retOrder
+	 */
+	public int addRetOrder(ReturnOrder retOrder);
 }

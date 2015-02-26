@@ -82,4 +82,11 @@ public interface IOrderService {
 	 * @return
 	 */
 	public Page<Order> getOrdersByOrderConditon(OrderCondition orderCondition, Page<Order> page);
+
+	/**
+	 * 根据订单明细id获取订单明细
+	 * @param orderItemId
+	 * @return
+	 */
+	public OrderItem getOrderItemById(Long orderItemId);
 }

@@ -12,13 +12,13 @@ public class OrderItem implements Serializable{
 
 	private Long orderItemId;
 
-	private Integer orderId;
+	private Long orderId;
 
 	private String orderCode;
 
-	private Integer skuId;
+	private Long skuId;
 
-	private Integer prodId;
+	private Long prodId;
 
 	private String prodCode;
 
@@ -51,6 +51,8 @@ public class OrderItem implements Serializable{
 	private String brandShowTitle;
 	
 	private Long bsdId;
+	
+	private Order order;
 
 	public Long getOrderItemId() {
 		return orderItemId;
@@ -60,11 +62,11 @@ public class OrderItem implements Serializable{
 		this.orderItemId = orderItemId;
 	}
 
-	public Integer getOrderId() {
+	public Long getOrderId() {
 		return orderId;
 	}
 
-	public void setOrderId(Integer orderId) {
+	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
 
@@ -76,19 +78,19 @@ public class OrderItem implements Serializable{
 		this.orderCode = orderCode == null ? null : orderCode.trim();
 	}
 
-	public Integer getSkuId() {
+	public Long getSkuId() {
 		return skuId;
 	}
 
-	public void setSkuId(Integer skuId) {
+	public void setSkuId(Long skuId) {
 		this.skuId = skuId;
 	}
 
-	public Integer getProdId() {
+	public Long getProdId() {
 		return prodId;
 	}
 
-	public void setProdId(Integer prodId) {
+	public void setProdId(Long prodId) {
 		this.prodId = prodId;
 	}
 
@@ -241,6 +243,14 @@ public class OrderItem implements Serializable{
 		}
 		
 		return specTemp;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
 	}
 
 }
