@@ -127,6 +127,10 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_TOBECOMMENT = "c";
 	/**
+	 * 订单状态：已删除（前台不可见）
+	 */
+	public static final String ORDER_STATUS_DELETE = "d";
+	/**
 	 * 支付方式：货到付款
 	 */
 	public static final String PAY_TYPE_COD = "0";
