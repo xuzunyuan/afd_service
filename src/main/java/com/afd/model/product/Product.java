@@ -66,10 +66,12 @@ public class Product implements Serializable {
 
     private List<Sku> skus;
     
-    //
+    //展示属性
     private String bcName;
     private String salePrice;
     private String marketPrice;
+    
+    
 	public Integer getProdId() {
 		return prodId;
 	}

@@ -19,6 +19,8 @@ public class ProductCondition implements Serializable {
     private Date createDate;//创建时间
 	private String auditStatus;	//审核状态
 	private String lastAuditName;//审核人
+	private Integer brandId;	//品牌ID
+	private String brandName;	//品牌名称
 	
 	public Integer getSellerId() {
 		return sellerId;
@@ -103,6 +105,18 @@ public class ProductCondition implements Serializable {
 	}
 	public void setLastAuditName(String lastAuditName) {
 		this.lastAuditName = lastAuditName;
+	}
+	public Integer getBrandId() {
+		return brandId;
+	}
+	public void setBrandId(Integer brandId) {
+		this.brandId = brandId;
+	}
+	public String getBrandName() {
+		return brandName;
+	}
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
 	}
 	
 }
