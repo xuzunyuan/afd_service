@@ -35,6 +35,7 @@ public class BrandShowDetail implements Serializable {
 
 	private Sku sku;
 	private Product product;
+	private int removed;
 
 	public Sku getSku() {
 		return sku;
@@ -42,6 +43,14 @@ public class BrandShowDetail implements Serializable {
 
 	public void setSku(Sku sku) {
 		this.sku = sku;
+	}
+
+	public int getRemoved() {
+		return removed;
+	}
+
+	public void setRemoved(int removed) {
+		this.removed = removed;
 	}
 
 	public Product getProduct() {
