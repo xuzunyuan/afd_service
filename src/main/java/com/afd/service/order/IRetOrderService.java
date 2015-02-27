@@ -19,8 +19,6 @@ public interface IRetOrderService {
 		
 	public ReturnOrder getRetOrderByRetOrderId(Long retOrderId);
 	
-	public ReturnOrder getRetOrderByRetOrderId(Integer retOrderId);
-
 	/**
 	 * 买家取消退货单
 	 * @param retOrderId
