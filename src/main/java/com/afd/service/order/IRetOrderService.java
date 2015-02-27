@@ -19,4 +19,11 @@ public interface IRetOrderService {
 	
 	
 	public ReturnOrder getRetOrderByRetOrderId(Integer retOrderId);
+
+	/**
+	 * 买家取消退货单
+	 * @param retOrderId
+	 * @param uid
+	 */
+	public int cancelRetOrderById(Long retOrderId, Long uid);
 }

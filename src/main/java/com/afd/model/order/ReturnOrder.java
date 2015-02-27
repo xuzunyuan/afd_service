@@ -54,6 +54,8 @@ public class ReturnOrder implements Serializable{
     
     private Date rejectDate;
     
+    private Date cancelDate;
+    
     private String strStatus;
     
     private Seller seller;
@@ -273,5 +275,13 @@ public class ReturnOrder implements Serializable{
 
 	public void setSeller(Seller seller) {
 		this.seller = seller;
+	}
+
+	public Date getCancelDate() {
+		return cancelDate;
+	}
+
+	public void setCancelDate(Date cancelDate) {
+		this.cancelDate = cancelDate;
 	}
 }
