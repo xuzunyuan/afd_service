@@ -269,13 +269,6 @@ public class ReturnOrder implements Serializable{
 		this.strStatus = strStatus;
 	}
 
-	public Seller getSeller() {
-		return seller;
-	}
-
-	public void setSeller(Seller seller) {
-		this.seller = seller;
-	}
 
 	public Date getCancelDate() {
 		return cancelDate;
@@ -283,5 +276,14 @@ public class ReturnOrder implements Serializable{
 
 	public void setCancelDate(Date cancelDate) {
 		this.cancelDate = cancelDate;
+	}
+	
+	public Seller getSeller() {
+		return seller;
+	}
+
+	public void setSeller(Seller seller) {
+		this.seller = seller;
+
 	}
 }
