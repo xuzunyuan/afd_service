@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 
 import com.afd.constants.order.OrderConstants;
+import com.afd.model.seller.Seller;
 
 public class ReturnOrder implements Serializable{
 	private static final long serialVersionUID = 235156282514243901L;
@@ -54,6 +55,8 @@ public class ReturnOrder implements Serializable{
     private Date rejectDate;
     
     private String strStatus;
+    
+    private Seller seller;
 
     public Date getAuditDate() {
 		return auditDate;
@@ -262,5 +265,13 @@ public class ReturnOrder implements Serializable{
 
 	public void setStrStatus(String strStatus) {
 		this.strStatus = strStatus;
+	}
+
+	public Seller getSeller() {
+		return seller;
+	}
+
+	public void setSeller(Seller seller) {
+		this.seller = seller;
 	}
 }

@@ -1,7 +1,6 @@
 package com.afd.service.order;
 
-import java.util.List;
-
+import com.afd.common.mybatis.Page;
 import com.afd.model.order.ReturnOrder;
 
 public interface IRetOrderService {
@@ -10,7 +9,7 @@ public interface IRetOrderService {
 	 * @param userId
 	 * @return
 	 */
-	public List<ReturnOrder> getRetOrdersByUserId(long userId);
+	public Page<ReturnOrder> getRetOrdersByUserId(long userId,Page<ReturnOrder> page);
 
 	/**
 	 * 生成退货单
