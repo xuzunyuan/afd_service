@@ -3,6 +3,8 @@ package com.afd.param.order;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang.math.NumberUtils;
+
 import com.afd.common.util.DateUtils;
 
 
@@ -35,7 +37,7 @@ public class OrderCondition implements Serializable {
 	private String provinceName;
 	private String cityName;
 	private String countyName;
-	private int brandShowId;
+	private String brandShowId;
 	
 	//是否写库查询
 	private boolean writable;
@@ -196,9 +198,9 @@ public class OrderCondition implements Serializable {
 		this.payType = payType;
 	}
 	public int getBrandShowId() {
-		return brandShowId;
+		return NumberUtils.toInt(brandShowId, 0);
 	}
-	public void setBrandShowId(int brandShowId) {
+	public void setBrandShowId(String brandShowId) {
 		this.brandShowId = brandShowId;
 	}
 	public String getOrderCode() {

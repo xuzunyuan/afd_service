@@ -19,6 +19,13 @@ public interface IOrderService {
 	 */
 	public Order getOrderById(Long orderId);
 	
+	/**
+	 * 修改订单为已发送
+	 * @param order
+	 * @return 1:修改成功,else:失败
+	 */
+	public int updateOrder2Sended(Order order);
+	
 	public List<Order> getOrdersByIds(Long[] orderIds);
 	/**
 	 * 根据订单id和用户id获取订单
