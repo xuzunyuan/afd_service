@@ -53,6 +53,8 @@ public class ReturnOrder implements Serializable{
     
     private Date rejectDate;
     
+    private Date cancelDate;
+    
     private String strStatus;
 
     public Date getAuditDate() {
@@ -262,5 +264,13 @@ public class ReturnOrder implements Serializable{
 
 	public void setStrStatus(String strStatus) {
 		this.strStatus = strStatus;
+	}
+
+	public Date getCancelDate() {
+		return cancelDate;
+	}
+
+	public void setCancelDate(Date cancelDate) {
+		this.cancelDate = cancelDate;
 	}
 }
