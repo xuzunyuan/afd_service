@@ -48,20 +48,11 @@ public class ProductConvertUtil {
 			product.setAttrValueName(vo.getAttrValueName()); //属性值字符串
 		}
 		if(StringUtils.isNotBlank(vo.getImgUrl())){ //主图图片
-			System.out.println(vo.getImgUrl());
 			product.setImgUrl(vo.getImgUrl());
 		}
 		if(StringUtils.isNotBlank(vo.getDetail())){ //描述
 			product.setDetail(vo.getDetail());
 		}
-
-		
-
-
-
-
-
-
 		
 		product.setStatus(ProductConstants.PROD_STATUS_ON);
 		product.setAuditStatus(ProductConstants.PROD_AUDIT_STATUS_WAIT);
