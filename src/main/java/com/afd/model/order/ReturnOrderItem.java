@@ -3,6 +3,8 @@ package com.afd.model.order;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import com.afd.model.product.Sku;
+
 public class ReturnOrderItem implements Serializable{
     private Long retOrderItemId;
 
@@ -19,6 +21,8 @@ public class ReturnOrderItem implements Serializable{
     private Long returnNumber;
 
     private BigDecimal retFee;
+    
+    private Sku sku;
 
     public Long getRetOrderItemId() {
         return retOrderItemId;
@@ -83,4 +87,12 @@ public class ReturnOrderItem implements Serializable{
     public void setRetFee(BigDecimal retFee) {
         this.retFee = retFee;
     }
+
+	public Sku getSku() {
+		return sku;
+	}
+
+	public void setSku(Sku sku) {
+		this.sku = sku;
+	}
 }

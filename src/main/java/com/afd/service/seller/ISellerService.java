@@ -5,6 +5,8 @@
 package com.afd.service.seller;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 import com.afd.model.seller.Seller;
 
@@ -39,4 +41,11 @@ public interface ISellerService {
 	 */
 	public int confirmDeposit(int sellerId, Date depositDate,
 			String depositAuditor);
+
+	/**
+	 * 根据卖家id获取卖家信息
+	 * @param sellerIds
+	 * @return
+	 */
+	public List<Seller> getSellersByIds(Set<Long> sellerIds);
 }

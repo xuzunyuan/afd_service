@@ -40,6 +40,8 @@ public class Sku implements Serializable {
     private Date lastUpdateDate;
 
     private String updateByName;
+    
+    private Product product;
 
     public Integer getSkuId() {
         return skuId;
@@ -176,4 +178,12 @@ public class Sku implements Serializable {
     public void setUpdateByName(String updateByName) {
         this.updateByName = updateByName;
     }
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
 }

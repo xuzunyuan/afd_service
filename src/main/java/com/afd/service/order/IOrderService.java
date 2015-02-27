@@ -42,7 +42,7 @@ public interface IOrderService {
 	 * @param userId
 	 * @return
 	 */
-	public List<Order> getOrdersByUserId(Long userId);
+	public Page<Order> getOrdersByUserId(Long userId, Page<Order> page);
 	
 	/**
 	 * 根据用户Id和订单状态取得订单列表
@@ -50,7 +50,7 @@ public interface IOrderService {
 	 * @param status
 	 * @return
 	 */
-	public List<Order> getOrdersByUserIdAndStatus(Long userId, String status);
+	public Page<Order> getOrdersByUserIdAndStatus(Long userId, String status, Page<Order> page);
 	
 	/**
 	 * 批量生成订单

@@ -564,6 +564,8 @@ public class Order implements Serializable{
 			orderStatusName = "交易完成";
 		}else if(OrderConstants.ORDER_STATUS_RETURN.equals(this.orderStatus)){
 			orderStatusName = "已退货";
+		}else if(OrderConstants.ORDER_STATUS_DELETE.equals(this.orderStatus)){
+			orderStatusName = "已删除";
 		}
 		
 		return orderStatusName;
