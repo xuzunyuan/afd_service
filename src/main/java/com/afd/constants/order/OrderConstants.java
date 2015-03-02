@@ -107,11 +107,11 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_DELIVERED = "5";
 	/**
-	 * 订单状态：配送失败
+	 * 订单状态：配送失败（废弃）
 	 */
 	public static final String ORDER_STATUS_DELIVERY_FAILURE = "6";
 	/**
-	 * 订单状态：拒收
+	 * 订单状态：拒收（废弃）
 	 */
 	public static final String ORDER_STATUS_REJECT = "7";
 	/**
@@ -119,7 +119,7 @@ public interface OrderConstants {
 	 */
 	public static final String ORDER_STATUS_COMPLETED = "8";
 	/**
-	 * 订单状态：已退货
+	 * 订单状态：已退货（废弃）
 	 */
 	public static final String ORDER_STATUS_RETURN = "9";
 	/**

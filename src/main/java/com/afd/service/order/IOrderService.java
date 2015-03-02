@@ -96,4 +96,40 @@ public interface IOrderService {
 	 * @return
 	 */
 	public OrderItem getOrderItemById(Long orderItemId);
+	
+	/**
+	 * 根据订单ID和用户ID获取订单（前台用）
+	 * @param orderId
+	 * @param userId
+	 * @return
+	 */
+	public Order getOrderByIdAndUser(Long orderId, Long userId);
+	
+	/**
+	 * 取消订单（前台用）
+	 * @param orderId
+	 * @param userId
+	 * @param userName
+	 * @param cancelReason
+	 * @return
+	 */
+	public int cancelOrderByIdAndUser(Long orderId, Long userId, String userName, String cancelReason);
+	
+	/**
+	 * 确认收货（前台用）
+	 * @param orderId
+	 * @param userId
+	 * @param userName
+	 * @return
+	 */
+	public int confirmOrderByUser(Long orderId, Long userId, String userName);
+	
+	/**
+	 * 删除订单（前台用）
+	 * @param orderId
+	 * @param userId
+	 * @param userName
+	 * @return
+	 */
+	public int deleteOrderByUser(Long orderId, Long userId, String userName);
 }
