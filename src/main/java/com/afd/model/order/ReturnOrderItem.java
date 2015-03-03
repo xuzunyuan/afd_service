@@ -6,7 +6,9 @@ import java.math.BigDecimal;
 import com.afd.model.product.Sku;
 
 public class ReturnOrderItem implements Serializable{
-    private Long retOrderItemId;
+	private static final long serialVersionUID = 8005746338092665813L;
+
+	private Long retOrderItemId;
 
     private Long retOrderId;
 
@@ -23,6 +25,8 @@ public class ReturnOrderItem implements Serializable{
     private BigDecimal retFee;
     
     private Sku sku;
+    
+    private OrderItem orderItem; 
 
     public Long getRetOrderItemId() {
         return retOrderItemId;
@@ -94,5 +98,13 @@ public class ReturnOrderItem implements Serializable{
 
 	public void setSku(Sku sku) {
 		this.sku = sku;
+	}
+
+	public OrderItem getOrderItem() {
+		return orderItem;
+	}
+
+	public void setOrderItem(OrderItem orderItem) {
+		this.orderItem = orderItem;
 	}
 }

@@ -1,5 +1,7 @@
 package com.afd.service.order;
 
+import java.util.Map;
+
 import com.afd.common.mybatis.Page;
 import com.afd.model.order.ReturnOrder;
 
@@ -10,6 +12,8 @@ public interface IRetOrderService {
 	 * @return
 	 */
 	public Page<ReturnOrder> getRetOrdersByUserId(long userId,Page<ReturnOrder> page);
+	
+	public Page<ReturnOrder> getRetOrdersByPage(Map<String, ?> cond, Page<ReturnOrder> page);
 
 	/**
 	 * 生成退货单
@@ -18,6 +22,12 @@ public interface IRetOrderService {
 	public int addRetOrder(ReturnOrder retOrder);
 		
 	public ReturnOrder getRetOrderByRetOrderId(Long retOrderId);
+	
+	/**
+	 * @param retOrderId 退货单ID
+	 * @return 包括退货单及详情和商品的信息
+	 */
+	public ReturnOrder getRetOrderInfoByRetOrderId(Long retOrderId);
 	
 	/**
 	 * 买家取消退货单
