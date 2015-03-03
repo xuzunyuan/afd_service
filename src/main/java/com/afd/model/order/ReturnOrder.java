@@ -58,8 +58,6 @@ public class ReturnOrder implements Serializable{
     
     private Long brandShowId;
     
-    private String strStatus;
-    
     private Seller seller;
 
     public Date getAuditDate() {
@@ -266,11 +264,29 @@ public class ReturnOrder implements Serializable{
 		}
 		return strStatus;
 	}
-
-	public void setStrStatus(String strStatus) {
-		this.strStatus = strStatus;
+	
+	public String getSellerStatus(){
+		String strStatus = "";
+		if(StringUtils.isNotBlank(this.status)){
+			switch(this.status){
+				case OrderConstants.order_return_comfirm:
+					strStatus = "已退货";
+					break;
+				case OrderConstants.order_return_cancel:
+					strStatus = "退货取消";
+					break;
+				case OrderConstants.order_return_wait:
+					strStatus = "买家申请退货";
+					break;
+				case OrderConstants.order_return_audit:
+					strStatus = "卖家同意退货";
+					break;
+				case OrderConstants.order_return_refund:
+					strStatus = "已退款";
+			}
+		}
+		return strStatus;
 	}
-
 
 	public Date getCancelDate() {
 		return cancelDate;
