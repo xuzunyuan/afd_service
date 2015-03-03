@@ -56,6 +56,8 @@ public class ReturnOrder implements Serializable{
     
     private Date cancelDate;
     
+    private Long brandShowId;
+    
     private String strStatus;
     
     private Seller seller;
@@ -285,5 +287,13 @@ public class ReturnOrder implements Serializable{
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 
+	}
+
+	public Long getBrandShowId() {
+		return brandShowId;
+	}
+
+	public void setBrandShowId(Long brandShowId) {
+		this.brandShowId = brandShowId;
 	}
 }
