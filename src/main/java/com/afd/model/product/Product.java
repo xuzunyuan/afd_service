@@ -61,15 +61,19 @@ public class Product implements Serializable {
     private String sourceArea;
     
     private String imgUrl;
+    
+    private String auditContent;
 
     private String detail;
 
     private List<Sku> skus;
     
     //展示属性
-    private String bcName;
-    private String salePrice;
-    private String marketPrice;
+    private String bcName;		//所属类目
+    private String salePrice;	//销售价
+    private String marketPrice;	//市场价	
+    private Integer stockBalance;//库存
+    private String coName;		//卖家名称
     
     
 	public Integer getProdId() {
@@ -264,6 +268,23 @@ public class Product implements Serializable {
 	public void setMarketPrice(String marketPrice) {
 		this.marketPrice = marketPrice;
 	}
-
+	public Integer getStockBalance() {
+		return stockBalance;
+	}
+	public void setStockBalance(Integer stockBalance) {
+		this.stockBalance = stockBalance;
+	}
+	public String getCoName() {
+		return coName;
+	}
+	public void setCoName(String coName) {
+		this.coName = coName;
+	}
+	public String getAuditContent() {
+		return auditContent;
+	}
+	public void setAuditContent(String auditContent) {
+		this.auditContent = auditContent;
+	}
 
 }

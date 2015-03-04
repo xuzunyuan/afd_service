@@ -25,6 +25,7 @@ public class ProductVo implements Serializable{
 	private BigDecimal[] skuSalePrice;//销售价
 	private BigDecimal[] skuMarketPrice;//特卖价
 	private Integer[] skuStockBalance;//库存
+	private Integer[] sellerNo;//商家编号
 	private String[] skuImgUrl;	// sku图片
 
 	public Integer getProdId() {
@@ -147,5 +148,12 @@ public class ProductVo implements Serializable{
 	public void setSkuStockBalance(Integer[] skuStockBalance) {
 		this.skuStockBalance = skuStockBalance;
 	}
+	public Integer[] getSellerNo() {
+		return sellerNo;
+	}
+	public void setSellerNo(Integer[] sellerNo) {
+		this.sellerNo = sellerNo;
+	}
+	
 	
 }

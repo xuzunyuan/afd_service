@@ -206,19 +206,19 @@ public interface IProductService {
 	 * 商品上架 （BOSS 审核通过）
 	 * 
 	 * @param prodId 商品ID
-	 * @Param auditName 审核人
+	 * @Param optName 审核人
 	 * @return
 	 */
-	public boolean putawayProductByBoss(Integer prodId, String auditName);
+	public boolean putawayProductByBoss(Integer prodId, String optName);
 
 	/**
 	 * 批量商品上架 （BOSS 审核通过）
 	 * 
 	 * @param idList 商品ID
-	 * @param auditName 审核人
+	 * @param optName 审核人
 	 * @return
 	 */
-	public boolean batchPutawayProductByBoss(List<Integer> idList, String auditName);
+	public boolean batchPutawayProductByBoss(List<Integer> idList, String optName);
 
 	/**
 	 *  删除商品 （seller 后台 || boss 后台）
@@ -255,6 +255,26 @@ public interface IProductService {
 	 */
 	public boolean batchOpenSaleProduct(Integer sellerId, List<Integer> idList, String optName);
 	
+	/**
+	 *  抽样审核（Boss）
+	 * @param prodId		商品ID
+	 * @param auditStatus	审核状态
+	 * @param auditContent	审核内容
+	 * @param auditName		审核人
+	 * @return
+	 */
+	public boolean auditProduct(Integer prodId, String auditStatus,
+			String auditContent, String auditName);
+	/**
+	 *  抽样审核（Boss）
+	 * @param prodId		商品ID
+	 * @param auditStatus	审核状态
+	 * @param auditContent	审核内容
+	 * @param auditName		审核人
+	 * @return
+	 */
+	public boolean batchAuditProduct(List<Integer> prodIds, String auditStatus,
+			String auditContent, String auditName);
 	
 	/********************************************* 商品查询 *********************************************************/
 	/**

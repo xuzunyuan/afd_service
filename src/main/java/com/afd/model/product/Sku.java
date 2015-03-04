@@ -18,6 +18,8 @@ public class Sku implements Serializable {
     private String prodCode;
 
     private String skuCode;
+    
+    private String sellerNo;	//商家编号
 
     private String skuImgUrl;
 
@@ -186,4 +188,14 @@ public class Sku implements Serializable {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+
+	public String getSellerNo() {
+		return sellerNo;
+	}
+
+	public void setSellerNo(String sellerNo) {
+		this.sellerNo = sellerNo;
+	}
+	
+	
 }
