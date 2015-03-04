@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.afd.model.seller.Seller;
+import com.afd.model.seller.SellerRetAddress;
 
 /**
  * 卖家服务接口
@@ -48,4 +49,11 @@ public interface ISellerService {
 	 * @return
 	 */
 	public List<Seller> getSellersByIds(Set<Long> sellerIds);
+	
+	/**
+	 * 根据id获取卖家退货地址
+	 * @param sRAId
+	 * @return
+	 */
+	public SellerRetAddress getSellerRetAddress(Integer sRAId);
 }
