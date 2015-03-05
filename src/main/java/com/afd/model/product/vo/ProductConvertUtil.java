@@ -15,12 +15,19 @@ public class ProductConvertUtil {
 		
 		if(null != vo.getProdId() &&  vo.getProdId() > 0){ //商品ID
 			product.setProdId(vo.getProdId());
+		}else{ // 新增
+			product.setStatus(ProductConstants.PROD_STATUS_ON);
+			product.setAuditStatus(ProductConstants.PROD_AUDIT_STATUS_PASS);
 		}
+		
+		if(StringUtils.isNotBlank(vo.getAuditStatus()) 
+				&& ProductConstants.PROD_AUDIT_STATUS_NO_PASS.equals(vo.getAuditStatus())){ //审核驳回
+			product.setAuditStatus(ProductConstants.PROD_AUDIT_STATUS_WAIT);
+		}		
 		if(StringUtils.isNotBlank(vo.getProdCode())){ //商品编码
 			product.setProdCode(vo.getProdCode());
 		}else{
-			//TODO 生成prodCode
-			
+//			product.setProdCode(prodCode); //TODO 生成prodCode
 			product.setCreateDate(DateUtils.currentDate()); //创建时间
 		}
 		if(null != vo.getSellerId() &&  vo.getSellerId() > 0){ //卖家ID
@@ -53,9 +60,6 @@ public class ProductConvertUtil {
 		if(StringUtils.isNotBlank(vo.getDetail())){ //描述
 			product.setDetail(vo.getDetail());
 		}
-		
-		product.setStatus(ProductConstants.PROD_STATUS_ON);
-		product.setAuditStatus(ProductConstants.PROD_AUDIT_STATUS_WAIT);
 		
 		product.setLastUpdateDate(DateUtils.currentDate());
 		return product;

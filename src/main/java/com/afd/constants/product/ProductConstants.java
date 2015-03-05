@@ -10,8 +10,8 @@ public interface ProductConstants {
 	public static final String PROD_STATUS_SUSPEND_SALE = "3";// 暂停销售（店铺冻结）
 
 	// 商品审核状态
-	public static final String PROD_AUDIT_STATUS_WAIT = "0"; // 待审核
-	public static final String PROD_AUDIT_STATUS_PASS = "1"; // 审核通过
+	public static final String PROD_AUDIT_STATUS_PASS = "0"; // 审核通过
+	public static final String  PROD_AUDIT_STATUS_WAIT = "1"; // 待审核
 	public static final String PROD_AUDIT_STATUS_NO_PASS = "2"; // 审核驳回
 
 	// sku状态
