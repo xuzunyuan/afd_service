@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
+import com.afd.common.util.DateUtils;
 import com.afd.constants.order.OrderConstants;
 import com.afd.constants.order.PayModeEnum;
 
@@ -119,6 +120,16 @@ public class Order implements Serializable{
     private String lastUpdateByName;
 
     private List<OrderItem> orderItems;
+    
+    public long getPayRestTime() {
+    	if(!OrderConstants.ORDER_STATUS_WAITPAYMENT.equals(this.orderStatus)) {
+    		return 0l;
+    	}
+    	long now = System.currentTimeMillis();
+    	long expireDate = this.createdDate.getTime() + 24 * 60 * 60 * 1000;
+    	long payRestTime = (expireDate - now) / 1000;
+    	return payRestTime;
+    }
     
     public Long getOrderId() {
         return orderId;
