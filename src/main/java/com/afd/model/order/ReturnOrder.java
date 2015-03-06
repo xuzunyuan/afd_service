@@ -59,6 +59,10 @@ public class ReturnOrder implements Serializable{
     
     private Long brandShowId;
     
+    private String brandShowTitle;
+    
+    private Long orderCode;
+    
     private Seller seller;
 
     public Date getAuditDate() {
@@ -328,5 +332,21 @@ public class ReturnOrder implements Serializable{
 
 	public void setBrandShowId(Long brandShowId) {
 		this.brandShowId = brandShowId;
+	}
+
+	public String getBrandShowTitle() {
+		return brandShowTitle;
+	}
+
+	public void setBrandShowTitle(String brandShowTitle) {
+		this.brandShowTitle = brandShowTitle;
+	}
+
+	public Long getOrderCode() {
+		return orderCode;
+	}
+
+	public void setOrderCode(Long orderCode) {
+		this.orderCode = orderCode;
 	}
 }
