@@ -1,6 +1,7 @@
 package com.afd.model.order;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -153,6 +154,22 @@ public class ReturnOrder implements Serializable{
     public String getEvidencePicUrl() {
         return evidencePicUrl;
     }
+    
+    public List<String> getEvidencePics() {
+		List<String> evidenceTemp = null;
+		
+		if (StringUtils.isNotBlank(this.evidencePicUrl)) {
+			String[] urls = this.evidencePicUrl.split(",");
+			evidenceTemp = new ArrayList<>(urls.length);
+			for (String url : urls) {
+				evidenceTemp.add(url);
+			}
+		}else{
+			evidenceTemp = new ArrayList<>(0);
+		}
+		
+		return evidenceTemp;
+	}
 
     public void setEvidencePicUrl(String evidencePicUrl) {
         this.evidencePicUrl = evidencePicUrl == null ? null : evidencePicUrl.trim();

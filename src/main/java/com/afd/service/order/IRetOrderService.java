@@ -35,4 +35,10 @@ public interface IRetOrderService {
 	 * @param uid
 	 */
 	public int cancelRetOrderById(Long retOrderId, Long uid);
+	
+	/**
+	 * @param retOrder
+	 * @return 1:成功,0:失败,-1:状态不对
+	 */
+	public int updateRetOrderByIdSelective(ReturnOrder retOrder);
 }
