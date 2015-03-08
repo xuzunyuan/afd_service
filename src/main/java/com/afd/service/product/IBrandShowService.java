@@ -20,15 +20,6 @@ public interface IBrandShowService {
 	public int newBrandShow(BrandShow brandShow);
 
 	/**
-	 * 提交特卖至审核
-	 * 
-	 * @param brandShowId
-	 * @param details
-	 * @return
-	 */
-	public int submitNewBrandShow(int brandShowId, BrandShowDetail[] details);
-
-	/**
 	 * 修改特卖信息
 	 * 
 	 * @param brandShow
@@ -43,7 +34,7 @@ public interface IBrandShowService {
 	 * @param details
 	 * @return
 	 */
-	public int submitModifyBrandShow(int brandShowId, BrandShowDetail[] details);
+	public int submitBrandShow(int brandShowId, BrandShowDetail[] details);
 
 	/**
 	 * 分页查询卖家的特卖

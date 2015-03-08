@@ -32,10 +32,19 @@ public class BrandShowDetail implements Serializable {
 	private Date removeDate;
 	private BigDecimal orgPrice;
 	private BigDecimal discount;
+	private String artNo;
 
 	private Sku sku;
 	private Product product;
 	private int removed;
+
+	public String getArtNo() {
+		return artNo;
+	}
+
+	public void setArtNo(String artNo) {
+		this.artNo = artNo;
+	}
 
 	public Sku getSku() {
 		return sku;

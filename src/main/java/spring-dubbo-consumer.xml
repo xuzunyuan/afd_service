@@ -39,6 +39,7 @@
    	<dubbo:reference id="dubbo_sellerLoginService" interface="com.afd.service.seller.ISellerLoginService" />
    	<dubbo:reference id="dubbo_sellerService" interface="com.afd.service.seller.ISellerService" />
    	<dubbo:reference id="dubbo_sellerApplyService" interface="com.afd.service.seller.ISellerApplyService" />
+   	<dubbo:reference id="dubbo_sellerRetAddrService" interface="com.afd.service.seller.ISellerRetAddrService" />   
    	
    	<beans profile="develop">
 	    <dubbo:registry protocol="zookeeper" port="2181" address="192.168.1.19" />

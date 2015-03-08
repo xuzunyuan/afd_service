@@ -4,7 +4,12 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
+
 public class BrandShow implements Serializable {
+	private static final char SPLITTER = ',';
+
 	private Integer brandShowId;
 	private Integer sellerId;
 	private Integer brandId;
@@ -198,6 +203,12 @@ public class BrandShow implements Serializable {
 
 	public void setServiceQq(String serviceQq) {
 		this.serviceQq = serviceQq;
+
+		if (StringUtils.isBlank(serviceQq)) {
+			this.serviceQqs = null;
+		} else {
+			this.serviceQqs = StringUtils.split(serviceQq, SPLITTER);
+		}
 	}
 
 	public String getServiceTel() {
@@ -206,6 +217,12 @@ public class BrandShow implements Serializable {
 
 	public void setServiceTel(String serviceTel) {
 		this.serviceTel = serviceTel;
+
+		if (StringUtils.isBlank(serviceTel)) {
+			this.serviceTels = null;
+		} else {
+			this.serviceTels = StringUtils.split(serviceTel, SPLITTER);
+		}
 	}
 
 	public Integer getDeliverProvince() {
@@ -230,6 +247,13 @@ public class BrandShow implements Serializable {
 
 	public void setLogisticsCompIds(String logisticsCompIds) {
 		this.logisticsCompIds = logisticsCompIds;
+
+		if (StringUtils.isBlank(logisticsCompIds)) {
+			this.logisticsCompId = null;
+		} else {
+			this.logisticsCompId = StringUtils
+					.split(logisticsCompIds, SPLITTER);
+		}
 	}
 
 	public BigDecimal getLowestPrice() {
@@ -244,5 +268,50 @@ public class BrandShow implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 5266608886537929458L;
+
+	private String[] serviceQqs;
+	private String[] serviceTels;
+	private String[] logisticsCompId;
+
+	public String[] getServiceQqs() {
+		return serviceQqs;
+	}
+
+	public void setServiceQqs(String[] serviceQqs) {
+		this.serviceQqs = serviceQqs;
+
+		if (ArrayUtils.isEmpty(serviceQqs)) {
+			this.serviceQq = null;
+		} else {
+			this.serviceQq = StringUtils.join(serviceQqs, SPLITTER);
+		}
+	}
+
+	public String[] getServiceTels() {
+		return serviceTels;
+	}
+
+	public void setServiceTels(String[] serviceTels) {
+		this.serviceTels = serviceTels;
+
+		if (ArrayUtils.isEmpty(serviceTels)) {
+			this.serviceTel = null;
+		} else {
+			this.serviceTel = StringUtils.join(serviceTels, SPLITTER);
+		}
+	}
+
+	public String[] getLogisticsCompId() {
+		return logisticsCompId;
+	}
+
+	public void setLogisticsCompId(String[] logisticsCompId) {
+		this.logisticsCompId = logisticsCompId;
+		if (ArrayUtils.isEmpty(logisticsCompId)) {
+			this.logisticsCompIds = null;
+		} else {
+			this.logisticsCompIds = StringUtils.join(logisticsCompId, SPLITTER);
+		}
+	}
 
 }
