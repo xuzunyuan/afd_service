@@ -314,4 +314,14 @@ public class BrandShow implements Serializable {
 		}
 	}
 
+	private String brandName; // 品牌名称
+
+	public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
 }
