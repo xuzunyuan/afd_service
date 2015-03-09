@@ -315,6 +315,15 @@ public class BrandShow implements Serializable {
 	}
 
 	private String brandName; // 品牌名称
+	private String coName;
+
+	public String getCoName() {
+		return coName;
+	}
+
+	public void setCoName(String coName) {
+		this.coName = coName;
+	}
 
 	public String getBrandName() {
 		return brandName;

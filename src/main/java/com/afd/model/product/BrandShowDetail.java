@@ -33,6 +33,7 @@ public class BrandShowDetail implements Serializable {
 	private BigDecimal orgPrice;
 	private BigDecimal discount;
 	private String artNo;
+	private String brandName;
 
 	private Sku sku;
 	private Product product;
@@ -244,6 +245,14 @@ public class BrandShowDetail implements Serializable {
 
 	public void setDiscount(BigDecimal discount) {
 		this.discount = discount;
+	}
+
+	public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
 	}
 
 }
