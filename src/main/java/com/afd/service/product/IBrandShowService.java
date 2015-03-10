@@ -65,6 +65,9 @@ public interface IBrandShowService {
 	public Page<BrandShow> queryWaitAuditBrandShowByPage(Map<String, ?> cond,
 			int... page);
 
+	public Page<BrandShow> queryBrandShowByPage(Map<String, ?> cond,
+			int... page);
+
 	/**
 	 * 审核通过
 	 * 
