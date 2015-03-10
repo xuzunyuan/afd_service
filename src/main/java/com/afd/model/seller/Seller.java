@@ -68,9 +68,11 @@ public class Seller implements Serializable {
 	private String bankAcctNo;
 
 	private String branchName;
-
+	
 	private String branchNo;
 
+	private String branchAddress;
+	
 	private String contractType;
 
 	private String contractImg;
@@ -458,4 +460,13 @@ public class Seller implements Serializable {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+
+	public String getBranchAddress() {
+		return branchAddress;
+	}
+
+	public void setBranchAddress(String branchAddress) {
+		this.branchAddress = branchAddress;
+	}
+	
 }
