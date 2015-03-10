@@ -20,6 +20,8 @@ public class Seller implements Serializable {
 	private String status;
 
 	private String coName;
+	
+	private String payeeName;
 
 	private String coBln;
 
@@ -467,6 +469,14 @@ public class Seller implements Serializable {
 
 	public void setBranchAddress(String branchAddress) {
 		this.branchAddress = branchAddress;
+	}
+
+	public String getPayeeName() {
+		return payeeName;
+	}
+
+	public void setPayeeName(String payeeName) {
+		this.payeeName = payeeName;
 	}
 	
 }
