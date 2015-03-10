@@ -11,7 +11,7 @@ public class CookieCartItem implements Serializable {
 	private static final long serialVersionUID = -5373641727775842709L;
 
 	// 特卖明细ID
-	private Long brandShowDetailId;
+	private Long bsdid;
 	// 数量
 	private Long num;
 	// 是否选中
@@ -20,11 +20,11 @@ public class CookieCartItem implements Serializable {
 	public Long getNum() {
 		return num;
 	}
-	public Long getBrandShowDetailId() {
-		return brandShowDetailId;
+	public Long getBsdid() {
+		return bsdid;
 	}
-	public void setBrandShowDetailId(Long brandShowDetailId) {
-		this.brandShowDetailId = brandShowDetailId;
+	public void setBsdid(Long bsdid) {
+		this.bsdid = bsdid;
 	}
 	public void setNum(Long num) {
 		this.num = num;
@@ -38,7 +38,7 @@ public class CookieCartItem implements Serializable {
 	
 	public CartItem transferCartItem(){
 		CartItem cartItem = new CartItem();
-		cartItem.setBrandShowDetailId(this.brandShowDetailId);
+		cartItem.setBrandShowDetailId(this.bsdid);
 		cartItem.setNum(this.num);
 		cartItem.setSelected(this.selected);
 
