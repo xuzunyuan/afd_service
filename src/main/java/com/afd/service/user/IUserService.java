@@ -73,6 +73,8 @@ public interface IUserService {
 	 */
 	public int chgPwd(String mobile, String pwd);
 
+	public int chgPwdById(long userId, String pwd);
+
 	/**
 	 * 通过id获取用户所有信息
 	 * 
