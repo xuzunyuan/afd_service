@@ -39,6 +39,8 @@ public class SellerRetAddress implements Serializable {
 	private String zipCode;
 
 	private String status;
+	
+	private Boolean isDefault;
 
 	public Integer getsRAId() {
 		return sRAId;
@@ -166,6 +168,14 @@ public class SellerRetAddress implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Boolean getIsDefault() {
+		return isDefault;
+	}
+
+	public void setIsDefault(Boolean isDefault) {
+		this.isDefault = isDefault;
 	}
 
 }
