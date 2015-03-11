@@ -170,6 +170,9 @@ public interface IBrandShowService {
 
 	public Page<BrandShowDetail> getBrandShowDetailByPage(Map<?, ?> map,
 			Page<BrandShowDetail> page);
-	
-	public BrandShowDetail getBrandShowDetailBySkuId(Integer brandShowId,Integer skuId);
+
+	public BrandShowDetail getBrandShowDetailBySkuId(Integer brandShowId,
+			Integer skuId);
+
+	public int getBrandShowCountOfSellerByStatus(int sellerId, String status);
 }

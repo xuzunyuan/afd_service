@@ -438,4 +438,12 @@ public interface IProductService {
 	 */
 	List<Product> getOnlineProductBySellerIdAndBrandId(Integer sellerId,
 			Integer brandId);
+
+	/**
+	 * 获得卖家商品数量
+	 * 
+	 * @param sellerId
+	 * @return
+	 */
+	int getValidProductCountOfSeller(int sellerId);
 }
