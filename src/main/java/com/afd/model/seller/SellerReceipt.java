@@ -2,39 +2,46 @@ package com.afd.model.seller;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang.StringUtils;
+
 public class SellerReceipt implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 3269396778853128723L;
 
-	private Integer receiptId;
+	private Integer receiptId; //发票ID
+	
+	private Integer sellerId;	//卖家ID
 
-	private Integer sellerId;
+	private String rName;		//收件人姓名
 
-	private String rName;
+	private String rMobile;		//收件人电话
 
-	private String rMobile;
+	private String rAddress;	//收件地址
 
-	private String rAddress;
+	private String taxImg;		//税务等级证电子版
 
-	private String taxImg;
+	private String taxNo;		//公司税号
 
-	private String taxNo;
+	private String registerAddr;//公司注册地址
 
-	private String registerAddr;
+	private String registerTel;	//公司注册电话
+	
+	private String bankAcctName;//开户行
 
-	private String registerTel;
+	private String bankAcctNo;	//银行账号
 
-	private String bankAcctName;
+	private String taxType;		//发票类型
 
-	private String bankAcctNo;
+	private String coName;		//单位全称
 
-	private String taxType;
-
-	private String coName;
-
-	private String qualiUrl;
+	private String qualiUrl;	//纳税人资质证明电子版
+	
+	// 扩展
+	private static final String SPLITTER = "-";
+	private String telArea, telExt, telNo;
+	
 
 	public Integer getReceiptId() {
 		return receiptId;
@@ -106,6 +113,18 @@ public class SellerReceipt implements Serializable {
 
 	public void setRegisterTel(String registerTel) {
 		this.registerTel = registerTel;
+		if (registerTel == null) {
+			telArea = telExt = telNo = null;
+		} else {
+			String[] tels = StringUtils.split(registerTel, SPLITTER);
+
+			if (tels.length >= 1)
+				telArea = tels[0];
+			if (tels.length >= 2)
+				telNo = tels[1];
+			if (tels.length >= 3)
+				telExt = tels[2];
+		}
 	}
 
 	public String getBankAcctName() {
@@ -147,4 +166,29 @@ public class SellerReceipt implements Serializable {
 	public void setQualiUrl(String qualiUrl) {
 		this.qualiUrl = qualiUrl;
 	}
+
+	public String getTelArea() {
+		return telArea;
+	}
+
+	public void setTelArea(String telArea) {
+		this.telArea = telArea;
+	}
+
+	public String getTelExt() {
+		return telExt;
+	}
+
+	public void setTelExt(String telExt) {
+		this.telExt = telExt;
+	}
+
+	public String getTelNo() {
+		return telNo;
+	}
+
+	public void setTelNo(String telNo) {
+		this.telNo = telNo;
+	}
+	
 }

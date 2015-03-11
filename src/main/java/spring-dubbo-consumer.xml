@@ -40,6 +40,7 @@
    	<dubbo:reference id="dubbo_sellerService" interface="com.afd.service.seller.ISellerService" />
    	<dubbo:reference id="dubbo_sellerApplyService" interface="com.afd.service.seller.ISellerApplyService" />
    	<dubbo:reference id="dubbo_sellerRetAddrService" interface="com.afd.service.seller.ISellerRetAddrService" />   
+   	<dubbo:reference id="dubbo_sellerReceiptService" interface="com.afd.service.seller.ISellerReceiptService" />   
    	
    	<!-- schedule service --> 
    	<dubbo:reference id="dubbo_brandShowScheduleService" interface="com.afd.service.schedule.IBrandShowScheduleService" />
