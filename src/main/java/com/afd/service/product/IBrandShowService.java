@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.afd.common.mybatis.Page;
 import com.afd.model.order.LogisticsCompany;
 import com.afd.model.product.BrandShow;
@@ -175,4 +177,7 @@ public interface IBrandShowService {
 			Integer skuId);
 
 	public int getBrandShowCountOfSellerByStatus(int sellerId, String status);
+	
+	public List<BrandShowDetail> getBrandShowDetailsByProdId(@Param("brandShowId")Integer brandShowId,
+			@Param("prodId")Integer prodId);
 }
