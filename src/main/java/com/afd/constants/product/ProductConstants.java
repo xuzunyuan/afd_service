@@ -27,6 +27,15 @@ public interface ProductConstants {
 	// 产品缓存
 	public static final String CACHE_PERFIX_PRODUCT = "product_";
 
+	
+	/************************************* 商品相关常量 *************************************/
+	
+	/**
+	 * 商品缓存中的KEY值
+	 */
+	public static final String PROD_ = SystemConstants.CACHE_PREFIX + "product_";
+	
+	
 	/************************************* 类目相关常量 *************************************/
 
 	/**
