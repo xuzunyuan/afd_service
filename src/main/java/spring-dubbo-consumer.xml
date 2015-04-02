@@ -48,4 +48,8 @@
    	<beans profile="develop">
 	    <dubbo:registry protocol="zookeeper" port="2181" address="192.168.1.19" />
    	</beans>
+   	
+   	<beans profile="product">
+	    <dubbo:registry protocol="zookeeper" port="2181" address="10.25.0.237" />
+   	</beans>
 </beans>
