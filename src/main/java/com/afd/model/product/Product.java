@@ -316,6 +316,13 @@ public class Product implements Serializable {
 	}
 
 	public String getSalePrice() {
+		if(salePrice!=null && salePrice.trim().length()>0){
+			String[] split = salePrice.split(" ~ ");
+			if(split.length==2 && split[0].equals(split[1])){
+				salePrice = split[0];
+			}
+		}
+		
 		return salePrice;
 	}
 
@@ -324,6 +331,13 @@ public class Product implements Serializable {
 	}
 
 	public String getMarketPrice() {
+		if(marketPrice!=null && marketPrice.trim().length()>0){
+			String[] split = marketPrice.split(" ~ ");
+			if(split.length==2 && split[0].equals(split[1])){
+				marketPrice = split[0];
+			}
+		}
+		
 		return marketPrice;
 	}
 
